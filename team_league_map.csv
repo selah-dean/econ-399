@@ -1,0 +1,33 @@
+﻿team,team_id,league,division,market_size
+Arizona Diamondbacks,ARI,National League,West,3251876
+Oakland Athletics,OAK,American League,West,7039362
+Atlanta Braves,ATL,National League,East,4112198
+Baltimore Orioles,BAL,American League,East,7608070
+Boston Red Sox,BOS,American League,East,5819100
+Chicago Cubs,CHC,National League,Central,9157540
+Chicago White Sox,CHW,American League,Central,9157540
+Cincinnati Reds,CIN,National League,Central,1979202
+Cleveland Indians,CLE,American League,Central,2945831
+Cleveland Guardians,CLE,American League,Central,2945831
+Colorado Rockies,COL,National League,West,2581506
+Detroit Tigers,DET,American League,Central,5456428
+Houston Astros,HOU,American League,West,4669571
+Kansas City Royals,KCR,American League,Central,1776062
+Los Angeles Angels,LAA,American League,West,16373645
+Los Angeles Dodgers,LAD,National League,West,16373645
+Miami Marlins,MIA,National League,East,3878380
+Milwaukee Brewers,MIL,National League,Central,1689572
+Minnesota Twins,MIN,American League,Central,2968806
+New York Mets,NYM,National League,East,21199865
+New York Yankees,NYY,American League,East,21199865
+Philadelphia Phillies,PHI,National League,East,6188463
+Pittsburgh Pirates,PIT,National League,Central,2358695
+San Diego Padres,SDP,National League,West,2813833
+San Francisco Giants,SFG,National League,West,7039362
+Seattle Mariners,SEA,American League,West,3554760
+St. Louis Cardinals,STL,National League,Central,2603607
+Tampa Bay Rays,TBR,American League,East,2395997
+Texas Rangers,TEX,American League,West,5221801
+Toronto Blue Jays,TOR,American League,East,4682897
+Washington Nationals,WSN,National League,East,7608070
+Los Angeles Angels of Anaheim,LAA,American League,West,16373645

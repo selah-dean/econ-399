@@ -1,0 +1,1289 @@
+---
+title: "Modeling"
+author: "Selah Dean"
+date: "`r Sys.Date()`"
+output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/sgdea/ECON399")
+library(tidyverse)
+library(ggpubr)
+library(naniar)
+library(scales)
+library(gridExtra)
+library(grid)
+library(stringr)
+library(stringi)
+library(stringdist)
+library(deaR)
+```
+
+# Notes on Papers
+
+## [Is Winning Everything? A Data Envelopment Analysis of Major League Baseball and the National Football League](https://journals.sagepub.com/doi/epdf/10.1177/1527002503254047)
+
+-   Compares the efficiency of MLB (NL and AL) vs NFL
+-   Player salaries as input and on-field-performance as output
+    -   Useful results even is a franchise owner’s entire economic
+        outcome is not captured
+-   A franchise can be inefficient for a few different reasons
+    -   Poor management skills
+
+        -   Inaccurately predicts future performance and overspends
+
+    -   Bad luck
+
+        -   Injury prone players
+
+    -   League may reward a large-market franchise with more revenue
+
+        -   Can spend more on player salaries to increase probability of
+            winning
+
+    -   Receive greater utility than others
+-   DEA technique
+    -   Measure the relative efficiency of decision-making units that
+        change inputs into outputs
+
+    -   Compares the levels of inputs and outputs of one DMU with the
+        rest of its peer group
+
+        -   DMUs that produce the highest outputs with their inputs are
+            deemed efficient
+
+        -   Form a piecewise linear frontier
+
+        -   Minimize inputs while satisfying at least the given output
+            levels
+
+            -   Searches data set to determine if a linear combination
+                uses lower levels of inputs to produce at least the
+                level of output
+-   Use a two-input, three output BCC data envelopment analysis model
+    -   MLB
+
+        -   Inputs: hitter salaries and pitcher salaries
+
+        -   Outputs: number of wins (includes postseason), team batting
+            average, and team earned run average
+
+        -   Looks at correlations between the variables
+
+        -   A franchise is deemed inefficient only when other league
+            franchise (or linear combination) can produce more wins,
+            higher BA, lower ERA using lower pitcher and hitter salaries
+
+    -   NFL
+
+        -   Inputs: offense salary and defense salary
+
+        -   Outputs: number of wins (includes postseason), offensive
+            yards per game, defensive yards per game
+-   1985 through 2001
+-   Considers AL and NL separately
+-   2001 Yankees one of the few franchises that appeared in the WS and
+    found to be inefficient
+-   28 out of 32 WS teams were perfectly efficient
+-   19 out of 20 Super Bowl teams were perfectly efficient
+-   NFL franchises more efficient on average than MLB
+    -   significant difference in mean of the efficiency factors (both
+        pre- and post-salary cap)
+-   Significant increase in average efficiency after implementation of
+    salary cap
+-   Large-market teams are more likely to be inefficient and large
+    market teams also more likely to have higher payrolls
+-   No significant correlation between teams with high payrolls and
+    inefficiency
+-   No correlations between market size, payroll, and efficiency in the
+    NFL
+-   Uses glut ratio to compare payrolls and efficiency
+    -   Glut ratio: franchise’s mean payroll ratio divided by its mean
+        efficiency factor
+
+    -   Inefficient franchise with a large payroll will have a high glut
+        ratio
+
+    -   Efficient franchise with a small payroll will have a low glut
+        ratio
+-   Strong significant correlation exists between large-market
+    franchises and the glut ratio in MLB
+    -   Large-market tended to be inefficient and have high payrolls
+
+    -   Small-markets franchises tended to be efficient and have low
+        payrolls
+-   No statistically significant diff in avg efficiency between any year
+    or set of years in MLB from 1985 to 2001
+-   MLB economic infrastructure provides a significant advantage to
+    big-market teams and encourages inefficient production
+-   NFL has revenue-sharing system that compels owners to operate
+    efficiently further encouraged by the implementation of a salary cap
+-   Franchises with high payrolls in MLB have a greater chance of
+    winning and are typically found to be efficient
+
+## [Player Salaries, Organizational Efficiency, and Competitiveness in Major League Baseball](https://journals.sagepub.com/doi/epdf/10.1177/1527002506286776)
+
+-   Research Questions
+    -   How much does a team need to spend on TPS to be competitive?
+
+        -   \$6.19 million in 1985 to \$38.67 million in 2002
+
+        -   Annual growth rate of 10.7% adjusted for inflation
+
+        -   Team minimum, mean, and maximum have risen at nearly the
+            same rate
+
+        -   Ratio of competitive salary to min TPS remained stable
+            around mean of 1.5
+
+    -   What is the maximum TPS that a team can pay without
+        overspending?
+
+        -   HC salary \$9.81 million in 1985 to \$125.9 million in 2002
+
+        -   Increase of 12.6%
+
+    -   How many teams are noncompetitive because of low TPS?
+
+        -   Each year between 0 and 4
+
+        -   Between 0 and 8 noncompetitive for other reasons
+
+        -   Markov analysis suggests for a year, 5.5% of teams
+            noncompetitive because of low TPS and another 4.8% of team
+            noncompetitive for other reasons
+
+    -   How many teams are overspending on TPS?
+
+        -   Between 0 and 9 teams are HC
+
+        -   95 of 442 (21.5%) have been overspending on TPS
+
+        -   54.7% of overspending were HC, 43.2% were CC, and 2.15 were
+            noncompetitive
+
+        -   Markov analysis suggests for a year 12.2% of team will be HC
+
+    -   How does noncompetitiveness because of low TPS relate to market
+        size?
+
+        -   Number of times a team is noncompetitive due to low TPS is
+            negatively related to the size of the market
+
+        -   Size of market relates to the number of games it can win if
+            it is efficient
+
+            -   Ex: New York team can expect to win about 4 more games
+                per season than an efficient Milwaukee team
+
+    -   How does overspending on TPS relate to market size?
+
+        -   Large market teams are more likely to be HC than small
+            market teams
+-   DEA measures relative efficiency in situations with multiple inputs
+    and outputs
+    -   Establishes an efficient frontier based on the observed best
+        performance
+-   Logistic Regression: probability the dependent variable equals 1
+    given specific values for input variable
+-   Gini Index: scale from 0 to 1 to measure the extent to which members
+    of a population are dissimilar from one another
+-   Competitive balance: state where “every well-run club has regularly
+    recurring reasonable hope of reaching postseason play”
+-   Use a two-stage production model
+    -   Stage 1: total player salary into talent measured by offense
+        (total bases gained) and defensive (total bases surrendered)
+        production
+
+    -   Stage 2: talent into games won
+-   Steps
+    -   Solve DEA model for the front office of Team k
+
+    -   Solve DEA model for the on-field performance of Team k
+
+    -   Compute the hypothetical TBG and TBS that the team would have
+        had had its front office been efficient
+
+    -   Compute the number of games each team would have had they been
+        efficient (EGW = GW/Efficiency)
+-   Reasonable hope of reaching postseason play: team must have a least
+    the same probability of reaching postseason play as it would have if
+    all teams in its league were equally talented
+    -   Refer to as team’s balanced probability
+
+    -   Depends on the number of teams in its division and number of
+        teams in its league
+-   Construct a logistic regression for probability of qualifying for
+    postseason play
+    -   Computes probability of qualifying for postseason play given its
+        number GW and the playoff qualification condition that applied
+        to their league and division
+-   Use logistic regression model to compute the minimum number of games
+    a team must win to be competitive under each condition
+    -   A team is competitive if and only if it would have won at least
+        MGW had it been efficient
+-   Determine minimum total player salary needed to be competitive
+    -   Sort teams according to TPS (low to high) and use Gini index to
+        identify a TPS that partitions teams into two sets
+
+    -   Competitive salary for the year is the TPS for the lowest paid
+        team in the primarily competitive set
+-   Noncompetitive teams divided into two groups
+    -   Low TPS or other reasons
+-   Competitive teams into 3 groups
+    -   Conditionally competitive if GW\* \< MGW
+
+        -   Spending enough but inefficient in front office
+
+        -   May be overspending if TPS\* \< TPS
+
+    -   Economically competitive if GW\* \>= MGW and TPS\* = TPS
+
+    -   Hypercompetitive if GW\* \>= MGW and TPS\* \< TPS
+-   Model transition of teams among the 5 states according to a Markov
+    process
+
+# Next Steps
+
+-   Use DEA analysis to look into market efficiency from 2015 through
+    2024.
+-   Inputs: Team Payroll
+    -   Split by hitting vs pitching
+        -   Potentially split further by position
+        
+    - Split by pre-arbitration, arbitration eligible, and veteran
+-   Outputs: Wins, offensive statistic, and defensive statistic
+    -   The first paper uses team batting average and team earned run
+        average
+    -   The second paper used total bases gain and total based
+        surrendered
+        -   I want to use different statistic
+
+# Data Cleaning
+## Import Data Sets 
+```{r}
+# Spotrac payroll data  
+payroll_data <- read.csv("payroll_data_from_2015.csv") %>% select(-X)
+payroll_ranks <- read.csv("payroll_ranks_from_2015.csv") %>% select(-X)
+
+# Baseball Reference 40 man roster data
+forty_man <- read.csv("bb_ref_forty_man_roster_from_2015.csv") %>% select(-X)
+
+# Baseball Reference standings data
+standings <- read.csv("standings_from_2012.csv") %>% select(-X) %>%
+  filter(Tm != "Average")
+
+# File that contains each team, there bbref abbr, league, and division info
+team_league_map <- read.csv("team_league_map.csv") 
+```
+
+
+## Match League Info for Each Dataset 
+```{r}
+# Join standings data with team_league_map 
+standings <- inner_join(standings, team_league_map, by = join_by(Tm == team))
+
+# Join forty man data with team_league_map
+# Only include the newest names to match spotrac
+forty_man <- inner_join(
+  forty_man,
+  team_league_map %>%
+    filter(team != "Cleveland Indians" &
+             team != "Los Angeles Angels of Anaheim"),
+  by = join_by(team == team_id)
+) %>%
+  rename(team_id = team, team = team.y)
+
+# modify the format of the team name to match with spotrac 
+team_league_map <- team_league_map %>% mutate(
+  team = str_to_lower(team) %>%
+    gsub(" ", "-", .) %>%
+    gsub("\\.", "", .) %>%
+    gsub("-of-anaheim", "", .) %>%
+    gsub("indians", "guardians", .) %>%
+    gsub("oakland-", "", .)
+)  %>% distinct()
+
+# Join payroll rank data on team_league_map
+payroll_ranks <- inner_join(payroll_ranks, team_league_map, by = join_by(team))
+
+# Join payroll data on team_league_map
+payroll_data <- inner_join(payroll_data, team_league_map, by = join_by(team))
+
+```
+
+## General Data Cleaning
+```{r}
+# Clean payroll rank so amount and rank are numeric 
+payroll_ranks <- payroll_ranks %>% mutate(
+    amount = as.numeric(gsub("[\\$,]", "", amount)), 
+    rank = as.numeric(gsub("[a-zA-Z]", "", rank))
+  )
+
+# Clean payroll data so salaries are numeric 
+# Replace any empty strings with NA
+# Simplify the roster column to not include year or the word "Payroll"
+# This should match the designations found in the payroll_ranks
+payroll_data <- payroll_data %>%
+  mutate(across(
+    c(
+      payroll_salary,
+      payroll_salary_adjusted,
+      base_salary,
+      signing_bonus,
+      incentives_likely,
+      incentives_unlikely
+    ),
+    ~ as.numeric(gsub("[\\$,]", "", na_if(., "-")))
+  )) %>% 
+  mutate(across(where(is.character), ~ na_if(.x, ""))) %>%
+  mutate(
+    roster = str_remove(roster, "^\\d{4} ") %>%  
+                          str_remove(" Payroll$")
+  )
+
+# Determine total payroll for each team 
+total_payroll <- payroll_ranks %>% 
+  filter(player_type == "Total Adjusted Payroll Allocations")
+
+# Clean 40 man data
+# rename X.1 column to all_star
+# Make Yrs numeric 
+forty_man <- forty_man %>%
+  rename(
+    all_star = X.1
+  ) %>%
+  mutate(
+    all_star = case_when(
+      all_star == "All-Star" ~ TRUE, 
+      TRUE ~ FALSE
+    ), 
+    Yrs = as.numeric(gsub("[a-zA-Z]", "", Yrs))
+  )
+  
+
+# Add attribute for win variablity 
+standings <- standings  %>%
+  arrange(team_id, year) %>%  # Sort by team and year
+  group_by(team_id) %>%       # Group by team
+  mutate(win_variability = map_dbl(year, ~ {
+    valid_years <- year[year <= .x & year != 2020]  # Exclude 2020
+    if (length(valid_years) < 3) return(NA)  # Ensure at least 3 years exist
+    sd(W[year %in% tail(valid_years, 3)])  # Compute SD for last 3 valid years
+  })) %>%
+  ungroup()
+```
+
+## Clean position attribute 
+```{r}
+# Add column to design hitter vs pitcher 
+payroll_data <- payroll_data %>%
+  mutate(
+    pos_simple = case_when(
+      pos == "SP/DH" ~ "two-way", 
+      pos %in% c("RP", "SP", "SP1", "P", "CL") ~ "pitcher", 
+      TRUE ~ "hitter"
+    )
+  )
+
+# Assign a position to each player based on the most games played at a position
+# For pitchers determine is starting or relief pitcher 
+forty_man <- forty_man %>%
+  mutate(
+    position = apply(select(., P:DH) %>% select(-OF), 1, function(row)
+      names(row)[which.max(row)]), 
+    position = case_when(
+      position == "P" & GS >= 0.8 * G ~ "SP", 
+      position == "P" ~ "RP", 
+      TRUE ~ position
+    ), 
+    position = gsub("X", "", position), 
+    # manually fix Ohtani's position, don't love this solution 
+    position = case_when(
+      Name == "Shohei Ohtani" ~ "SP/DH", 
+      TRUE ~ position
+    ),
+    pos_simple = case_when(
+      position == "SP/DH" ~ "two-way", 
+      position %in% c("RP", "SP") ~ "pitcher", 
+      TRUE ~ "hitter"
+    )
+  )
+
+```
+
+## Handle Duplicate Players in Payroll 
+
+The duplicates appear to come from when the player is on different roster designations throughout the season resulting in split contracts. To get the player's overall salary from the team I am going to add the duplicates together. For the other values, I want to keep it the same if they are the same in the duplicates, keep the non-null, and combine any remaining unmatched values. 
+
+```{r}
+# Function to combine duplicates into one row
+combine_duplicates <- function(x) {
+  if (all(is.na(x))) {
+    return(NA)  # return NA if all values are NA
+  } else if (is.numeric(x)) {
+    return(sum(x, na.rm = TRUE))  # sum any numeric values
+  } else if (is.character(x)) {
+    return(paste(unique(na.omit(x)), collapse = "/"))  # concat diff values
+  } else {
+    return(unique(na.omit(x)))  # keep the value if the same between rows 
+  }
+}
+
+payroll_data <- payroll_data %>% 
+  group_by(player, team, year, pos_simple) %>%
+  summarize(across(everything(), combine_duplicates), .groups = "drop")
+```
+
+## Match 40 man and payroll data
+
+```{r}
+# Function to clean name 
+clean_name <- function(Name) {
+  # Convert encoding to Latin-ASCII
+  Name <- stri_trans_general(Name, "Latin-ASCII")
+  
+  # Remove suffixes
+  suffixes <- c("Jr.", "Sr.", "II", "III", "IV", "V", "HOF")
+  suffix_pattern <- paste0("\\s*(", paste(suffixes, collapse = "|"), ")\\s*$")
+  Name <- stri_replace_all_regex(Name, suffix_pattern, "")
+  #Name <- stri_replace_all_regex(Name, pattern, "")
+
+  
+  # Remove periods and dashes
+  Name <- stri_replace_all_regex(Name, "[.]", "")
+  
+  Name <- stri_replace_all_regex(Name, "[-]", " ")
+  
+  # Convert to title case 
+  Name <- str_to_title(Name)
+  
+  Name <- gsub('[\t\n]','',Name)
+  
+  return(Name)
+}
+
+# Function to extract last name while removing suffixes
+extract_last_name <- function(full_name) {
+  name_parts <- str_split(full_name, " ")[[1]]
+  last_name <- tail(name_parts, 1)
+  
+  return(last_name)
+}
+
+match_players <- function(roster, payroll) {
+  # Step 1: Clean the names by removing accents and create column for last name
+  roster <- roster %>% mutate(
+    player_name_clean = sapply(Name, clean_name), 
+    last_name = sapply(player_name_clean, extract_last_name)
+    )
+  
+  payroll <- payroll %>% mutate(
+    player_name_clean = sapply(player, clean_name), 
+    last_name = sapply(player_name_clean, extract_last_name)
+    )
+  
+  # Step 2: Initial exact match on the cleaned names
+  exact_matches <- roster %>%
+    inner_join(payroll, by = 
+                 join_by(player_name_clean, team_id, year, pos_simple), 
+               suffix = c("", ""))
+  
+  # Step 3: Find unmatched rows in roster and payroll
+  unmatched_roster <- roster %>%
+    anti_join(exact_matches, by = join_by(player_name_clean, team_id, year, pos_simple))
+  
+  unmatched_payroll <- payroll %>%
+    anti_join(exact_matches, by = join_by(player_name_clean, team_id, year, pos_simple))
+  
+  # Step 4: Fuzzy matching for unmatched names in roster
+  last_name_matches <- unmatched_roster %>%
+    inner_join(
+      unmatched_payroll,
+      by =join_by(last_name, team_id, year, pos_simple),
+      suffix = c("", "")
+    ) 
+  
+  combined_matches <- exact_matches %>%
+    bind_rows(last_name_matches)
+  
+  unmatched_roster_2 <- unmatched_roster %>%
+    anti_join(combined_matches, by = join_by(Name, team_id, year, pos_simple))
+  
+  unmatched_payroll_2 <- unmatched_payroll %>%
+    anti_join(combined_matches, by = join_by(player, team_id, year, pos_simple))
+  
+  wo_position_matches <- unmatched_roster_2 %>%
+    inner_join(unmatched_payroll_2, by = 
+                 join_by(player_name_clean, team_id, year), 
+               suffix = c("_bbref", "_spotrac")) %>% 
+    rename(team = team_spotrac) %>%
+    select(-contains("_spotrac"), -team_bbref) %>%
+    rename_with(~ str_replace(.x, "_bbref$", ""), ends_with("_bbref"))
+  
+  combined_matches_2 <- combined_matches %>%
+    bind_rows(wo_position_matches)
+  
+  unmatched_roster_3 <- unmatched_roster_2 %>%
+    anti_join(combined_matches_2, by = join_by(Name, team_id, year, pos_simple))
+  
+  unmatched_payroll_3 <- unmatched_payroll_2 %>%
+    anti_join(combined_matches_2, by = join_by(player, team_id, year, pos_simple))
+  
+  injured_players <- unmatched_payroll_3 %>% filter(roster == "Injured List")
+
+  # Step 6: Combine exact matches, fuzzy matches, and remaining players from payroll
+  # The remaining players are those who did not make a major league appearance for the team
+  final_result <- combined_matches_2 %>%
+    bind_rows(unmatched_roster_3)
+  
+  return(final_result)
+}
+
+roster_payroll_data <- match_players(forty_man, payroll_data)
+```
+
+```{r}
+
+injured_players <- anti_join(payroll_data, roster_payroll_data,
+                             by=join_by(player, team_id, year)) %>%
+  filter(roster == "Injured List")
+
+roster_to_join <- roster_payroll_data %>% 
+  mutate(
+    prev_year = year - 1, 
+    next_year = year + 1
+    ) %>%
+  select(player, pos_simple, year, prev_year, next_year, Name, Age, Birth, B, T, Ht, Wt, DoB, Yrs) %>% distinct()
+
+match_injured <- injured_players %>% 
+  left_join(roster_to_join, 
+            by = join_by(player, pos_simple, year  == next_year), 
+            suffix = c("", "_matched")) %>%
+  mutate(
+    Age = Age + 1
+  ) 
+
+still_missing <- match_injured %>% filter(is.na(Name))
+
+match_future <- still_missing %>% 
+  left_join(roster_to_join, 
+            by = join_by(player, pos_simple, year  == prev_year), 
+            suffix = c("_original", "_matched")) %>%
+  # mutate(
+  #   Age = Age - 1, 
+  #   Yrs = Yrs - 1
+  # ) #%>%
+  select(-contains("_original"))
+
+final_missing <- match_future %>% filter(is.na(Name_matched))
+  
+```
+# Initial Plots 
+
+## Payroll Rank vs Team Performance 
+```{r}
+# Combine payroll data and standings
+payroll_with_standings <- inner_join(
+  total_payroll, standings, 
+  by = join_by(team_id, year, league, division)
+) 
+
+# Payroll Rank vs Regular Season Rank
+payroll_rank_reg_season_rank <- ggplot(payroll_with_standings, aes(x=rank, y=Rk)) + 
+  geom_point() + 
+  xlab("Payroll Rank") + ylab("Regular Season Rank") + 
+  xlim(1, 30) + ylim(1,30) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Regular Season Rank)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_rank_reg_season_rank.png", payroll_rank_reg_season_rank,
+       width = 6, height = 4, units = "in")
+
+payroll_rank_reg_season_rank
+
+```
+
+### By Year 
+
+```{r}
+# Payroll Rank vs Regular Season Rank split by Season 
+payroll_rank_reg_season_rank_by_season <- ggplot(payroll_with_standings, aes(x=rank, y=Rk)) + 
+  geom_point() + 
+  xlab("Payroll Rank") + ylab("Regular Season Rank") + 
+  xlim(1, 30) + ylim(1,30) + 
+  theme_bw() + facet_wrap(vars(year), ncol=5) + 
+  ggtitle("Payroll vs Team Performance (Regular Season Rank) by Season") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_rank_reg_season_rank_by_season.png", 
+       payroll_rank_reg_season_rank_by_season,
+       width = 10, height = 5, units = "in")
+
+payroll_rank_reg_season_rank_by_season
+```
+
+## Payroll Amount vs Team Performance 
+```{r}
+# Payroll Amount vs Win Percentage
+payroll_amount_win_per <- ggplot(payroll_with_standings, aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Wins)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_win_per.png", 
+       payroll_amount_win_per,
+       width = 6, height = 4, units = "in")
+
+payroll_amount_win_per
+
+# Without 2020 
+payroll_amount_win_per_wo_2020 <- ggplot(payroll_with_standings %>% 
+                                           filter(year != 2020), aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Wins) (Excluding 2020)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_win_per_wo_2020.png", 
+       payroll_amount_win_per_wo_2020,
+       width = 6, height = 4, units = "in")
+
+payroll_amount_win_per_wo_2020
+```
+
+### By Year 
+```{r}
+# Payroll Amount vs Wins split by Season 
+payroll_amount_wins_by_season <- ggplot(payroll_with_standings %>% 
+                                          filter(year !=2020), aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + facet_wrap(vars(year), ncol=5) + 
+  ggtitle("Payroll vs Team Performance (Wins) by Season") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_wins_by_season.png", 
+       payroll_amount_wins_by_season,
+       width = 10, height = 5, units = "in")
+
+payroll_amount_wins_by_season
+
+
+```
+
+## Payroll Gap 
+```{r}
+payroll_gap <- payroll_with_standings %>%
+  group_by(league, year) %>%
+  summarize(
+    payroll_gap = max(amount) - min(amount),
+    win_gap = max(W) - min(W),
+    .groups = "drop"
+  ) %>%
+  bind_rows(
+    payroll_with_standings %>%
+      group_by(year) %>%
+      summarize(
+        league = "Overall",
+        payroll_gap = max(amount) - min(amount),
+        win_gap = max(W) - min(W),
+        .groups = "drop"
+      )
+  ) %>%
+  mutate(
+    gap_group = ifelse(year < 2020, "before_2020", "after_2020")
+  )
+
+payroll_gap_plot <- ggplot(payroll_gap, aes(x = year, group = league)) +
+  geom_point(aes(y = payroll_gap, color = league)) +
+  geom_line(aes(y = payroll_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Payroll Gap") +
+  labs(color = "League") +
+  ggtitle("League Payroll Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+win_gap_plot <- ggplot(payroll_gap, aes(x = year, group = league)) +
+  geom_point(aes(y = win_gap, color = league)) +
+  geom_line(aes(y = win_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Win Gap") +
+  labs(color = "League") +
+  ggtitle("League Win Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+payroll_win_gap <- ggarrange(payroll_gap_plot, win_gap_plot,
+                             common.legend = TRUE, legend="bottom")
+
+ggsave("figures/payroll_win_gap.png", 
+       payroll_win_gap,
+       width = 8, height = 4, units = "in")
+
+payroll_win_gap
+
+
+payroll_gap_plot_wo_2020 <- ggplot(payroll_gap %>% filter(year != 2020), 
+                                   aes(x = year, 
+                                       group = interaction(league, gap_group))) +
+  geom_point(aes(y = payroll_gap, color = league)) +
+  geom_line(aes(y = payroll_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) + 
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Payroll Gap") +
+  labs(color = "League") +
+  ggtitle("League Payroll Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+win_gap_plot_wo_2020 <- ggplot(payroll_gap %>% filter(year != 2020), 
+                               aes(x = year, 
+                                   group = interaction(league, gap_group))) +
+  geom_point(aes(y = win_gap, color = league)) +
+  geom_line(aes(y = win_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Win Gap") +
+  labs(color = "League") +
+  ggtitle("League Win Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+payroll_win_gap_wo_2020 <- ggarrange(payroll_gap_plot_wo_2020, win_gap_plot_wo_2020, 
+          common.legend = TRUE, legend="bottom")
+
+ggsave("figures/payroll_win_gap_wo_2020.png", 
+       payroll_win_gap_wo_2020,
+       width = 8, height = 4, units = "in")
+
+payroll_win_gap_wo_2020
+
+```
+
+## Min, Avg, Max Payroll 
+```{r}
+team_payroll_by_year <- total_payroll %>% group_by(league, year) %>%
+  summarize(
+    avg_team_payroll = mean(amount), 
+    max_team_payroll = max(amount), 
+    min_team_payroll = min(amount), 
+    .groups = "drop"
+  ) %>% bind_rows(
+    total_payroll %>% 
+      group_by(year) %>%
+      summarize(
+        league = "Overall", 
+        avg_team_payroll = mean(amount), 
+        max_team_payroll = max(amount), 
+        min_team_payroll = min(amount), 
+        .groups = "drop"
+        )
+  ) %>% pivot_longer(
+    cols = c(avg_team_payroll, max_team_payroll, min_team_payroll), 
+    names_to = "payroll_type",  
+    values_to = "payroll_value" 
+  ) %>% mutate(
+    gap_group = ifelse(year < 2020, "before_2020", "after_2020")
+  )
+
+league_payroll_by_season <- ggplot(team_payroll_by_year, aes(x = year, 
+                                 group = interaction(league, payroll_type))) +
+  geom_point(aes(y = payroll_value, color = payroll_type)) +
+  geom_line(aes(y = payroll_value, color = payroll_type, linetype = league)) +
+  scale_color_brewer(palette = "Set1") +  
+  scale_linetype_manual(values = c("solid", "dashed", "dotted")) + 
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Team Payroll") +
+  labs(color = "", linetype = "League") +
+  ggtitle("League Payroll by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+ggsave("figures/league_payroll_by_season.png", 
+       league_payroll_by_season,
+       width = 8, height = 4, units = "in")
+
+league_payroll_by_season
+
+league_payroll_by_season_wo_2020 <- ggplot(team_payroll_by_year %>% filter(year != 2020), aes(x = year, 
+                                 group = interaction(league, payroll_type, gap_group))) +
+  geom_point(aes(y = payroll_value, color = payroll_type)) +
+  geom_line(aes(y = payroll_value, color = payroll_type, linetype = league)) +
+  scale_color_brewer(palette = "Set1") +  
+  scale_linetype_manual(values = c("solid", "dashed", "dotted")) + 
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Team Payroll") +
+  labs(color = "", linetype = "League") +
+  ggtitle("League Payroll by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+ggsave("figures/league_payroll_by_season_wo_2020.png", 
+       league_payroll_by_season_wo_2020,
+       width = 8, height = 4, units = "in")
+
+league_payroll_by_season_wo_2020
+```
+
+### Split by Hitter vs Pitcher Payroll 
+
+## Experience Level 
+```{r}
+roster_payroll_data %>% group_by(status) %>%
+  summarise(
+    count = n(), 
+    avg_exp = mean(exp, na.rm = T), 
+    na_exp = sum(is.na(exp)), 
+    na_yrs = sum(is.na(Yrs))
+  ) %>% arrange(desc(count))
+```
+```{r}
+roster_payroll_data <- roster_payroll_data %>%
+  mutate(
+    status = case_when(
+      (is.na(status) & !is.na(exp)) ~ ifelse(exp <= 3, "Pre-Arbitration", 
+                                            ifelse(exp > 3 & exp <= 6, 
+                                                   "Arbitration", "Veteran")), 
+      (is.na(status) & is.na(exp) & 
+         roster %in% 
+         c("Minor", "Active Roster", "Injured List", "Retained/Minor")) ~ "Pre-Arbitration", 
+       TRUE ~ status 
+    )
+  )
+```
+
+```{r}
+roster_payroll_data %>% group_by(status) %>%
+  summarise(
+    count = n(), 
+    avg_exp = mean(exp, na.rm = T), 
+    na_exp = sum(is.na(exp)), 
+    na_yrs = sum(is.na(Yrs))
+  ) %>% arrange(desc(count))
+
+```
+
+```{r}
+copy <- roster_payroll_data %>% select(player, DoB, year, exp, status) %>% 
+  filter(!is.na(status)) %>% distinct()
+
+status_lookup <- roster_payroll_data %>% filter(is.na(status) & is.na(exp)) %>% 
+  left_join(copy, by = join_by(player, DoB, year), suffix = c("", "_matched")) %>%
+    mutate(exp = ifelse(is.na(exp), exp_matched, exp), 
+         status = ifelse(is.na(status), status_matched, status)
+         ) %>%
+  select(-contains("_matched")) %>% distinct()
+
+roster_payroll_data <- bind_rows(roster_payroll_data %>% filter(!(is.na(status) & is.na(exp))), status_lookup) 
+```
+
+
+```{r}
+copy <- roster_payroll_data %>% select(player, DoB, year, exp, status) %>% 
+  filter(!is.na(status)) %>% distinct()
+
+to_join <- roster_payroll_data %>% filter(is.na(status) & roster == "Retained") %>% mutate(
+  prev_year = year - 1
+) 
+
+by_prev <- to_join %>% 
+  left_join(copy, by = join_by(player, DoB, prev_year == year), suffix = c("", "_matched")) %>%
+    mutate(prev_exp = ifelse(is.na(exp), exp_matched, exp), 
+         prev_status = ifelse(is.na(status), status_matched, status), 
+         status = case_when(
+           (prev_status == "Veteran" | prev_exp >= 5) ~ "Veteran", 
+           (prev_status == "Pre-Arbitration" & 
+              (is.na(prev_exp) | prev_exp < 2)) ~ "Pre-Arbitration", 
+           (is.na(prev_status) & is.na(prev_exp)) ~ 
+             ifelse(Yrs <= 3, "Pre-Arbitration", ifelse(Yrs >= 8, "Veteran", "Arbitration")), 
+           TRUE ~ "Arbitration"
+         )
+         ) %>%
+  select(-contains("_matched")) %>% distinct()
+
+roster_payroll_data <- bind_rows(roster_payroll_data %>% filter(!(is.na(status) &
+                                                                    roster == "Retained")),
+                                 roster_payroll_data %>% filter(is.na(player)),
+                                 by_prev)
+```
+
+
+### Plots
+
+```{r}
+roster_payroll_data <- roster_payroll_data %>% 
+  mutate(
+    status_simple = case_when(
+      grepl("Pre-Arbitration", status) ~ "Pre-Arbitration",
+      (grepl("Veteran", status) | status == "Club Exercised") ~ "Veteran", 
+      (grepl("Arbitration", status) | status == "Arb Avoided") ~ "Arbitration", 
+      status == "minor-buried" ~ ifelse(exp < 3, "Pre-Arbitration", "Arbitration"), 
+      exp < 3 ~ "Pre-Arbitration", 
+      exp >= 3 & exp < 6 ~ "Arbitration", 
+      exp >= 6 ~ "Veteran", 
+      TRUE ~ status
+    )
+  )
+
+# roster_payroll_data %>% group_by(status_simple) %>%
+#   summarise(
+#     count = n(), 
+#     na_exp = sum(is.na(exp))
+#   ) %>% arrange(desc(count))
+
+
+status_summary <- roster_payroll_data %>% 
+  filter(!is.na(status_simple) & !is.na(payroll_salary_adjusted)) %>%
+  group_by(team_id, year, status_simple) %>%
+  summarize(
+    num_players = n(),
+    min_salary = min(payroll_salary_adjusted, na.rm = T),
+    max_salary = max(payroll_salary_adjusted, na.rm = T),
+    avg_salary = mean(payroll_salary_adjusted, na.rm = T),
+    total_payroll = sum(payroll_salary_adjusted, na.rm = T), 
+    .groups = "drop"
+  ) %>% 
+  left_join(total_payroll %>% select(amount, rank, team_id, year, league, division, market_size), 
+            by = join_by(team_id, year)) %>%
+  rename(
+    total_payroll_amount = amount, 
+    total_payroll_rank = rank
+  ) %>%
+  left_join(standings %>% select(W, W.L., win_variability, team_id, year), 
+            by = join_by(team_id, year))
+
+#top <- test %>% group_by(status_simple) %>% slice_max(count, n = 10)
+
+
+```
+
+```{r}
+status_summary <- status_summary %>% 
+  mutate(status_simple = factor(status_simple, 
+                                levels = c("Pre-Arbitration", "Arbitration", "Veteran")))
+
+player_designation_distribution <- ggplot(status_summary %>% filter(year != 2020), aes(x = W, 
+                                 group = interaction(status_simple))) +
+  geom_point(aes(y = num_players, color = status_simple)) +
+  theme_bw() +
+  xlab("Wins") +
+  ylab("Number of Players") +
+  labs(color = "") +
+  ggtitle("Player Designation Distribution") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/player_designation_distribution.png", 
+       player_designation_distribution,
+       width = 8, height = 4, units = "in")
+
+player_designation_distribution
+
+payroll_player_distribution <- ggplot(status_summary %>% filter(year != 2020), aes(x = total_payroll_amount, 
+                                 group = interaction(status_simple))) +
+  geom_point(aes(y = avg_salary, color = status_simple)) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Total Payroll Amount") +
+  ylab("Avgerage Player Salary") +
+  labs(color = "", linetype = "League") +
+  ggtitle("Payroll Player Distribution") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_player_distribution.png", 
+       payroll_player_distribution,
+       width = 8, height = 4, units = "in")
+
+payroll_player_distribution
+
+```
+
+# DEA
+
+```{r}
+payroll_data %>% group_by(status) %>%
+  summarise(
+    count = n(), 
+    avg_exp = mean(exp, na.rm = T), 
+    na_exp = sum(is.na(exp))
+  ) %>% arrange(desc(count))
+
+missing_status <- payroll_data %>% filter(is.na(status))
+```
+
+```{r}
+status_summary_wide <- status_summary %>% 
+  pivot_wider(names_from = status_simple, 
+              values_from = c(num_players, min_salary, max_salary, avg_salary, total_payroll), 
+              names_glue = "{status_simple}_{.value}") %>%
+  rename_with(~ str_to_lower(str_replace_all(., "-", "_"))) %>% 
+  mutate(across(c("pre_arbitration_total_payroll", "arbitration_total_payroll", "veteran_total_payroll"), 
+                 ~ . / 1e6, 
+                .names = "{.col}_millions"))
+
+```
+
+```{r}
+efficiency_data <- data.frame()
+
+for (year in 2015:2024){
+  dea_data <- make_deadata(status_summary_wide %>% filter(year == !!year), 
+                           ni= 3, no = 1, dmus = "team_id", inputs = c("pre_arbitration_total_payroll_millions", "arbitration_total_payroll_millions", "veteran_total_payroll_millions"), outputs = "w")
+  
+  model <- model_basic(dea_data, rts = "vrs")
+
+  efficiency <- data.frame(efficiencies(model))
+  colnames(efficiency) <- c("efficiency")
+  
+  # Ensure team_id remains a character column
+  efficiency <- efficiency %>%
+    mutate(team_id = as.character(rownames(.)), year = year) %>%
+    select(team_id, year, efficiency)  # Ensure correct column order
+  
+  rownames(efficiency) <- NULL
+  
+  efficiency_data <- bind_rows(efficiency_data, efficiency)
+}
+
+
+efficiency_data <- efficiency_data %>% left_join(status_summary_wide, by=join_by(team_id, year))
+
+```
+
+
+```{r}
+dea_data <- make_deadata(status_summary_wide %>% filter(year == 2024), 
+                         dmus = "team_id", 
+                         inputs = c("pre_arbitration_total_payroll_millions", 
+                                    "veteran_total_payroll_millions"), 
+                         outputs = "w")
+  
+model <- model_basic(dea_data, rts = "vrs")
+
+data.frame(efficiencies(model))
+
+```
+
+```{r}
+ggplot(efficiency_data, aes(x = w.l.)) +
+  geom_point(aes(y = efficiency)) +
+  theme_bw() +
+  xlab("Win Percentage") +
+  ylab("Efficiency") +
+  #labs(color = "", linetype = "League") +
+  ggtitle("Wins vs Efficiency") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(efficiency_data , aes(x = total_payroll_amount)) +
+  geom_point(aes(y = efficiency)) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Total Payroll") +
+  ylab("Efficiency") +
+  ggtitle("Payroll vs Efficiency") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(efficiency_data %>% filter(year != 2020) , aes(x = total_payroll_amount)) +
+  geom_point(aes(y = efficiency)) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Total Payroll") +
+  ylab("Efficiency") +
+  ggtitle("Payroll vs Efficiency") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+efficiency_data <- efficiency_data %>% mutate(eff_w = w / efficiency)
+ggplot(efficiency_data , aes(x = w)) +
+  geom_point(aes(y = eff_w)) +
+  theme_bw() +
+  xlab("Wins") +
+  ylab("Efficient wins") +
+  ggtitle("Games Won vs Efficient Games Won") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+```{r}
+library(corrplot)
+correlations <- cor(efficiency_data %>% select(-c(team_id, year, league, division)))
+
+corrplot(correlations)
+```
+
+```{r}
+correlations <- cor(efficiency_data %>% 
+                      filter(year != 2020) %>% 
+                      select(efficiency, total_payroll_amount, w, 
+                             contains("_num_players"), contains("_total_payroll")))
+
+
+corrplot(correlations, type = 'upper')
+```
+
+# Win Variance 
+```{r}
+status_summary_wide <- status_summary %>% 
+  pivot_wider(names_from = status_simple, 
+              values_from = c(num_players, min_salary, max_salary, avg_salary, total_payroll), 
+              names_glue = "{status_simple}_{.value}") %>%
+  rename_with(~ str_to_lower(str_replace_all(., "-", "_"))) %>%
+  mutate(
+    market_size_cat = case_when(
+      market_size >= 5e6 ~ "large", 
+      market_size < 5e6 & market_size >= 2.5e6 ~ "mid", 
+      market_size < 2.5e6 ~ "small"
+    ), 
+    market_size_cat = factor(market_size_cat, levels = c("small", "mid", "large"))
+  )
+  
+
+test <- status_summary_wide %>% 
+  filter(year != 2020) %>% 
+  group_by(team_id) %>%
+  summarize(
+    win_sd = sd(w), 
+    total_payroll = sum(total_payroll_amount), 
+    avg_payroll = mean(total_payroll_amount), 
+    total_veteran_payroll = sum(veteran_total_payroll), 
+    avg_veteran_payroll = mean(veteran_total_payroll), 
+    total_arbitration_payroll = sum(arbitration_total_payroll), 
+    avg_arbitration_payroll = mean(arbitration_total_payroll), 
+    total_pre_arbitration_payroll = sum(pre_arbitration_total_payroll), 
+    avg_pre_arbitration_payroll = mean(pre_arbitration_total_payroll), 
+    market_size_cat = first(market_size_cat)
+  )
+  
+
+ggplot(test, aes(x = avg_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  ylim(0, max(test$win_sd)) + 
+  xlab("Average Total Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+ggplot(test, aes(x = avg_veteran_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e9, suffix = "B")) +
+  ylim(0, max(test$win_sd)) + 
+  xlab("Average Total Veteran Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+ggplot(test, aes(x = avg_arbitration_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e9, suffix = "B")) +
+  ylim(0, max(test$win_sd)) + 
+  xlab("Average Total Arbitration Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+
+ggplot(test, aes(x = avg_pre_arbitration_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  ylim(0, max(test$win_sd)) + 
+  xlab("Average Total Pre-Arbitration Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+```
+
+
+```{r}
+status_summary_wo_2020 <- status_summary_wide %>% 
+  filter(year != 2020) %>%
+  group_by(team_id) %>%
+  mutate(
+    win_sd = sd(w)
+  )
+
+model <- lm(w ~ total_payroll_amount + team_id * as.factor(year), 
+   data = status_summary_wo_2020)
+
+
+summary(model)
+```
+```{r}
+library(plm)
+library(lmtest)
+
+win_fe_mod <- plm(w ~ veteran_total_payroll + arbitration_total_payroll + pre_arbitration_total_payroll, 
+                    data = status_summary_wo_2020,
+                    index = c("team_id", "year"), 
+                    model = "within")
+
+summary(win_fe_mod)
+
+#coeftest(win_fe_mod, vcov. = vcovHC, type = "HC1")
+```
+
+```{r}
+win_market_fe_mod <- plm(w ~ total_payroll_amount + market_size, 
+                         data = status_summary_wo_2020, 
+                         index = c("team_id", "year"), 
+                         model="within")
+
+summary(win_market_fe_mod)
+
+```
+
+```{r}
+df <- pdata.frame(status_summary_wo_2020, index = c("team_id", "year"))
+
+fe_model <- plm(w ~ pre_arbitration_total_payroll + arbitration_total_payroll + veteran_total_payroll, 
+                data = df, 
+                model = "within", 
+                effect = "individual")
+summary(fe_model)
+
+# re_model <- plm(w ~ pre_arbitration_total_payroll + arbitration_total_payroll + veteran_total_payroll, 
+#                 data = df, 
+#                 model = "random")
+# summary(re_model)
+# 
+# phtest(fe_model, re_model)
+
+
+```
+
+```{r}
+fe_model <- plm(win_variability ~ pre_arbitration_total_payroll + arbitration_total_payroll + veteran_total_payroll, 
+                data = df, 
+                model = "within", 
+                effect = "individual")
+summary(fe_model)
+```

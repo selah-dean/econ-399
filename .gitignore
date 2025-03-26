@@ -1,0 +1,12 @@
+# Ignore .Rhistory files
+.Rhistory
+
+# Ignore .Rdata files (R workspace files)
+.Rdata
+
+# Ignore .Rproj.user directories (RStudio project-specific files)
+.Rproj.user/
+
+# Ignore other common files or folders you don't want to track
+*.log
+*.tmp

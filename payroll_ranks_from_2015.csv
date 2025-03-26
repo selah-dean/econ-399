@@ -1,0 +1,1554 @@
+,player_type,amount,rank,team,year
+0,Active Roster,"$45,142,733",28th,arizona-diamondbacks,2015
+1,Injured List,"$1,026,500",26th,arizona-diamondbacks,2015
+2,Retained,"$30,465,028",6th,arizona-diamondbacks,2015
+3,Minor,"$147,540",25th,arizona-diamondbacks,2015
+4,Total Adjusted Payroll Allocations,"$76,781,801",28th,arizona-diamondbacks,2015
+5,Active Roster,"$42,311,467",29th,athletics,2015
+6,Injured List,"$8,772,896",17th,athletics,2015
+7,Retained,"$29,168,581",8th,athletics,2015
+8,Minor,"$238,395",22nd,athletics,2015
+9,Total Adjusted Payroll Allocations,"$80,491,339",26th,athletics,2015
+10,Active Roster,"$54,961,789",24th,atlanta-braves,2015
+11,Injured List,"$11,263,899",13th,atlanta-braves,2015
+12,Retained,"$44,307,649",4th,atlanta-braves,2015
+13,Minor,"$244,042",21st,atlanta-braves,2015
+14,Total Adjusted Payroll Allocations,"$110,777,379",18th,atlanta-braves,2015
+15,Active Roster,"$105,883,315",12th,baltimore-orioles,2015
+16,Injured List,"$1,245,000",25th,baltimore-orioles,2015
+17,Retained,"$8,976,584",20th,baltimore-orioles,2015
+18,Minor,"$295,971",18th,baltimore-orioles,2015
+19,Total Adjusted Payroll Allocations,"$116,400,870",16th,baltimore-orioles,2015
+20,Active Roster,"$95,030,446",16th,boston-red-sox,2015
+21,Injured List,"$42,985,571",1st,boston-red-sox,2015
+22,Retained,"$45,443,277",3rd,boston-red-sox,2015
+23,Minor,"$22,184",28th,boston-red-sox,2015
+24,Total Adjusted Payroll Allocations,"$183,481,478",3rd,boston-red-sox,2015
+25,Active Roster,"$106,652,384",9th,chicago-cubs,2015
+26,Injured List,"$1,000,000",28th,chicago-cubs,2015
+27,Retained,"$23,656,617",12th,chicago-cubs,2015
+28,Minor,"$1,684,809",5th,chicago-cubs,2015
+29,Total Adjusted Payroll Allocations,"$132,993,810",11th,chicago-cubs,2015
+30,Active Roster,"$94,365,735",17th,chicago-white-sox,2015
+31,Injured List,"$507,500",30th,chicago-white-sox,2015
+32,Reserve/Suspended,"$13,000,000",1st,chicago-white-sox,2015
+33,Retained,"$9,052,252",19th,chicago-white-sox,2015
+34,Total Adjusted Payroll Allocations,"$116,925,487",15th,chicago-white-sox,2015
+35,Active Roster,"$68,445,559",21st,cincinnati-reds,2015
+36,Injured List,"$22,890,777",6th,cincinnati-reds,2015
+37,Retained,"$20,832,787",13th,cincinnati-reds,2015
+38,Minor,"$163,974",24th,cincinnati-reds,2015
+39,Total Adjusted Payroll Allocations,"$112,333,097",17th,cincinnati-reds,2015
+40,Active Roster,"$45,520,977",27th,cleveland-guardians,2015
+41,Injured List,"$680,720",29th,cleveland-guardians,2015
+42,Retained,"$29,817,050",7th,cleveland-guardians,2015
+43,Minor,"$1,385,666",6th,cleveland-guardians,2015
+44,Total Adjusted Payroll Allocations,"$77,404,413",27th,cleveland-guardians,2015
+45,Active Roster,"$74,930,648",20th,colorado-rockies,2015
+46,Injured List,"$6,103,870",20th,colorado-rockies,2015
+47,Retained,"$19,940,868",14th,colorado-rockies,2015
+48,Minor,"$301,665",17th,colorado-rockies,2015
+49,Total Adjusted Payroll Allocations,"$101,277,051",22nd,colorado-rockies,2015
+50,Active Roster,"$109,879,336",8th,detroit-tigers,2015
+51,Injured List,"$27,072,978",4th,detroit-tigers,2015
+52,Retained,"$25,208,607",11th,detroit-tigers,2015
+53,Total Adjusted Payroll Allocations,"$162,160,921",6th,detroit-tigers,2015
+54,Active Roster,"$64,818,398",22nd,houston-astros,2015
+55,Injured List,"$11,040,900",14th,houston-astros,2015
+56,Retained,"$3,150,680",25th,houston-astros,2015
+57,Minor,"$2,331,568",4th,houston-astros,2015
+58,Total Adjusted Payroll Allocations,"$81,341,546",25th,houston-astros,2015
+59,Active Roster,"$111,740,891",7th,kansas-city-royals,2015
+60,Injured List,"$10,483,450",16th,kansas-city-royals,2015
+61,Retained,"$4,047,582",23rd,kansas-city-royals,2015
+62,Minor,"$257,912",20th,kansas-city-royals,2015
+63,Total Adjusted Payroll Allocations,"$126,529,835",13th,kansas-city-royals,2015
+64,Active Roster,"$106,512,083",10th,los-angeles-angels,2015
+65,Injured List,"$19,015,000",8th,los-angeles-angels,2015
+66,Retained,"$16,043,722",16th,los-angeles-angels,2015
+67,Minor,"$627,357",8th,los-angeles-angels,2015
+68,Total Adjusted Payroll Allocations,"$142,198,162",8th,los-angeles-angels,2015
+69,Active Roster,"$202,137,688",1st,los-angeles-dodgers,2015
+70,Injured List,"$20,914,084",7th,los-angeles-dodgers,2015
+71,Retained,"$68,164,195",1st,los-angeles-dodgers,2015
+72,Minor,"$10,519,113",1st,los-angeles-dodgers,2015
+73,Total Adjusted Payroll Allocations,"$301,735,080",1st,los-angeles-dodgers,2015
+74,Active Roster,"$37,571,144",30th,miami-marlins,2015
+75,Injured List,"$15,751,830",10th,miami-marlins,2015
+76,Retained,"$19,528,890",15th,miami-marlins,2015
+77,Minor,"$138,661",26th,miami-marlins,2015
+78,Total Adjusted Payroll Allocations,"$72,990,525",30th,miami-marlins,2015
+79,Active Roster,"$58,772,714",23rd,milwaukee-brewers,2015
+80,Injured List,"$1,020,000",27th,milwaukee-brewers,2015
+81,Retained,"$33,510,458",5th,milwaukee-brewers,2015
+82,Minor,"$549,095",9th,milwaukee-brewers,2015
+83,Total Adjusted Payroll Allocations,"$93,852,267",24th,milwaukee-brewers,2015
+84,Active Roster,"$101,448,147",14th,minnesota-twins,2015
+85,Injured List,"$2,070,081",23rd,minnesota-twins,2015
+86,Retained,"$2,200,000",27th,minnesota-twins,2015
+87,Minor,"$513,590",11th,minnesota-twins,2015
+88,Total Adjusted Payroll Allocations,"$106,231,818",21st,minnesota-twins,2015
+89,Active Roster,"$103,930,260",13th,new-york-mets,2015
+90,Injured List,"$5,551,249",21st,new-york-mets,2015
+91,Suspended/Restricted,"$311,967",1st,new-york-mets,2015
+92,Retained,"$129,200",29th,new-york-mets,2015
+93,Minor,"$476,251",12th,new-york-mets,2015
+94,Total Adjusted Payroll Allocations,"$110,398,927",19th,new-york-mets,2015
+95,Active Roster,"$187,465,727",2nd,new-york-yankees,2015
+96,Injured List,"$24,415,379",5th,new-york-yankees,2015
+97,Reserve/Suspended,"$507,500",2nd,new-york-yankees,2015
+98,Retained,"$8,459,561",21st,new-york-yankees,2015
+99,Minor,"$394,492",16th,new-york-yankees,2015
+100,Total Adjusted Payroll Allocations,"$221,242,659",2nd,new-york-yankees,2015
+101,Active Roster,"$52,800,331",25th,philadelphia-phillies,2015
+102,Injured List,"$33,290,177",3rd,philadelphia-phillies,2015
+103,Retained,"$51,719,664",2nd,philadelphia-phillies,2015
+104,Minor,"$3,912,467",2nd,philadelphia-phillies,2015
+105,Total Adjusted Payroll Allocations,"$141,722,639",9th,philadelphia-phillies,2015
+106,Active Roster,"$81,904,030",19th,pittsburgh-pirates,2015
+107,Injured List,"$14,318,868",11th,pittsburgh-pirates,2015
+108,Retained,"$2,759,768",26th,pittsburgh-pirates,2015
+109,Minor,"$452,940",13th,pittsburgh-pirates,2015
+110,Total Adjusted Payroll Allocations,"$99,435,606",23rd,pittsburgh-pirates,2015
+111,Active Roster,"$93,212,255",18th,san-diego-padres,2015
+112,Injured List,"$11,029,819",15th,san-diego-padres,2015
+113,Retained,"$3,267,222",24th,san-diego-padres,2015
+114,Minor,"$405,976",15th,san-diego-padres,2015
+115,Total Adjusted Payroll Allocations,"$107,915,272",20th,san-diego-padres,2015
+116,Active Roster,"$133,109,385",4th,san-francisco-giants,2015
+117,Injured List,"$38,423,837",2nd,san-francisco-giants,2015
+118,Retained,"$7,522,089",22nd,san-francisco-giants,2015
+119,Minor,"$1,108,319",7th,san-francisco-giants,2015
+120,Total Adjusted Payroll Allocations,"$180,163,630",4th,san-francisco-giants,2015
+121,Active Roster,"$95,874,782",15th,seattle-mariners,2015
+122,Injured List,"$1,383,169",24th,seattle-mariners,2015
+123,Retained,"$25,921,321",9th,seattle-mariners,2015
+124,Minor,"$2,866,201",3rd,seattle-mariners,2015
+125,Total Adjusted Payroll Allocations,"$126,045,473",14th,seattle-mariners,2015
+126,Active Roster,"$128,814,787",5th,st-louis-cardinals,2015
+127,Injured List,"$3,195,000",22nd,st-louis-cardinals,2015
+128,Minor,"$169,164",23rd,st-louis-cardinals,2015
+129,Total Adjusted Payroll Allocations,"$132,178,951",12th,st-louis-cardinals,2015
+130,Active Roster,"$52,092,948",26th,tampa-bay-rays,2015
+131,Injured List,"$8,440,963",18th,tampa-bay-rays,2015
+132,Retained,"$12,164,597",17th,tampa-bay-rays,2015
+133,Minor,"$543,044",10th,tampa-bay-rays,2015
+134,Total Adjusted Payroll Allocations,"$73,241,552",29th,tampa-bay-rays,2015
+135,Active Roster,"$125,715,876",6th,texas-rangers,2015
+136,Injured List,"$13,135,760",12th,texas-rangers,2015
+137,Retained,"$10,018,970",18th,texas-rangers,2015
+138,Minor,"$415,001",14th,texas-rangers,2015
+139,Total Adjusted Payroll Allocations,"$149,285,607",7th,texas-rangers,2015
+140,Active Roster,"$106,426,104",11th,toronto-blue-jays,2015
+141,Injured List,"$6,382,500",19th,toronto-blue-jays,2015
+142,Retained,"$25,214,964",10th,toronto-blue-jays,2015
+143,Minor,"$286,096",19th,toronto-blue-jays,2015
+144,Total Adjusted Payroll Allocations,"$138,309,664",10th,toronto-blue-jays,2015
+145,Active Roster,"$146,009,803",3rd,washington-nationals,2015
+146,Injured List,"$17,556,549",9th,washington-nationals,2015
+147,Retained,"$2,000,000",28th,washington-nationals,2015
+148,Minor,"$88,743",27th,washington-nationals,2015
+149,Total Adjusted Payroll Allocations,"$165,655,095",5th,washington-nationals,2015
+150,Active Roster,"$78,823,003",18th,arizona-diamondbacks,2016
+151,Injured List,"$1,051,200",28th,arizona-diamondbacks,2016
+152,Retained,"$17,455,091",12th,arizona-diamondbacks,2016
+153,Minor,"$545,188",17th,arizona-diamondbacks,2016
+154,Total Adjusted Payroll Allocations,"$97,874,482",22nd,arizona-diamondbacks,2016
+155,Active Roster,"$28,084,351",29th,athletics,2016
+156,Injured List,"$19,754,414",8th,athletics,2016
+157,Retained,"$35,098,597",6th,athletics,2016
+158,Minor,"$171,926",23rd,athletics,2016
+159,Total Adjusted Payroll Allocations,"$83,109,288",27th,athletics,2016
+160,Active Roster,"$46,676,093",27th,atlanta-braves,2016
+161,Injured List,"$8,116,832",18th,atlanta-braves,2016
+162,Retained,"$41,248,677",5th,atlanta-braves,2016
+163,Minor,"$244,024",20th,atlanta-braves,2016
+164,Total Adjusted Payroll Allocations,"$95,778,126",24th,atlanta-braves,2016
+165,Active Roster,"$148,307,663",7th,baltimore-orioles,2016
+166,Injured List,"$2,650,245",24th,baltimore-orioles,2016
+167,Retained,"$2,773,173",28th,baltimore-orioles,2016
+168,Minor,"$417,751",18th,baltimore-orioles,2016
+169,Total Adjusted Payroll Allocations,"$154,148,832",9th,baltimore-orioles,2016
+170,Active Roster,"$165,121,274",4th,boston-red-sox,2016
+171,Injured List,"$19,567,513",9th,boston-red-sox,2016
+172,Retained,"$2,194,948",29th,boston-red-sox,2016
+173,Minor,"$20,875,101",1st,boston-red-sox,2016
+174,Total Adjusted Payroll Allocations,"$207,758,836",3rd,boston-red-sox,2016
+175,Active Roster,"$165,798,832",3rd,chicago-cubs,2016
+176,Injured List,"$2,050,500",26th,chicago-cubs,2016
+177,Retained,"$17,412,586",13th,chicago-cubs,2016
+178,Minor,"$1,510,576",9th,chicago-cubs,2016
+179,Total Adjusted Payroll Allocations,"$186,772,494",5th,chicago-cubs,2016
+180,Active Roster,"$88,724,466",16th,chicago-white-sox,2016
+181,Injured List,"$12,024,268",13th,chicago-white-sox,2016
+182,Retained,"$28,966,952",9th,chicago-white-sox,2016
+183,Total Adjusted Payroll Allocations,"$129,715,686",16th,chicago-white-sox,2016
+184,Active Roster,"$63,783,665",21st,cincinnati-reds,2016
+185,Injured List,"$11,856,070",15th,cincinnati-reds,2016
+186,Retained,"$10,862,757",19th,cincinnati-reds,2016
+187,Minor,"$723,945",13th,cincinnati-reds,2016
+188,Total Adjusted Payroll Allocations,"$87,226,437",25th,cincinnati-reds,2016
+189,Active Roster,"$61,284,062",22nd,cleveland-guardians,2016
+190,Injured List,"$11,875,000",14th,cleveland-guardians,2016
+191,Reserve/Suspended,"$1,000,000",1st,cleveland-guardians,2016
+192,Retained,"$30,765,065",8th,cleveland-guardians,2016
+193,Minor,"$47,141",26th,cleveland-guardians,2016
+194,Total Adjusted Payroll Allocations,"$104,971,268",18th,cleveland-guardians,2016
+195,Active Roster,"$88,354,041",17th,colorado-rockies,2016
+196,Injured List,"$1,289,832",27th,colorado-rockies,2016
+197,Retained,"$16,710,362",14th,colorado-rockies,2016
+198,Minor,"$548,045",16th,colorado-rockies,2016
+199,Total Adjusted Payroll Allocations,"$106,902,280",17th,colorado-rockies,2016
+200,Active Roster,"$163,019,728",5th,detroit-tigers,2016
+201,Injured List,"$28,189,200",3rd,detroit-tigers,2016
+202,Retained,"$8,675,064",22nd,detroit-tigers,2016
+203,Minor,"$295,293",19th,detroit-tigers,2016
+204,Total Adjusted Payroll Allocations,"$200,179,285",4th,detroit-tigers,2016
+205,Active Roster,"$75,441,606",19th,houston-astros,2016
+206,Injured List,"$6,968,124",19th,houston-astros,2016
+207,Retained,"$15,955,584",15th,houston-astros,2016
+208,Minor,"$2,113,693",7th,houston-astros,2016
+209,Total Adjusted Payroll Allocations,"$99,828,742",20th,houston-astros,2016
+210,Active Roster,"$106,349,212",13th,kansas-city-royals,2016
+211,Injured List,"$20,825,000",7th,kansas-city-royals,2016
+212,Retained,"$14,210,664",16th,kansas-city-royals,2016
+213,Minor,"$202,482",21st,kansas-city-royals,2016
+214,Total Adjusted Payroll Allocations,"$141,587,358",14th,kansas-city-royals,2016
+215,Active Roster,"$89,811,509",15th,los-angeles-angels,2016
+216,Injured List,"$39,667,205",2nd,los-angeles-angels,2016
+217,Retained,"$42,327,190",4th,los-angeles-angels,2016
+218,Minor,"$2,484,469",5th,los-angeles-angels,2016
+219,Total Adjusted Payroll Allocations,"$174,290,373",7th,los-angeles-angels,2016
+220,Active Roster,"$193,881,011",1st,los-angeles-dodgers,2016
+221,Injured List,"$13,288,890",12th,los-angeles-dodgers,2016
+222,Retained,"$52,652,847",1st,los-angeles-dodgers,2016
+223,Minor,"$4,647,746",3rd,los-angeles-dodgers,2016
+224,Total Adjusted Payroll Allocations,"$264,470,494",1st,los-angeles-dodgers,2016
+225,Active Roster,"$60,842,038",23rd,miami-marlins,2016
+226,Injured List,"$3,300,000",23rd,miami-marlins,2016
+227,Retained,"$10,032,559",20th,miami-marlins,2016
+228,Minor,"$2,190,709",6th,miami-marlins,2016
+229,Total Adjusted Payroll Allocations,"$76,365,306",28th,miami-marlins,2016
+230,Active Roster,"$49,464,613",26th,milwaukee-brewers,2016
+231,Injured List,"$2,517,700",25th,milwaukee-brewers,2016
+232,Retained,"$8,299,097",23rd,milwaukee-brewers,2016
+233,Minor,"$1,879,781",8th,milwaukee-brewers,2016
+234,Total Adjusted Payroll Allocations,"$62,161,191",30th,milwaukee-brewers,2016
+235,Active Roster,"$66,477,950",20th,minnesota-twins,2016
+236,Injured List,"$24,241,532",4th,minnesota-twins,2016
+237,Retained,"$3,663,294",26th,minnesota-twins,2016
+238,Minor,"$2,861,681",4th,minnesota-twins,2016
+239,Total Adjusted Payroll Allocations,"$97,244,457",23rd,minnesota-twins,2016
+240,Active Roster,"$101,296,332",14th,new-york-mets,2016
+241,Injured List,"$39,822,605",1st,new-york-mets,2016
+242,Retained,"$6,117,623",25th,new-york-mets,2016
+243,Total Adjusted Payroll Allocations,"$147,236,560",12th,new-york-mets,2016
+244,Active Roster,"$159,213,515",6th,new-york-yankees,2016
+245,Injured List,"$10,509,409",17th,new-york-yankees,2016
+246,Retained,"$50,238,466",2nd,new-york-yankees,2016
+247,Minor,"$781,986",10th,new-york-yankees,2016
+248,Total Adjusted Payroll Allocations,"$220,743,376",2nd,new-york-yankees,2016
+249,Active Roster,"$53,797,706",25th,philadelphia-phillies,2016
+250,Injured List,"$22,025,303",5th,philadelphia-phillies,2016
+251,Retained,"$21,909,132",10th,philadelphia-phillies,2016
+252,Minor,"$6,166,668",2nd,philadelphia-phillies,2016
+253,Total Adjusted Payroll Allocations,"$103,898,809",19th,philadelphia-phillies,2016
+254,Active Roster,"$57,311,465",24th,pittsburgh-pirates,2016
+255,Injured List,"$10,861,276",16th,pittsburgh-pirates,2016
+256,Retained,"$31,267,751",7th,pittsburgh-pirates,2016
+257,Minor,"$77,644",25th,pittsburgh-pirates,2016
+258,Total Adjusted Payroll Allocations,"$99,518,136",21st,pittsburgh-pirates,2016
+259,Active Roster,"$21,508,794",30th,san-diego-padres,2016
+260,Injured List,"$13,711,664",10th,san-diego-padres,2016
+261,Retained,"$48,181,815",3rd,san-diego-padres,2016
+262,Minor,"$33,286",27th,san-diego-padres,2016
+263,Total Adjusted Payroll Allocations,"$83,435,559",26th,san-diego-padres,2016
+264,Active Roster,"$176,684,532",2nd,san-francisco-giants,2016
+265,Injured List,"$487,120",30th,san-francisco-giants,2016
+266,Retained,"$1,082,965",30th,san-francisco-giants,2016
+267,Minor,"$579,729",14th,san-francisco-giants,2016
+268,Total Adjusted Payroll Allocations,"$178,834,344",6th,san-francisco-giants,2016
+269,Active Roster,"$132,303,221",11th,seattle-mariners,2016
+270,Injured List,"$4,036,934",22nd,seattle-mariners,2016
+271,Retained,"$9,931,590",21st,seattle-mariners,2016
+272,Minor,"$732,035",12th,seattle-mariners,2016
+273,Total Adjusted Payroll Allocations,"$147,003,780",13th,seattle-mariners,2016
+274,Active Roster,"$132,790,389",10th,st-louis-cardinals,2016
+275,Injured List,"$13,596,500",11th,st-louis-cardinals,2016
+276,Retained,"$2,968,981",27th,st-louis-cardinals,2016
+277,Total Adjusted Payroll Allocations,"$149,355,870",10th,st-louis-cardinals,2016
+278,Active Roster,"$36,226,000",28th,tampa-bay-rays,2016
+279,Injured List,"$5,226,100",21st,tampa-bay-rays,2016
+280,Retained,"$20,177,348",11th,tampa-bay-rays,2016
+281,Minor,"$779,101",11th,tampa-bay-rays,2016
+282,Total Adjusted Payroll Allocations,"$62,408,549",29th,tampa-bay-rays,2016
+283,Active Roster,"$134,724,626",8th,texas-rangers,2016
+284,Injured List,"$21,458,018",6th,texas-rangers,2016
+285,Retained,"$6,652,924",24th,texas-rangers,2016
+286,Minor,"$186,122",22nd,texas-rangers,2016
+287,Total Adjusted Payroll Allocations,"$163,021,690",8th,texas-rangers,2016
+288,Active Roster,"$134,332,539",9th,toronto-blue-jays,2016
+289,Injured List,"$1,000,000",29th,toronto-blue-jays,2016
+290,Retained,"$12,644,767",18th,toronto-blue-jays,2016
+291,Minor,"$565,489",15th,toronto-blue-jays,2016
+292,Total Adjusted Payroll Allocations,"$148,385,479",11th,toronto-blue-jays,2016
+293,Active Roster,"$119,416,458",12th,washington-nationals,2016
+294,Injured List,"$5,869,400",20th,washington-nationals,2016
+295,Retained,"$14,207,786",17th,washington-nationals,2016
+296,Minor,"$90,208",24th,washington-nationals,2016
+297,Total Adjusted Payroll Allocations,"$139,583,852",15th,washington-nationals,2016
+298,Active Roster,"$81,644,775",19th,arizona-diamondbacks,2017
+299,Injured List,"$19,379,200",7th,arizona-diamondbacks,2017
+300,Retained,"$1,572,116",30th,arizona-diamondbacks,2017
+301,Minor,"$23,384",30th,arizona-diamondbacks,2017
+302,Total Adjusted Payroll Allocations,"$102,619,475",23rd,arizona-diamondbacks,2017
+303,Active Roster,"$31,723,817",28th,athletics,2017
+304,Injured List,"$1,437,784",23rd,athletics,2017
+305,Retained,"$39,189,018",7th,athletics,2017
+306,Minor,"$1,126,461",12th,athletics,2017
+307,Total Adjusted Payroll Allocations,"$73,477,080",29th,athletics,2017
+308,Active Roster,"$81,963,434",18th,atlanta-braves,2017
+309,Injured List,"$1,997,766",22nd,atlanta-braves,2017
+310,Retained,"$21,037,983",15th,atlanta-braves,2017
+311,Minor,"$269,392",24th,atlanta-braves,2017
+312,Total Adjusted Payroll Allocations,"$105,268,575",21st,atlanta-braves,2017
+313,Active Roster,"$163,560,704",6th,baltimore-orioles,2017
+314,Retained,"$7,267,168",24th,baltimore-orioles,2017
+315,Minor,"$3,301,913",4th,baltimore-orioles,2017
+316,Total Adjusted Payroll Allocations,"$174,129,785",8th,baltimore-orioles,2017
+317,Active Roster,"$172,158,546",2nd,boston-red-sox,2017
+318,Injured List,"$5,941,108",20th,boston-red-sox,2017
+319,Retained,"$30,597,474",11th,boston-red-sox,2017
+320,Minor,"$1,175,380",11th,boston-red-sox,2017
+321,Total Adjusted Payroll Allocations,"$209,872,508",2nd,boston-red-sox,2017
+322,Active Roster,"$161,127,834",7th,chicago-cubs,2017
+323,Retained,"$10,748,400",21st,chicago-cubs,2017
+324,Minor,"$216,302",25th,chicago-cubs,2017
+325,Total Adjusted Payroll Allocations,"$172,092,536",9th,chicago-cubs,2017
+326,Active Roster,"$32,540,383",27th,chicago-white-sox,2017
+327,Injured List,"$7,571,000",15th,chicago-white-sox,2017
+328,Retained,"$44,858,846",4th,chicago-white-sox,2017
+329,Minor,"$525,009",18th,chicago-white-sox,2017
+330,Total Adjusted Payroll Allocations,"$85,495,238",26th,chicago-white-sox,2017
+331,Active Roster,"$64,567,947",23rd,cincinnati-reds,2017
+332,Injured List,"$16,021,450",12th,cincinnati-reds,2017
+333,Retained,"$15,403,006",18th,cincinnati-reds,2017
+334,Minor,"$443,600",19th,cincinnati-reds,2017
+335,Total Adjusted Payroll Allocations,"$96,436,003",25th,cincinnati-reds,2017
+336,Active Roster,"$116,072,319",13th,cleveland-guardians,2017
+337,Injured List,"$6,129,713",19th,cleveland-guardians,2017
+338,Retained,"$10,007,205",22nd,cleveland-guardians,2017
+339,Minor,"$49,691",29th,cleveland-guardians,2017
+340,Total Adjusted Payroll Allocations,"$132,258,928",18th,cleveland-guardians,2017
+341,Active Roster,"$108,379,084",15th,colorado-rockies,2017
+342,Retained,"$30,443,391",12th,colorado-rockies,2017
+343,Minor,"$676,866",14th,colorado-rockies,2017
+344,Total Adjusted Payroll Allocations,"$139,499,341",16th,colorado-rockies,2017
+345,Active Roster,"$91,135,320",17th,detroit-tigers,2017
+346,Injured List,"$18,000,000",8th,detroit-tigers,2017
+347,Retained,"$77,874,916",1st,detroit-tigers,2017
+348,Minor,"$1,018,638",13th,detroit-tigers,2017
+349,Total Adjusted Payroll Allocations,"$188,028,874",5th,detroit-tigers,2017
+350,Active Roster,"$132,170,916",8th,houston-astros,2017
+351,Injured List,"$835,843",26th,houston-astros,2017
+352,Retained,"$3,284,838",29th,houston-astros,2017
+353,Minor,"$2,052,614",8th,houston-astros,2017
+354,Total Adjusted Payroll Allocations,"$138,344,211",17th,houston-astros,2017
+355,Active Roster,"$125,678,691",11th,kansas-city-royals,2017
+356,Injured List,"$1,046,749",25th,kansas-city-royals,2017
+357,Retained,"$19,965,515",16th,kansas-city-royals,2017
+358,Minor,"$1,536,867",9th,kansas-city-royals,2017
+359,Total Adjusted Payroll Allocations,"$148,227,822",13th,kansas-city-royals,2017
+360,Active Roster,"$114,610,825",14th,los-angeles-angels,2017
+361,Injured List,"$16,095,730",11th,los-angeles-angels,2017
+362,Retained,"$34,823,286",9th,los-angeles-angels,2017
+363,Minor,"$631,368",15th,los-angeles-angels,2017
+364,Total Adjusted Payroll Allocations,"$166,161,209",10th,los-angeles-angels,2017
+365,Active Roster,"$184,429,091",1st,los-angeles-dodgers,2017
+366,Injured List,"$22,654,516",5th,los-angeles-dodgers,2017
+367,Retained,"$41,492,656",6th,los-angeles-dodgers,2017
+368,Minor,"$10,735,130",1st,los-angeles-dodgers,2017
+369,Total Adjusted Payroll Allocations,"$259,311,393",1st,los-angeles-dodgers,2017
+370,Active Roster,"$72,360,311",21st,miami-marlins,2017
+371,Injured List,"$21,441,206",6th,miami-marlins,2017
+372,Retained,"$13,782,819",20th,miami-marlins,2017
+373,Minor,"$3,181,263",5th,miami-marlins,2017
+374,Total Adjusted Payroll Allocations,"$110,765,599",20th,miami-marlins,2017
+375,Active Roster,"$57,578,930",25th,milwaukee-brewers,2017
+376,Injured List,"$547,000",27th,milwaukee-brewers,2017
+377,Retained,"$6,033,614",27th,milwaukee-brewers,2017
+378,Minor,"$417,192",20th,milwaukee-brewers,2017
+379,Total Adjusted Payroll Allocations,"$64,576,736",30th,milwaukee-brewers,2017
+380,Active Roster,"$75,616,449",20th,minnesota-twins,2017
+381,Injured List,"$22,830,000",3rd,minnesota-twins,2017
+382,Retained,"$19,497,309",17th,minnesota-twins,2017
+383,Minor,"$2,899,073",7th,minnesota-twins,2017
+384,Total Adjusted Payroll Allocations,"$120,842,831",19th,minnesota-twins,2017
+385,Active Roster,"$48,736,470",26th,new-york-mets,2017
+386,Injured List,"$44,924,726",1st,new-york-mets,2017
+387,Retained,"$49,595,502",3rd,new-york-mets,2017
+388,Minor,"$58,460",28th,new-york-mets,2017
+389,Total Adjusted Payroll Allocations,"$143,315,158",15th,new-york-mets,2017
+390,Active Roster,"$164,826,896",4th,new-york-yankees,2017
+391,Injured List,"$7,867,680",14th,new-york-yankees,2017
+392,Retained,"$36,170,687",8th,new-york-yankees,2017
+393,Minor,"$179,239",26th,new-york-yankees,2017
+394,Total Adjusted Payroll Allocations,"$209,044,502",3rd,new-york-yankees,2017
+395,Active Roster,"$28,213,540",29th,philadelphia-phillies,2017
+396,Injured List,"$16,578,578",10th,philadelphia-phillies,2017
+397,Retained,"$58,889,622",2nd,philadelphia-phillies,2017
+398,Minor,"$339,068",23rd,philadelphia-phillies,2017
+399,Total Adjusted Payroll Allocations,"$104,020,808",22nd,philadelphia-phillies,2017
+400,Active Roster,"$66,496,313",22nd,pittsburgh-pirates,2017
+401,Injured List,"$16,750,000",9th,pittsburgh-pirates,2017
+402,Suspended/Restricted,"$2,750,000",1st,pittsburgh-pirates,2017
+403,Retained,"$14,381,028",19th,pittsburgh-pirates,2017
+404,Minor,"$125,689",27th,pittsburgh-pirates,2017
+405,Total Adjusted Payroll Allocations,"$100,503,030",24th,pittsburgh-pirates,2017
+406,Active Roster,"$23,930,424",30th,san-diego-padres,2017
+407,Injured List,"$5,182,750",21st,san-diego-padres,2017
+408,Retained,"$42,793,983",5th,san-diego-padres,2017
+409,Minor,"$5,014,521",2nd,san-diego-padres,2017
+410,Total Adjusted Payroll Allocations,"$76,921,678",28th,san-diego-padres,2017
+411,Active Roster,"$171,792,784",3rd,san-francisco-giants,2017
+412,Injured List,"$7,219,058",16th,san-francisco-giants,2017
+413,Retained,"$6,354,972",26th,san-francisco-giants,2017
+414,Minor,"$3,039,995",6th,san-francisco-giants,2017
+415,Total Adjusted Payroll Allocations,"$188,406,809",4th,san-francisco-giants,2017
+416,Active Roster,"$120,728,483",12th,seattle-mariners,2017
+417,Injured List,"$29,449,738",2nd,seattle-mariners,2017
+418,Retained,"$9,229,977",23rd,seattle-mariners,2017
+419,Minor,"$1,333,612",10th,seattle-mariners,2017
+420,Total Adjusted Payroll Allocations,"$160,741,810",12th,seattle-mariners,2017
+421,Active Roster,"$107,961,954",16th,st-louis-cardinals,2017
+422,Injured List,"$6,935,000",17th,st-louis-cardinals,2017
+423,Retained,"$29,772,125",13th,st-louis-cardinals,2017
+424,Minor,"$587,006",17th,st-louis-cardinals,2017
+425,Total Adjusted Payroll Allocations,"$145,256,085",14th,st-louis-cardinals,2017
+426,Active Roster,"$63,918,694",24th,tampa-bay-rays,2017
+427,Injured List,"$6,867,218",18th,tampa-bay-rays,2017
+428,Retained,"$7,098,455",25th,tampa-bay-rays,2017
+429,Minor,"$382,917",22nd,tampa-bay-rays,2017
+430,Total Adjusted Payroll Allocations,"$77,811,205",27th,tampa-bay-rays,2017
+431,Active Roster,"$126,415,185",10th,texas-rangers,2017
+432,Injured List,"$1,074,360",24th,texas-rangers,2017
+433,Retained,"$33,856,996",10th,texas-rangers,2017
+434,Minor,"$619,779",16th,texas-rangers,2017
+435,Total Adjusted Payroll Allocations,"$161,966,320",11th,texas-rangers,2017
+436,Active Roster,"$127,315,534",9th,toronto-blue-jays,2017
+437,Injured List,"$22,811,106",4th,toronto-blue-jays,2017
+438,Retained,"$21,914,802",14th,toronto-blue-jays,2017
+439,Minor,"$3,576,045",3rd,toronto-blue-jays,2017
+440,Total Adjusted Payroll Allocations,"$175,617,487",7th,toronto-blue-jays,2017
+441,Active Roster,"$164,539,852",5th,washington-nationals,2017
+442,Injured List,"$11,351,707",13th,washington-nationals,2017
+443,Retained,"$5,952,690",28th,washington-nationals,2017
+444,Minor,"$394,605",21st,washington-nationals,2017
+445,Total Adjusted Payroll Allocations,"$182,238,854",6th,washington-nationals,2017
+446,Active Roster,"$107,901,628",12th,arizona-diamondbacks,2018
+447,Injured List,"$14,124,025",12th,arizona-diamondbacks,2018
+448,Retained,"$5,630,585",26th,arizona-diamondbacks,2018
+449,Minor,"$14,068,359",1st,arizona-diamondbacks,2018
+450,Total Adjusted Payroll Allocations,"$141,724,597",15th,arizona-diamondbacks,2018
+451,Active Roster,"$61,525,657",25th,athletics,2018
+452,Injured List,"$4,972,604",24th,athletics,2018
+453,Retained,"$10,118,631",21st,athletics,2018
+454,Minor,"$1,056,690",11th,athletics,2018
+455,Total Adjusted Payroll Allocations,"$77,673,582",28th,athletics,2018
+456,Active Roster,"$73,767,565",21st,atlanta-braves,2018
+457,Injured List,"$13,299,094",14th,atlanta-braves,2018
+458,Retained,"$42,392,955",4th,atlanta-braves,2018
+459,Minor,"$279,833",27th,atlanta-braves,2018
+460,Total Adjusted Payroll Allocations,"$129,739,447",20th,atlanta-braves,2018
+461,Active Roster,"$69,637,987",22nd,baltimore-orioles,2018
+462,Injured List,"$12,650,000",16th,baltimore-orioles,2018
+463,Reserve/Suspended,"$3,000,000",2nd,baltimore-orioles,2018
+464,Retained,"$43,550,980",3rd,baltimore-orioles,2018
+465,Minor,"$1,574,640",6th,baltimore-orioles,2018
+466,Total Adjusted Payroll Allocations,"$130,413,607",18th,baltimore-orioles,2018
+467,Active Roster,"$167,955,780",1st,boston-red-sox,2018
+468,Injured List,"$18,074,000",10th,boston-red-sox,2018
+469,Retained,"$41,755,860",5th,boston-red-sox,2018
+470,Minor,"$158,220",29th,boston-red-sox,2018
+471,Total Adjusted Payroll Allocations,"$227,398,860",1st,boston-red-sox,2018
+472,Active Roster,"$152,092,957",4th,chicago-cubs,2018
+473,Injured List,"$37,451,220",5th,chicago-cubs,2018
+474,Reserve/Suspended,"$3,200,000",1st,chicago-cubs,2018
+475,Retained,"$1,216,894",30th,chicago-cubs,2018
+476,Minor,"$298,862",26th,chicago-cubs,2018
+477,Total Adjusted Payroll Allocations,"$194,259,933",4th,chicago-cubs,2018
+478,Active Roster,"$57,261,542",26th,chicago-white-sox,2018
+479,Injured List,"$5,920,130",22nd,chicago-white-sox,2018
+480,Retained,"$7,681,442",24th,chicago-white-sox,2018
+481,Minor,"$976,694",13th,chicago-white-sox,2018
+482,Total Adjusted Payroll Allocations,"$71,839,808",29th,chicago-white-sox,2018
+483,Active Roster,"$82,511,299",19th,cincinnati-reds,2018
+484,Injured List,"$1,344,890",28th,cincinnati-reds,2018
+485,Retained,"$15,242,487",19th,cincinnati-reds,2018
+486,Minor,"$1,207,092",9th,cincinnati-reds,2018
+487,Total Adjusted Payroll Allocations,"$100,305,768",25th,cincinnati-reds,2018
+488,Active Roster,"$123,470,545",9th,cleveland-guardians,2018
+489,Injured List,"$12,836,166",15th,cleveland-guardians,2018
+490,Retained,"$5,222,548",27th,cleveland-guardians,2018
+491,Minor,"$1,075,444",10th,cleveland-guardians,2018
+492,Total Adjusted Payroll Allocations,"$142,604,703",14th,cleveland-guardians,2018
+493,Active Roster,"$131,213,168",7th,colorado-rockies,2018
+494,Injured List,"$7,545,000",18th,colorado-rockies,2018
+495,Retained,"$4,442,400",28th,colorado-rockies,2018
+496,Minor,"$767,976",16th,colorado-rockies,2018
+497,Total Adjusted Payroll Allocations,"$143,968,544",13th,colorado-rockies,2018
+498,Active Roster,"$67,047,516",24th,detroit-tigers,2018
+499,Injured List,"$37,720,870",4th,detroit-tigers,2018
+500,Retained,"$24,437,359",13th,detroit-tigers,2018
+501,Minor,"$1,789,604",5th,detroit-tigers,2018
+502,Total Adjusted Payroll Allocations,"$130,995,349",17th,detroit-tigers,2018
+503,Active Roster,"$158,720,510",3rd,houston-astros,2018
+504,Injured List,"$556,400",29th,houston-astros,2018
+505,Retained,"$4,027,264",29th,houston-astros,2018
+506,Minor,"$420,042",22nd,houston-astros,2018
+507,Total Adjusted Payroll Allocations,"$163,724,216",8th,houston-astros,2018
+508,Active Roster,"$83,618,228",17th,kansas-city-royals,2018
+509,Injured List,"$7,189,167",20th,kansas-city-royals,2018
+510,Retained,"$37,811,905",7th,kansas-city-royals,2018
+511,Minor,"$1,325,521",7th,kansas-city-royals,2018
+512,Total Adjusted Payroll Allocations,"$129,944,821",19th,kansas-city-royals,2018
+513,Active Roster,"$91,914,083",15th,los-angeles-angels,2018
+514,Injured List,"$57,532,566",2nd,los-angeles-angels,2018
+515,Retained,"$24,127,380",14th,los-angeles-angels,2018
+516,Minor,"$143,570",30th,los-angeles-angels,2018
+517,Total Adjusted Payroll Allocations,"$173,717,599",7th,los-angeles-angels,2018
+518,Active Roster,"$160,502,596",2nd,los-angeles-dodgers,2018
+519,Injured List,"$3,908,850",26th,los-angeles-dodgers,2018
+520,Retained,"$30,541,679",11th,los-angeles-dodgers,2018
+521,Minor,"$4,628,920",3rd,los-angeles-dodgers,2018
+522,Total Adjusted Payroll Allocations,"$199,582,045",3rd,los-angeles-dodgers,2018
+523,Active Roster,"$43,028,514",29th,miami-marlins,2018
+524,Injured List,"$15,407,490",11th,miami-marlins,2018
+525,Retained,"$31,020,460",10th,miami-marlins,2018
+526,Minor,"$2,204,036",4th,miami-marlins,2018
+527,Total Adjusted Payroll Allocations,"$91,660,500",26th,miami-marlins,2018
+528,Active Roster,"$89,888,839",16th,milwaukee-brewers,2018
+529,Injured List,"$7,321,500",19th,milwaukee-brewers,2018
+530,Retained,"$11,383,150",20th,milwaukee-brewers,2018
+531,Minor,"$388,527",23rd,milwaukee-brewers,2018
+532,Total Adjusted Payroll Allocations,"$108,982,016",22nd,milwaukee-brewers,2018
+533,Active Roster,"$56,283,693",27th,minnesota-twins,2018
+534,Injured List,"$29,213,890",6th,minnesota-twins,2018
+535,Retained,"$29,264,527",12th,minnesota-twins,2018
+536,Minor,"$776,730",15th,minnesota-twins,2018
+537,Total Adjusted Payroll Allocations,"$115,538,840",21st,minnesota-twins,2018
+538,Active Roster,"$82,655,203",18th,new-york-mets,2018
+539,Injured List,"$49,831,436",3rd,new-york-mets,2018
+540,Reserve/Suspended,"$1,792,000",3rd,new-york-mets,2018
+541,Retained,"$15,314,261",18th,new-york-mets,2018
+542,Minor,"$595,087",18th,new-york-mets,2018
+543,Total Adjusted Payroll Allocations,"$150,187,987",12th,new-york-mets,2018
+544,Active Roster,"$148,010,829",5th,new-york-yankees,2018
+545,Injured List,"$22,568,376",8th,new-york-yankees,2018
+546,Retained,"$9,249,414",23rd,new-york-yankees,2018
+547,Minor,"$269,532",28th,new-york-yankees,2018
+548,Total Adjusted Payroll Allocations,"$180,098,151",6th,new-york-yankees,2018
+549,Active Roster,"$97,016,347",13th,philadelphia-phillies,2018
+550,Retained,"$6,936,684",25th,philadelphia-phillies,2018
+551,Minor,"$344,440",24th,philadelphia-phillies,2018
+552,Total Adjusted Payroll Allocations,"$104,297,471",23rd,philadelphia-phillies,2018
+553,Active Roster,"$67,576,415",23rd,pittsburgh-pirates,2018
+554,Injured List,"$4,670,500",25th,pittsburgh-pirates,2018
+555,Retained,"$17,492,114",17th,pittsburgh-pirates,2018
+556,Minor,"$1,286,832",8th,pittsburgh-pirates,2018
+557,Total Adjusted Payroll Allocations,"$91,025,861",27th,pittsburgh-pirates,2018
+558,Active Roster,"$50,099,477",28th,san-diego-padres,2018
+559,Injured List,"$5,702,300",23rd,san-diego-padres,2018
+560,Reserve/Suspended,"$545,000",4th,san-diego-padres,2018
+561,Retained,"$44,479,430",2nd,san-diego-padres,2018
+562,Minor,"$934,608",14th,san-diego-padres,2018
+563,Total Adjusted Payroll Allocations,"$101,760,815",24th,san-diego-padres,2018
+564,Active Roster,"$119,689,218",10th,san-francisco-giants,2018
+565,Injured List,"$64,341,827",1st,san-francisco-giants,2018
+566,Retained,"$21,136,053",15th,san-francisco-giants,2018
+567,Minor,"$498,250",20th,san-francisco-giants,2018
+568,Total Adjusted Payroll Allocations,"$205,665,348",2nd,san-francisco-giants,2018
+569,Active Roster,"$136,839,663",6th,seattle-mariners,2018
+570,Injured List,"$13,496,812",13th,seattle-mariners,2018
+571,Retained,"$9,361,340",22nd,seattle-mariners,2018
+572,Minor,"$546,012",19th,seattle-mariners,2018
+573,Total Adjusted Payroll Allocations,"$160,243,827",10th,seattle-mariners,2018
+574,Active Roster,"$113,741,329",11th,st-louis-cardinals,2018
+575,Injured List,"$27,345,600",7th,st-louis-cardinals,2018
+576,Retained,"$20,907,798",16th,st-louis-cardinals,2018
+577,Minor,"$339,584",25th,st-louis-cardinals,2018
+578,Total Adjusted Payroll Allocations,"$162,334,311",9th,st-louis-cardinals,2018
+579,Active Roster,"$25,668,988",30th,tampa-bay-rays,2018
+580,Injured List,"$2,213,706",27th,tampa-bay-rays,2018
+581,Retained,"$36,028,993",9th,tampa-bay-rays,2018
+582,Minor,"$4,983,450",2nd,tampa-bay-rays,2018
+583,Total Adjusted Payroll Allocations,"$68,895,137",30th,tampa-bay-rays,2018
+584,Active Roster,"$96,239,016",14th,texas-rangers,2018
+585,Injured List,"$6,683,451",21st,texas-rangers,2018
+586,Retained,"$36,936,251",8th,texas-rangers,2018
+587,Minor,"$766,300",17th,texas-rangers,2018
+588,Total Adjusted Payroll Allocations,"$140,625,018",16th,texas-rangers,2018
+589,Active Roster,"$81,293,347",20th,toronto-blue-jays,2018
+590,Injured List,"$20,481,474",9th,toronto-blue-jays,2018
+591,Retained,"$48,740,616",1st,toronto-blue-jays,2018
+592,Minor,"$430,710",21st,toronto-blue-jays,2018
+593,Total Adjusted Payroll Allocations,"$150,946,147",11th,toronto-blue-jays,2018
+594,Active Roster,"$130,197,979",8th,washington-nationals,2018
+595,Injured List,"$8,999,485",17th,washington-nationals,2018
+596,Retained,"$41,161,720",6th,washington-nationals,2018
+597,Minor,"$1,023,425",12th,washington-nationals,2018
+598,Total Adjusted Payroll Allocations,"$181,382,609",5th,washington-nationals,2018
+599,Active Roster,"$65,040,742",26th,arizona-diamondbacks,2019
+600,Injured List,"$11,699,600",13th,arizona-diamondbacks,2019
+601,Retained,"$26,307,583",7th,arizona-diamondbacks,2019
+602,Minor,"$15,624,452",1st,arizona-diamondbacks,2019
+603,Total Adjusted Payroll Allocations,"$118,672,377",19th,arizona-diamondbacks,2019
+604,Active Roster,"$83,509,128",19th,athletics,2019
+605,Injured List,"$622,664",29th,athletics,2019
+606,Retained,"$13,870,505",22nd,athletics,2019
+607,Minor,"$642,234",13th,athletics,2019
+608,Total Adjusted Payroll Allocations,"$98,644,531",25th,athletics,2019
+609,Active Roster,"$117,758,736",11th,atlanta-braves,2019
+610,Injured List,"$8,328,689",20th,atlanta-braves,2019
+611,Retained,"$17,791,906",18th,atlanta-braves,2019
+612,Minor,"$68,632",28th,atlanta-braves,2019
+613,Total Adjusted Payroll Allocations,"$143,947,963",15th,atlanta-braves,2019
+614,Active Roster,"$52,804,601",28th,baltimore-orioles,2019
+615,Injured List,"$9,822,272",17th,baltimore-orioles,2019
+616,Retained,"$8,886,476",25th,baltimore-orioles,2019
+617,Minor,"$1,815,309",7th,baltimore-orioles,2019
+618,Total Adjusted Payroll Allocations,"$73,328,658",28th,baltimore-orioles,2019
+619,Active Roster,"$165,856,221",3rd,boston-red-sox,2019
+620,Injured List,"$37,583,783",3rd,boston-red-sox,2019
+621,Retained,"$25,887,800",9th,boston-red-sox,2019
+622,Minor,"$394,076",16th,boston-red-sox,2019
+623,Total Adjusted Payroll Allocations,"$229,166,880",1st,boston-red-sox,2019
+624,Active Roster,"$197,673,216",1st,chicago-cubs,2019
+625,Injured List,"$11,093,615",14th,chicago-cubs,2019
+626,Retained,"$8,275,227",26th,chicago-cubs,2019
+627,Minor,"$4,538,027",5th,chicago-cubs,2019
+628,Total Adjusted Payroll Allocations,"$221,580,085",3rd,chicago-cubs,2019
+629,Active Roster,"$67,330,431",23rd,chicago-white-sox,2019
+630,Injured List,"$10,267,750",16th,chicago-white-sox,2019
+631,Retained,"$13,080,697",23rd,chicago-white-sox,2019
+632,Minor,"$692,323",12th,chicago-white-sox,2019
+633,Total Adjusted Payroll Allocations,"$91,371,201",26th,chicago-white-sox,2019
+634,Active Roster,"$84,680,306",17th,cincinnati-reds,2019
+635,Injured List,"$580,000",30th,cincinnati-reds,2019
+636,Retained,"$43,074,191",3rd,cincinnati-reds,2019
+637,Minor,"$357,072",18th,cincinnati-reds,2019
+638,Total Adjusted Payroll Allocations,"$128,691,569",17th,cincinnati-reds,2019
+639,Active Roster,"$83,738,008",18th,cleveland-guardians,2019
+640,Injured List,"$6,588,308",22nd,cleveland-guardians,2019
+641,Retained,"$16,165,338",20th,cleveland-guardians,2019
+642,Minor,"$347,039",19th,cleveland-guardians,2019
+643,Total Adjusted Payroll Allocations,"$106,838,693",22nd,cleveland-guardians,2019
+644,Active Roster,"$120,506,596",9th,colorado-rockies,2019
+645,Injured List,"$12,420,904",10th,colorado-rockies,2019
+646,Retained,"$17,868,240",17th,colorado-rockies,2019
+647,Minor,"$4,607,773",4th,colorado-rockies,2019
+648,Total Adjusted Payroll Allocations,"$155,403,513",11th,colorado-rockies,2019
+649,Active Roster,"$72,709,746",21st,detroit-tigers,2019
+650,Injured List,"$14,738,806",9th,detroit-tigers,2019
+651,Retained,"$26,148,511",8th,detroit-tigers,2019
+652,Minor,"$1,034,074",8th,detroit-tigers,2019
+653,Total Adjusted Payroll Allocations,"$114,631,137",20th,detroit-tigers,2019
+654,Active Roster,"$153,370,215",6th,houston-astros,2019
+655,Injured List,"$11,713,065",12th,houston-astros,2019
+656,Retained,"$1,777,467",30th,houston-astros,2019
+657,Minor,"$277,512",21st,houston-astros,2019
+658,Total Adjusted Payroll Allocations,"$167,138,259",8th,houston-astros,2019
+659,Active Roster,"$68,625,332",22nd,kansas-city-royals,2019
+660,Injured List,"$11,895,598",11th,kansas-city-royals,2019
+661,Retained,"$23,207,385",13th,kansas-city-royals,2019
+662,Minor,"$244,688",23rd,kansas-city-royals,2019
+663,Total Adjusted Payroll Allocations,"$103,973,003",23rd,kansas-city-royals,2019
+664,Active Roster,"$118,016,581",10th,los-angeles-angels,2019
+665,Injured List,"$15,868,930",8th,los-angeles-angels,2019
+666,Retained,"$23,964,754",12th,los-angeles-angels,2019
+667,Minor,"$149,200",26th,los-angeles-angels,2019
+668,Total Adjusted Payroll Allocations,"$157,999,465",10th,los-angeles-angels,2019
+669,Active Roster,"$157,394,622",4th,los-angeles-dodgers,2019
+670,Injured List,"$1,341,835",27th,los-angeles-dodgers,2019
+671,Suspended/Restricted,"$555,000",4th,los-angeles-dodgers,2019
+672,Retained,"$41,972,880",4th,los-angeles-dodgers,2019
+673,Minor,"$5,736,477",2nd,los-angeles-dodgers,2019
+674,Total Adjusted Payroll Allocations,"$207,000,814",4th,los-angeles-dodgers,2019
+675,Active Roster,"$66,602,760",24th,miami-marlins,2019
+676,Injured List,"$3,001,903",24th,miami-marlins,2019
+677,Retained,"$4,968,020",28th,miami-marlins,2019
+678,Minor,"$1,023,588",9th,miami-marlins,2019
+679,Total Adjusted Payroll Allocations,"$75,596,271",27th,miami-marlins,2019
+680,Active Roster,"$107,189,797",12th,milwaukee-brewers,2019
+681,Injured List,"$8,283,400",21st,milwaukee-brewers,2019
+682,Retained,"$20,248,718",14th,milwaukee-brewers,2019
+683,Minor,"$167,104",24th,milwaukee-brewers,2019
+684,Total Adjusted Payroll Allocations,"$135,889,019",16th,milwaukee-brewers,2019
+685,Active Roster,"$96,059,595",14th,minnesota-twins,2019
+686,Injured List,"$1,773,872",25th,minnesota-twins,2019
+687,Reserve/Suspended,"$8,000,000",1st,minnesota-twins,2019
+688,Retained,"$19,156,231",16th,minnesota-twins,2019
+689,Minor,"$266,305",22nd,minnesota-twins,2019
+690,Total Adjusted Payroll Allocations,"$125,256,003",18th,minnesota-twins,2019
+691,Active Roster,"$104,490,573",13th,new-york-mets,2019
+692,Injured List,"$16,519,542",7th,new-york-mets,2019
+693,Retained,"$25,220,967",11th,new-york-mets,2019
+694,Minor,"$307,152",20th,new-york-mets,2019
+695,Total Adjusted Payroll Allocations,"$146,538,234",13th,new-york-mets,2019
+696,Active Roster,"$171,935,047",2nd,new-york-yankees,2019
+697,Injured List,"$42,325,463",2nd,new-york-yankees,2019
+698,Suspended/Restricted,"$577,500",3rd,new-york-yankees,2019
+699,Retained,"$7,772,219",27th,new-york-yankees,2019
+700,Minor,"$408,808",15th,new-york-yankees,2019
+701,Total Adjusted Payroll Allocations,"$223,019,037",2nd,new-york-yankees,2019
+702,Active Roster,"$82,703,582",20th,philadelphia-phillies,2019
+703,Injured List,"$67,270,903",1st,philadelphia-phillies,2019
+704,Suspended/Restricted,"$5,350,000",1st,philadelphia-phillies,2019
+705,Retained,"$3,500,513",29th,philadelphia-phillies,2019
+706,Minor,"$151,754",25th,philadelphia-phillies,2019
+707,Total Adjusted Payroll Allocations,"$158,976,752",9th,philadelphia-phillies,2019
+708,Active Roster,"$27,674,108",30th,pittsburgh-pirates,2019
+709,Injured List,"$19,571,272",6th,pittsburgh-pirates,2019
+710,Suspended/Restricted,"$4,500,000",2nd,pittsburgh-pirates,2019
+711,Retained,"$20,053,143",15th,pittsburgh-pirates,2019
+712,Minor,"$377,951",17th,pittsburgh-pirates,2019
+713,Total Adjusted Payroll Allocations,"$72,176,474",29th,pittsburgh-pirates,2019
+714,Active Roster,"$65,446,794",25th,san-diego-padres,2019
+715,Injured List,"$10,746,013",15th,san-diego-padres,2019
+716,Retained,"$25,368,956",10th,san-diego-padres,2019
+717,Minor,"$2,138,027",6th,san-diego-padres,2019
+718,Total Adjusted Payroll Allocations,"$103,699,790",24th,san-diego-padres,2019
+719,Active Roster,"$137,019,224",7th,san-francisco-giants,2019
+720,Injured List,"$9,768,564",18th,san-francisco-giants,2019
+721,Retained,"$31,241,902",6th,san-francisco-giants,2019
+722,Minor,"$24,420",30th,san-francisco-giants,2019
+723,Total Adjusted Payroll Allocations,"$178,054,110",5th,san-francisco-giants,2019
+724,Active Roster,"$84,703,863",16th,seattle-mariners,2019
+725,Injured List,"$5,638,913",23rd,seattle-mariners,2019
+726,Reserve/Suspended,"$1,800,000",2nd,seattle-mariners,2019
+727,Retained,"$51,230,092",2nd,seattle-mariners,2019
+728,Minor,"$1,015,441",11th,seattle-mariners,2019
+729,Total Adjusted Payroll Allocations,"$144,388,309",14th,seattle-mariners,2019
+730,Active Roster,"$135,268,456",8th,st-louis-cardinals,2019
+731,Injured List,"$21,794,083",5th,st-louis-cardinals,2019
+732,Retained,"$16,427,751",19th,st-louis-cardinals,2019
+733,Minor,"$54,133",29th,st-louis-cardinals,2019
+734,Total Adjusted Payroll Allocations,"$173,544,423",6th,st-louis-cardinals,2019
+735,Active Roster,"$54,345,374",27th,tampa-bay-rays,2019
+736,Injured List,"$644,520",28th,tampa-bay-rays,2019
+737,Retained,"$9,084,388",24th,tampa-bay-rays,2019
+738,Minor,"$104,440",27th,tampa-bay-rays,2019
+739,Total Adjusted Payroll Allocations,"$64,178,722",30th,tampa-bay-rays,2019
+740,Active Roster,"$85,904,339",15th,texas-rangers,2019
+741,Injured List,"$26,592,526",4th,texas-rangers,2019
+742,Retained,"$31,252,401",5th,texas-rangers,2019
+743,Minor,"$4,789,500",3rd,texas-rangers,2019
+744,Total Adjusted Payroll Allocations,"$148,538,766",12th,texas-rangers,2019
+745,Active Roster,"$36,637,976",29th,toronto-blue-jays,2019
+746,Injured List,"$8,512,071",19th,toronto-blue-jays,2019
+747,Retained,"$65,351,162",1st,toronto-blue-jays,2019
+748,Minor,"$584,930",14th,toronto-blue-jays,2019
+749,Total Adjusted Payroll Allocations,"$111,086,139",21st,toronto-blue-jays,2019
+750,Active Roster,"$155,857,858",5th,washington-nationals,2019
+751,Injured List,"$1,369,684",26th,washington-nationals,2019
+752,Retained,"$14,062,625",21st,washington-nationals,2019
+753,Minor,"$1,017,641",10th,washington-nationals,2019
+754,Total Adjusted Payroll Allocations,"$172,307,808",7th,washington-nationals,2019
+755,Active Roster,"$20,283,697",27th,arizona-diamondbacks,2020
+756,Exempt List,"$3,000,000",6th,arizona-diamondbacks,2020
+757,Injured List,"$1,589,593",23rd,arizona-diamondbacks,2020
+758,Reserve/Suspended,"$208,704",3rd,arizona-diamondbacks,2020
+759,Retained,"$40,016,446",1st,arizona-diamondbacks,2020
+760,Minor,"$500,312",25th,arizona-diamondbacks,2020
+761,Total Adjusted Payroll Allocations,"$65,598,752",14th,arizona-diamondbacks,2020
+762,Active Roster,"$35,283,875",17th,athletics,2020
+763,Injured List,"$902,038",26th,athletics,2020
+764,Retained,"$113,148",30th,athletics,2020
+765,Minor,"$421,117",26th,athletics,2020
+766,Total Adjusted Payroll Allocations,"$36,720,178",25th,athletics,2020
+767,Active Roster,"$50,458,292",10th,atlanta-braves,2020
+768,Exempt List,"$1,000,000",10th,atlanta-braves,2020
+769,Injured List,"$7,255,497",12th,atlanta-braves,2020
+770,Retained,"$1,000,284",28th,atlanta-braves,2020
+771,Minor,"$838,598",14th,atlanta-braves,2020
+772,Total Adjusted Payroll Allocations,"$60,552,671",16th,atlanta-braves,2020
+773,Active Roster,"$10,252,278",30th,baltimore-orioles,2020
+774,Exempt List,"$296,296",11th,baltimore-orioles,2020
+775,Injured List,"$11,102,531",9th,baltimore-orioles,2020
+776,Retained,"$1,264,595",27th,baltimore-orioles,2020
+777,Minor,"$562,935",22nd,baltimore-orioles,2020
+778,Total Adjusted Payroll Allocations,"$23,478,635",30th,baltimore-orioles,2020
+779,Active Roster,"$36,071,047",16th,boston-red-sox,2020
+780,Exempt List,"$222,222",12th,boston-red-sox,2020
+781,Injured List,"$16,644,224",5th,boston-red-sox,2020
+782,Retained,"$15,553,004",7th,boston-red-sox,2020
+783,Minor,"$15,719,893",1st,boston-red-sox,2020
+784,Total Adjusted Payroll Allocations,"$84,210,390",4th,boston-red-sox,2020
+785,Active Roster,"$66,116,504",3rd,chicago-cubs,2020
+786,Injured List,"$6,448,626",15th,chicago-cubs,2020
+787,Retained,"$12,464,463",12th,chicago-cubs,2020
+788,Minor,"$983,245",10th,chicago-cubs,2020
+789,Total Adjusted Payroll Allocations,"$86,012,838",3rd,chicago-cubs,2020
+790,Active Roster,"$43,034,329",14th,chicago-white-sox,2020
+791,Exempt List,"$208,704",14th,chicago-white-sox,2020
+792,Injured List,"$1,819,815",22nd,chicago-white-sox,2020
+793,Retained,"$7,812,642",15th,chicago-white-sox,2020
+794,Minor,"$789,761",16th,chicago-white-sox,2020
+795,Total Adjusted Payroll Allocations,"$53,665,251",20th,chicago-white-sox,2020
+796,Active Roster,"$51,854,326",8th,cincinnati-reds,2020
+797,Injured List,"$658,696",27th,cincinnati-reds,2020
+798,Retained,"$1,922,138",25th,cincinnati-reds,2020
+799,Minor,"$711,841",19th,cincinnati-reds,2020
+800,Total Adjusted Payroll Allocations,"$55,147,001",18th,cincinnati-reds,2020
+801,Active Roster,"$34,471,070",18th,cleveland-guardians,2020
+802,Injured List,"$209,630",30th,cleveland-guardians,2020
+803,Reserve/Suspended,"$209,185",2nd,cleveland-guardians,2020
+804,Retained,"$3,269,241",21st,cleveland-guardians,2020
+805,Minor,"$1,139,981",7th,cleveland-guardians,2020
+806,Total Adjusted Payroll Allocations,"$39,299,107",24th,cleveland-guardians,2020
+807,Active Roster,"$23,940,328",25th,colorado-rockies,2020
+808,Exempt List,"$5,555,556",4th,colorado-rockies,2020
+809,Injured List,"$17,205,744",3rd,colorado-rockies,2020
+810,Retained,"$30,851,852",2nd,colorado-rockies,2020
+811,Minor,"$958,757",11th,colorado-rockies,2020
+812,Total Adjusted Payroll Allocations,"$67,808,533",12th,colorado-rockies,2020
+813,Active Roster,"$29,636,694",21st,detroit-tigers,2020
+814,Injured List,"$6,108,631",16th,detroit-tigers,2020
+815,Retained,"$6,488,226",18th,detroit-tigers,2020
+816,Minor,"$931,329",12th,detroit-tigers,2020
+817,Total Adjusted Payroll Allocations,"$43,164,880",22nd,detroit-tigers,2020
+818,Active Roster,"$61,406,160",4th,houston-astros,2020
+819,Exempt List,"$1,481,481",7th,houston-astros,2020
+820,Injured List,"$18,763,334",2nd,houston-astros,2020
+821,Retained,"$250,000",29th,houston-astros,2020
+822,Minor,"$754,130",18th,houston-astros,2020
+823,Total Adjusted Payroll Allocations,"$82,655,105",5th,houston-astros,2020
+824,Active Roster,"$25,320,148",24th,kansas-city-royals,2020
+825,Injured List,"$7,094,043",13th,kansas-city-royals,2020
+826,Retained,"$1,464,114",26th,kansas-city-royals,2020
+827,Minor,"$1,056,391",9th,kansas-city-royals,2020
+828,Total Adjusted Payroll Allocations,"$34,934,696",26th,kansas-city-royals,2020
+829,Active Roster,"$56,821,306",6th,los-angeles-angels,2020
+830,Exempt List,"$4,757,308",5th,los-angeles-angels,2020
+831,Injured List,"$509,650",28th,los-angeles-angels,2020
+832,Retained,"$4,356,290",20th,los-angeles-angels,2020
+833,Minor,"$596,339",20th,los-angeles-angels,2020
+834,Total Adjusted Payroll Allocations,"$67,040,893",13th,los-angeles-angels,2020
+835,Active Roster,"$94,165,961",1st,los-angeles-dodgers,2020
+836,Exempt List,"$5,925,926",3rd,los-angeles-dodgers,2020
+837,Injured List,"$493,889",29th,los-angeles-dodgers,2020
+838,Suspended/Restricted,"$208,704",3rd,los-angeles-dodgers,2020
+839,Retained,"$16,917,530",6th,los-angeles-dodgers,2020
+840,Minor,"$7,007,070",3rd,los-angeles-dodgers,2020
+841,Total Adjusted Payroll Allocations,"$124,719,080",1st,los-angeles-dodgers,2020
+842,Active Roster,"$17,388,599",28th,miami-marlins,2020
+843,Injured List,"$2,897,429",20th,miami-marlins,2020
+844,Retained,"$12,335,262",13th,miami-marlins,2020
+845,Minor,"$1,280,630",6th,miami-marlins,2020
+846,Total Adjusted Payroll Allocations,"$33,901,920",27th,miami-marlins,2020
+847,Active Roster,"$28,464,819",22nd,milwaukee-brewers,2020
+848,Exempt List,"$5,925,926",2nd,milwaukee-brewers,2020
+849,Injured List,"$1,203,704",25th,milwaukee-brewers,2020
+850,Retained,"$4,484,938",19th,milwaukee-brewers,2020
+851,Minor,"$1,354,699",5th,milwaukee-brewers,2020
+852,Total Adjusted Payroll Allocations,"$41,434,086",23rd,milwaukee-brewers,2020
+853,Active Roster,"$49,057,558",11th,minnesota-twins,2020
+854,Injured List,"$6,876,058",14th,minnesota-twins,2020
+855,Retained,"$7,313,300",16th,minnesota-twins,2020
+856,Minor,"$840,180",13th,minnesota-twins,2020
+857,Total Adjusted Payroll Allocations,"$59,679,689",17th,minnesota-twins,2020
+858,Active Roster,"$46,360,406",12th,new-york-mets,2020
+859,Exempt List,"$1,393,035",8th,new-york-mets,2020
+860,Injured List,"$15,399,881",6th,new-york-mets,2020
+861,Retained,"$18,418,790",5th,new-york-mets,2020
+862,Minor,"$373,486",27th,new-york-mets,2020
+863,Total Adjusted Payroll Allocations,"$81,945,598",6th,new-york-mets,2020
+864,Active Roster,"$77,215,694",2nd,new-york-yankees,2020
+865,Injured List,"$9,920,725",10th,new-york-yankees,2020
+866,Retained,"$23,982,977",4th,new-york-yankees,2020
+867,Minor,"$819,685",15th,new-york-yankees,2020
+868,Total Adjusted Payroll Allocations,"$111,939,081",2nd,new-york-yankees,2020
+869,Active Roster,"$57,105,401",5th,philadelphia-phillies,2020
+870,Injured List,"$13,236,891",7th,philadelphia-phillies,2020
+871,Retained,"$2,662,073",22nd,philadelphia-phillies,2020
+872,Minor,"$539,182",23rd,philadelphia-phillies,2020
+873,Total Adjusted Payroll Allocations,"$73,543,547",8th,philadelphia-phillies,2020
+874,Active Roster,"$12,738,842",29th,pittsburgh-pirates,2020
+875,Injured List,"$8,467,312",11th,pittsburgh-pirates,2020
+876,Reserve/Suspended,"$2,444,444",1st,pittsburgh-pirates,2020
+877,Retained,"$2,437,508",23rd,pittsburgh-pirates,2020
+878,Minor,"$199,360",28th,pittsburgh-pirates,2020
+879,Total Adjusted Payroll Allocations,"$25,343,022",29th,pittsburgh-pirates,2020
+880,Active Roster,"$54,293,958",7th,san-diego-padres,2020
+881,Injured List,"$3,531,020",18th,san-diego-padres,2020
+882,Retained,"$14,471,215",10th,san-diego-padres,2020
+883,Minor,"$565,421",21st,san-diego-padres,2020
+884,Total Adjusted Payroll Allocations,"$72,861,614",11th,san-diego-padres,2020
+885,Active Roster,"$40,562,214",15th,san-francisco-giants,2020
+886,Exempt List,"$8,703,703",1st,san-francisco-giants,2020
+887,Injured List,"$1,428,006",24th,san-francisco-giants,2020
+888,Retained,"$13,996,618",11th,san-francisco-giants,2020
+889,Minor,"$8,718,276",2nd,san-francisco-giants,2020
+890,Total Adjusted Payroll Allocations,"$73,408,817",9th,san-francisco-giants,2020
+891,Active Roster,"$25,865,136",23rd,seattle-mariners,2020
+892,Injured List,"$3,268,960",19th,seattle-mariners,2020
+893,Retained,"$30,708,712",3rd,seattle-mariners,2020
+894,Minor,"$165,095",29th,seattle-mariners,2020
+895,Total Adjusted Payroll Allocations,"$50,563,459",21st,seattle-mariners,2020
+896,Active Roster,"$51,757,860",9th,st-louis-cardinals,2020
+897,Exempt List,"$214,370",13th,st-louis-cardinals,2020
+898,Injured List,"$12,343,763",8th,st-louis-cardinals,2020
+899,Retained,"$12,000,000",14th,st-louis-cardinals,2020
+900,Minor,"$1,087,757",8th,st-louis-cardinals,2020
+901,Total Adjusted Payroll Allocations,"$73,246,343",10th,st-louis-cardinals,2020
+902,Active Roster,"$21,769,463",26th,tampa-bay-rays,2020
+903,Injured List,"$1,958,020",21st,tampa-bay-rays,2020
+904,Retained,"$2,086,951",24th,tampa-bay-rays,2020
+905,Minor,"$2,476,255",4th,tampa-bay-rays,2020
+906,Total Adjusted Payroll Allocations,"$28,290,689",28th,tampa-bay-rays,2020
+907,Active Roster,"$30,879,036",20th,texas-rangers,2020
+908,Injured List,"$16,905,177",4th,texas-rangers,2020
+909,Suspended/Restricted,"$248,760",1st,texas-rangers,2020
+910,Retained,"$15,338,320",8th,texas-rangers,2020
+911,Minor,"$505,066",24th,texas-rangers,2020
+912,Total Adjusted Payroll Allocations,"$63,876,359",15th,texas-rangers,2020
+913,Active Roster,"$33,467,052",19th,toronto-blue-jays,2020
+914,Injured List,"$5,114,444",17th,toronto-blue-jays,2020
+915,Suspended/Restricted,"$210,370",2nd,toronto-blue-jays,2020
+916,Retained,"$14,667,030",9th,toronto-blue-jays,2020
+917,Minor,"$778,905",17th,toronto-blue-jays,2020
+918,Total Adjusted Payroll Allocations,"$54,237,801",19th,toronto-blue-jays,2020
+919,Active Roster,"$45,664,863",13th,washington-nationals,2020
+920,Exempt List,"$1,296,297",9th,washington-nationals,2020
+921,Injured List,"$20,500,582",1st,washington-nationals,2020
+922,Retained,"$7,137,096",17th,washington-nationals,2020
+923,Minor,"$98,495",30th,washington-nationals,2020
+924,Total Adjusted Payroll Allocations,"$74,697,333",7th,washington-nationals,2020
+925,Active Roster,"$54,229,878",19th,arizona-diamondbacks,2021
+926,Injured List,"$8,694,478",21st,arizona-diamondbacks,2021
+927,Retained,"$25,868,212",7th,arizona-diamondbacks,2021
+928,Minor,"$2,840,361",11th,arizona-diamondbacks,2021
+929,Total Adjusted Payroll Allocations,"$91,632,929",21st,arizona-diamondbacks,2021
+930,Active Roster,"$51,210,210",21st,athletics,2021
+931,Injured List,"$34,397,095",9th,athletics,2021
+932,Reserve/Suspended,"$580,500",2nd,athletics,2021
+933,Retained,"$2,500,111",30th,athletics,2021
+934,Minor,"$1,079,752",26th,athletics,2021
+935,Total Adjusted Payroll Allocations,"$89,767,668",23rd,athletics,2021
+936,Active Roster,"$115,354,620",11th,atlanta-braves,2021
+937,Injured List,"$3,301,950",26th,atlanta-braves,2021
+938,Suspended/Restricted,"$16,000,000",2nd,atlanta-braves,2021
+939,Retained,"$17,735,468",15th,atlanta-braves,2021
+940,Minor,"$1,596,717",16th,atlanta-braves,2021
+941,Total Adjusted Payroll Allocations,"$151,393,755",11th,atlanta-braves,2021
+942,Active Roster,"$13,838,690",30th,baltimore-orioles,2021
+943,Injured List,"$7,682,535",24th,baltimore-orioles,2021
+944,Retained,"$19,045,619",14th,baltimore-orioles,2021
+945,Minor,"$1,855,026",15th,baltimore-orioles,2021
+946,Total Adjusted Payroll Allocations,"$42,421,870",30th,baltimore-orioles,2021
+947,Active Roster,"$141,452,731",5th,boston-red-sox,2021
+948,Injured List,"$2,832,729",29th,boston-red-sox,2021
+949,Retained,"$41,374,493",5th,boston-red-sox,2021
+950,Minor,"$1,058,115",27th,boston-red-sox,2021
+951,Total Adjusted Payroll Allocations,"$186,718,068",6th,boston-red-sox,2021
+952,Active Roster,"$33,340,389",26th,chicago-cubs,2021
+953,Injured List,"$38,534,396",5th,chicago-cubs,2021
+954,Retained,"$71,494,409",1st,chicago-cubs,2021
+955,Minor,"$667,976",29th,chicago-cubs,2021
+956,Total Adjusted Payroll Allocations,"$144,037,170",14th,chicago-cubs,2021
+957,Active Roster,"$125,829,369",9th,chicago-white-sox,2021
+958,Injured List,"$3,193,240",27th,chicago-white-sox,2021
+959,Retained,"$10,099,143",21st,chicago-white-sox,2021
+960,Minor,"$1,285,073",23rd,chicago-white-sox,2021
+961,Total Adjusted Payroll Allocations,"$140,406,825",15th,chicago-white-sox,2021
+962,Active Roster,"$85,325,437",13th,cincinnati-reds,2021
+963,Injured List,"$35,531,500",7th,cincinnati-reds,2021
+964,Retained,"$4,226,409",27th,cincinnati-reds,2021
+965,Minor,"$1,504,101",18th,cincinnati-reds,2021
+966,Total Adjusted Payroll Allocations,"$126,587,447",16th,cincinnati-reds,2021
+967,Active Roster,"$35,682,311",24th,cleveland-guardians,2021
+968,Injured List,"$1,367,760",30th,cleveland-guardians,2021
+969,Suspended/Restricted,"$276,030",4th,cleveland-guardians,2021
+970,Retained,"$11,873,544",19th,cleveland-guardians,2021
+971,Minor,"$1,470,889",20th,cleveland-guardians,2021
+972,Total Adjusted Payroll Allocations,"$50,670,534",29th,cleveland-guardians,2021
+973,Active Roster,"$79,695,422",16th,colorado-rockies,2021
+974,Exempt List,"$8,000,000",1st,colorado-rockies,2021
+975,Injured List,"$5,931,272",25th,colorado-rockies,2021
+976,Retained,"$19,571,956",13th,colorado-rockies,2021
+977,Minor,"$3,010,316",10th,colorado-rockies,2021
+978,Total Adjusted Payroll Allocations,"$116,208,966",18th,colorado-rockies,2021
+979,Active Roster,"$61,408,153",17th,detroit-tigers,2021
+980,Injured List,"$13,503,703",17th,detroit-tigers,2021
+981,Retained,"$8,352,752",23rd,detroit-tigers,2021
+982,Minor,"$434,337",30th,detroit-tigers,2021
+983,Total Adjusted Payroll Allocations,"$83,698,945",25th,detroit-tigers,2021
+984,Active Roster,"$146,877,726",3rd,houston-astros,2021
+985,Injured List,"$39,870,546",4th,houston-astros,2021
+986,Retained,"$4,134,205",28th,houston-astros,2021
+987,Minor,"$3,339,565",8th,houston-astros,2021
+988,Total Adjusted Payroll Allocations,"$194,222,042",4th,houston-astros,2021
+989,Active Roster,"$52,514,932",20th,kansas-city-royals,2021
+990,Injured List,"$15,758,956",14th,kansas-city-royals,2021
+991,Retained,"$21,740,784",9th,kansas-city-royals,2021
+992,Minor,"$1,580,873",17th,kansas-city-royals,2021
+993,Total Adjusted Payroll Allocations,"$91,595,545",22nd,kansas-city-royals,2021
+994,Active Roster,"$33,967,088",25th,los-angeles-angels,2021
+995,Injured List,"$100,777,679",1st,los-angeles-angels,2021
+996,Retained,"$46,663,119",4th,los-angeles-angels,2021
+997,Minor,"$1,341,674",22nd,los-angeles-angels,2021
+998,Total Adjusted Payroll Allocations,"$182,749,560",7th,los-angeles-angels,2021
+999,Active Roster,"$174,661,542",2nd,los-angeles-dodgers,2021
+1000,Injured List,"$37,823,684",6th,los-angeles-dodgers,2021
+1001,Suspended/Restricted,"$31,333,333",1st,los-angeles-dodgers,2021
+1002,Retained,"$6,150,521",26th,los-angeles-dodgers,2021
+1003,Minor,"$15,374,310",1st,los-angeles-dodgers,2021
+1004,Total Adjusted Payroll Allocations,"$265,343,390",1st,los-angeles-dodgers,2021
+1005,Active Roster,"$16,304,223",29th,miami-marlins,2021
+1006,Injured List,"$15,489,077",15th,miami-marlins,2021
+1007,Retained,"$23,940,904",8th,miami-marlins,2021
+1008,Minor,"$2,353,976",13th,miami-marlins,2021
+1009,Total Adjusted Payroll Allocations,"$58,088,180",27th,miami-marlins,2021
+1010,Active Roster,"$79,937,621",15th,milwaukee-brewers,2021
+1011,Injured List,"$3,109,474",28th,milwaukee-brewers,2021
+1012,Retained,"$10,266,654",20th,milwaukee-brewers,2021
+1013,Minor,"$6,217,716",2nd,milwaukee-brewers,2021
+1014,Total Adjusted Payroll Allocations,"$99,377,415",19th,milwaukee-brewers,2021
+1015,Active Roster,"$84,942,828",14th,minnesota-twins,2021
+1016,Injured List,"$13,198,044",18th,minnesota-twins,2021
+1017,Retained,"$19,934,219",11th,minnesota-twins,2021
+1018,Minor,"$3,342,848",7th,minnesota-twins,2021
+1019,Total Adjusted Payroll Allocations,"$121,417,939",17th,minnesota-twins,2021
+1020,Active Roster,"$176,565,754",1st,new-york-mets,2021
+1021,Injured List,"$11,933,570",19th,new-york-mets,2021
+1022,Retained,"$9,524,946",22nd,new-york-mets,2021
+1023,Minor,"$3,735,419",6th,new-york-mets,2021
+1024,Total Adjusted Payroll Allocations,"$201,189,189",3rd,new-york-mets,2021
+1025,Active Roster,"$141,518,753",4th,new-york-yankees,2021
+1026,Injured List,"$48,217,362",3rd,new-york-yankees,2021
+1027,Retained,"$12,129,712",18th,new-york-yankees,2021
+1028,Minor,"$1,445,186",21st,new-york-yankees,2021
+1029,Total Adjusted Payroll Allocations,"$203,311,013",2nd,new-york-yankees,2021
+1030,Active Roster,"$141,014,046",6th,philadelphia-phillies,2021
+1031,Injured List,"$19,936,225",10th,philadelphia-phillies,2021
+1032,Suspended/Restricted,"$10,000,000",3rd,philadelphia-phillies,2021
+1033,Retained,"$13,803,916",16th,philadelphia-phillies,2021
+1034,Minor,"$5,759,036",3rd,philadelphia-phillies,2021
+1035,Total Adjusted Payroll Allocations,"$190,513,223",5th,philadelphia-phillies,2021
+1036,Active Roster,"$17,797,841",28th,pittsburgh-pirates,2021
+1037,Injured List,"$7,847,255",23rd,pittsburgh-pirates,2021
+1038,Reserve/Suspended,"$7,750,000",1st,pittsburgh-pirates,2021
+1039,Retained,"$19,989,602",10th,pittsburgh-pirates,2021
+1040,Minor,"$971,911",28th,pittsburgh-pirates,2021
+1041,Total Adjusted Payroll Allocations,"$54,356,609",28th,pittsburgh-pirates,2021
+1042,Active Roster,"$125,977,584",8th,san-diego-padres,2021
+1043,Injured List,"$49,745,500",2nd,san-diego-padres,2021
+1044,Retained,"$2,549,590",29th,san-diego-padres,2021
+1045,Minor,"$1,494,672",19th,san-diego-padres,2021
+1046,Total Adjusted Payroll Allocations,"$179,767,346",8th,san-diego-padres,2021
+1047,Active Roster,"$134,386,796",7th,san-francisco-giants,2021
+1048,Injured List,"$19,766,740",11th,san-francisco-giants,2021
+1049,Retained,"$12,958,219",17th,san-francisco-giants,2021
+1050,Minor,"$4,079,790",5th,san-francisco-giants,2021
+1051,Total Adjusted Payroll Allocations,"$171,191,545",9th,san-francisco-giants,2021
+1052,Active Roster,"$57,010,274",18th,seattle-mariners,2021
+1053,Injured List,"$16,037,933",13th,seattle-mariners,2021
+1054,Reserve/Suspended,"$570,500",3rd,seattle-mariners,2021
+1055,Retained,"$8,004,079",24th,seattle-mariners,2021
+1056,Minor,"$2,199,327",14th,seattle-mariners,2021
+1057,Total Adjusted Payroll Allocations,"$83,822,113",24th,seattle-mariners,2021
+1058,Active Roster,"$116,018,560",10th,st-louis-cardinals,2021
+1059,Injured List,"$14,512,682",16th,st-louis-cardinals,2021
+1060,Retained,"$19,759,129",12th,st-louis-cardinals,2021
+1061,Minor,"$1,179,623",25th,st-louis-cardinals,2021
+1062,Total Adjusted Payroll Allocations,"$151,469,994",10th,st-louis-cardinals,2021
+1063,Active Roster,"$44,288,651",23rd,tampa-bay-rays,2021
+1064,Injured List,"$18,352,159",12th,tampa-bay-rays,2021
+1065,Retained,"$6,218,025",25th,tampa-bay-rays,2021
+1066,Minor,"$1,245,717",24th,tampa-bay-rays,2021
+1067,Total Adjusted Payroll Allocations,"$70,104,552",26th,tampa-bay-rays,2021
+1068,Active Roster,"$24,843,032",27th,texas-rangers,2021
+1069,Injured List,"$7,899,375",22nd,texas-rangers,2021
+1070,Retained,"$58,916,700",2nd,texas-rangers,2021
+1071,Minor,"$4,129,712",4th,texas-rangers,2021
+1072,Total Adjusted Payroll Allocations,"$95,788,819",20th,texas-rangers,2021
+1073,Active Roster,"$109,902,749",12th,toronto-blue-jays,2021
+1074,Injured List,"$8,853,529",20th,toronto-blue-jays,2021
+1075,Retained,"$28,315,121",6th,toronto-blue-jays,2021
+1076,Minor,"$3,068,854",9th,toronto-blue-jays,2021
+1077,Total Adjusted Payroll Allocations,"$150,140,253",12th,toronto-blue-jays,2021
+1078,Active Roster,"$50,076,145",22nd,washington-nationals,2021
+1079,Injured List,"$34,877,122",8th,washington-nationals,2021
+1080,Retained,"$57,061,332",3rd,washington-nationals,2021
+1081,Minor,"$2,400,588",12th,washington-nationals,2021
+1082,Total Adjusted Payroll Allocations,"$144,415,187",13th,washington-nationals,2021
+1083,Active Roster,"$53,176,803",24th,arizona-diamondbacks,2022
+1084,Injured List,"$19,224,958",16th,arizona-diamondbacks,2022
+1085,Suspended/Restricted,"$700,000",3rd,arizona-diamondbacks,2022
+1086,Retained,"$9,533,407",26th,arizona-diamondbacks,2022
+1087,Minor,"$2,484,582",13th,arizona-diamondbacks,2022
+1088,Total Adjusted Payroll Allocations,"$85,119,750",26th,arizona-diamondbacks,2022
+1089,Active Roster,"$15,196,960",30th,athletics,2022
+1090,Injured List,"$6,642,582",25th,athletics,2022
+1091,Suspended/Restricted,"$373,062",4th,athletics,2022
+1092,Retained,"$22,966,027",11th,athletics,2022
+1093,Minor,"$3,265,269",7th,athletics,2022
+1094,Total Adjusted Payroll Allocations,"$48,443,900",29th,athletics,2022
+1095,Active Roster,"$143,633,732",8th,atlanta-braves,2022
+1096,Injured List,"$20,918,726",14th,atlanta-braves,2022
+1097,Retained,"$10,710,954",23rd,atlanta-braves,2022
+1098,Minor,"$1,875,476",19th,atlanta-braves,2022
+1099,Total Adjusted Payroll Allocations,"$177,138,888",10th,atlanta-braves,2022
+1100,Active Roster,"$25,488,146",28th,baltimore-orioles,2022
+1101,Injured List,"$2,759,974",29th,baltimore-orioles,2022
+1102,Retained,"$13,258,460",19th,baltimore-orioles,2022
+1103,Minor,"$3,381,808",6th,baltimore-orioles,2022
+1104,Total Adjusted Payroll Allocations,"$44,888,388",30th,baltimore-orioles,2022
+1105,Active Roster,"$109,769,156",12th,boston-red-sox,2022
+1106,Injured List,"$50,192,677",5th,boston-red-sox,2022
+1107,Retained,"$48,696,520",2nd,boston-red-sox,2022
+1108,Minor,"$3,153,778",9th,boston-red-sox,2022
+1109,Total Adjusted Payroll Allocations,"$211,812,131",6th,boston-red-sox,2022
+1110,Active Roster,"$83,228,504",17th,chicago-cubs,2022
+1111,Injured List,"$44,219,852",6th,chicago-cubs,2022
+1112,Retained,"$20,225,459",13th,chicago-cubs,2022
+1113,Minor,"$2,906,202",10th,chicago-cubs,2022
+1114,Total Adjusted Payroll Allocations,"$150,580,017",14th,chicago-cubs,2022
+1115,Active Roster,"$154,697,729",6th,chicago-white-sox,2022
+1116,Injured List,"$20,008,123",15th,chicago-white-sox,2022
+1117,Retained,"$25,306,501",10th,chicago-white-sox,2022
+1118,Minor,"$3,192,973",8th,chicago-white-sox,2022
+1119,Total Adjusted Payroll Allocations,"$203,205,326",7th,chicago-white-sox,2022
+1120,Active Roster,"$22,546,012",29th,cincinnati-reds,2022
+1121,Injured List,"$61,180,258",3rd,cincinnati-reds,2022
+1122,Retained,"$30,148,483",5th,cincinnati-reds,2022
+1123,Minor,"$1,542,568",21st,cincinnati-reds,2022
+1124,Total Adjusted Payroll Allocations,"$115,417,321",21st,cincinnati-reds,2022
+1125,Active Roster,"$56,507,878",22nd,cleveland-guardians,2022
+1126,Injured List,"$702,900",30th,cleveland-guardians,2022
+1127,Retained,"$4,619,812",30th,cleveland-guardians,2022
+1128,Minor,"$4,646,902",4th,cleveland-guardians,2022
+1129,Total Adjusted Payroll Allocations,"$66,477,492",27th,cleveland-guardians,2022
+1130,Active Roster,"$66,960,029",19th,colorado-rockies,2022
+1131,Injured List,"$64,172,808",2nd,colorado-rockies,2022
+1132,Retained,"$7,833,905",28th,colorado-rockies,2022
+1133,Minor,"$1,045,476",27th,colorado-rockies,2022
+1134,Total Adjusted Payroll Allocations,"$140,012,218",17th,colorado-rockies,2022
+1135,Active Roster,"$105,762,860",13th,detroit-tigers,2022
+1136,Injured List,"$13,017,207",18th,detroit-tigers,2022
+1137,Retained,"$15,133,063",16th,detroit-tigers,2022
+1138,Minor,"$1,199,458",25th,detroit-tigers,2022
+1139,Total Adjusted Payroll Allocations,"$135,112,588",18th,detroit-tigers,2022
+1140,Active Roster,"$145,414,730",7th,houston-astros,2022
+1141,Injured List,"$21,550,000",12th,houston-astros,2022
+1142,Retained,"$14,691,453",17th,houston-astros,2022
+1143,Minor,"$2,135,613",16th,houston-astros,2022
+1144,Total Adjusted Payroll Allocations,"$183,791,796",8th,houston-astros,2022
+1145,Active Roster,"$62,728,828",20th,kansas-city-royals,2022
+1146,Injured List,"$6,413,200",26th,kansas-city-royals,2022
+1147,Retained,"$21,516,010",12th,kansas-city-royals,2022
+1148,Minor,"$1,955,673",17th,kansas-city-royals,2022
+1149,Total Adjusted Payroll Allocations,"$92,613,711",24th,kansas-city-royals,2022
+1150,Active Roster,"$118,104,253",11th,los-angeles-angels,2022
+1151,Injured List,"$6,978,028",24th,los-angeles-angels,2022
+1152,Retained,"$49,768,044",1st,los-angeles-angels,2022
+1153,Minor,"$2,877,486",11th,los-angeles-angels,2022
+1154,Total Adjusted Payroll Allocations,"$177,727,811",9th,los-angeles-angels,2022
+1155,Active Roster,"$231,003,922",2nd,los-angeles-dodgers,2022
+1156,Injured List,"$28,920,266",9th,los-angeles-dodgers,2022
+1157,Reserve/Suspended,"$3,868,131",2nd,los-angeles-dodgers,2022
+1158,Retained,"$5,332,866",29th,los-angeles-dodgers,2022
+1159,Minor,"$1,256,241",24th,los-angeles-dodgers,2022
+1160,Total Adjusted Payroll Allocations,"$270,381,426",1st,los-angeles-dodgers,2022
+1161,Active Roster,"$54,841,980",23rd,miami-marlins,2022
+1162,Injured List,"$20,999,362",13th,miami-marlins,2022
+1163,Retained,"$10,674,607",24th,miami-marlins,2022
+1164,Minor,"$1,938,473",18th,miami-marlins,2022
+1165,Total Adjusted Payroll Allocations,"$88,454,422",25th,miami-marlins,2022
+1166,Active Roster,"$93,743,089",15th,milwaukee-brewers,2022
+1167,Injured List,"$5,763,506",27th,milwaukee-brewers,2022
+1168,Retained,"$26,548,013",8th,milwaukee-brewers,2022
+1169,Minor,"$4,714,717",3rd,milwaukee-brewers,2022
+1170,Total Adjusted Payroll Allocations,"$130,769,325",19th,milwaukee-brewers,2022
+1171,Active Roster,"$77,058,186",18th,minnesota-twins,2022
+1172,Injured List,"$53,517,506",4th,minnesota-twins,2022
+1173,Retained,"$18,666,930",15th,minnesota-twins,2022
+1174,Minor,"$1,120,869",26th,minnesota-twins,2022
+1175,Total Adjusted Payroll Allocations,"$150,363,491",15th,minnesota-twins,2022
+1176,Active Roster,"$231,062,889",1st,new-york-mets,2022
+1177,Injured List,"$4,155,954",28th,new-york-mets,2022
+1178,Retained,"$28,130,999",7th,new-york-mets,2022
+1179,Minor,"$992,664",28th,new-york-mets,2022
+1180,Total Adjusted Payroll Allocations,"$264,342,506",2nd,new-york-mets,2022
+1181,Active Roster,"$214,676,803",3rd,new-york-yankees,2022
+1182,Injured List,"$25,203,665",11th,new-york-yankees,2022
+1183,Retained,"$12,115,094",21st,new-york-yankees,2022
+1184,Minor,"$961,638",29th,new-york-yankees,2022
+1185,Total Adjusted Payroll Allocations,"$252,957,200",3rd,new-york-yankees,2022
+1186,Active Roster,"$164,119,333",5th,philadelphia-phillies,2022
+1187,Injured List,"$11,897,332",19th,philadelphia-phillies,2022
+1188,Suspended/Restricted,"$27,638,462",1st,philadelphia-phillies,2022
+1189,Retained,"$30,945,214",4th,philadelphia-phillies,2022
+1190,Minor,"$9,883,756",1st,philadelphia-phillies,2022
+1191,Total Adjusted Payroll Allocations,"$244,484,097",4th,philadelphia-phillies,2022
+1192,Active Roster,"$30,472,503",27th,pittsburgh-pirates,2022
+1193,Injured List,"$8,449,026",23rd,pittsburgh-pirates,2022
+1194,Retained,"$13,072,838",20th,pittsburgh-pirates,2022
+1195,Minor,"$4,189,665",5th,pittsburgh-pirates,2022
+1196,Total Adjusted Payroll Allocations,"$56,184,032",28th,pittsburgh-pirates,2022
+1197,Active Roster,"$173,934,032",4th,san-diego-padres,2022
+1198,Injured List,"$10,925,000",20th,san-diego-padres,2022
+1199,Reserve/Suspended,"$4,203,297",1st,san-diego-padres,2022
+1200,Retained,"$34,528,348",3rd,san-diego-padres,2022
+1201,Minor,"$921,017",30th,san-diego-padres,2022
+1202,Total Adjusted Payroll Allocations,"$224,511,694",5th,san-diego-padres,2022
+1203,Active Roster,"$43,246,200",26th,san-francisco-giants,2022
+1204,Injured List,"$90,082,706",1st,san-francisco-giants,2022
+1205,Suspended/Restricted,"$6,000,000",2nd,san-francisco-giants,2022
+1206,Retained,"$19,651,602",14th,san-francisco-giants,2022
+1207,Minor,"$2,736,809",12th,san-francisco-giants,2022
+1208,Total Adjusted Payroll Allocations,"$161,717,317",12th,san-francisco-giants,2022
+1209,Active Roster,"$84,933,408",16th,seattle-mariners,2022
+1210,Injured List,"$9,896,644",21st,seattle-mariners,2022
+1211,Retained,"$13,680,533",18th,seattle-mariners,2022
+1212,Minor,"$2,315,822",15th,seattle-mariners,2022
+1213,Total Adjusted Payroll Allocations,"$110,826,407",22nd,seattle-mariners,2022
+1214,Active Roster,"$134,723,541",10th,st-louis-cardinals,2022
+1215,Injured List,"$8,750,000",22nd,st-louis-cardinals,2022
+1216,Retained,"$9,569,813",25th,st-louis-cardinals,2022
+1217,Minor,"$2,334,971",14th,st-louis-cardinals,2022
+1218,Total Adjusted Payroll Allocations,"$155,378,325",13th,st-louis-cardinals,2022
+1219,Active Roster,"$50,869,016",25th,tampa-bay-rays,2022
+1220,Injured List,"$33,372,433",8th,tampa-bay-rays,2022
+1221,Retained,"$11,455,026",22nd,tampa-bay-rays,2022
+1222,Minor,"$1,470,598",22nd,tampa-bay-rays,2022
+1223,Total Adjusted Payroll Allocations,"$97,167,073",23rd,tampa-bay-rays,2022
+1224,Active Roster,"$100,539,086",14th,texas-rangers,2022
+1225,Injured List,"$13,330,822",17th,texas-rangers,2022
+1226,Retained,"$30,024,329",6th,texas-rangers,2022
+1227,Minor,"$6,143,209",2nd,texas-rangers,2022
+1228,Total Adjusted Payroll Allocations,"$150,037,446",16th,texas-rangers,2022
+1229,Active Roster,"$141,662,800",9th,toronto-blue-jays,2022
+1230,Injured List,"$25,698,159",10th,toronto-blue-jays,2022
+1231,Retained,"$7,955,708",27th,toronto-blue-jays,2022
+1232,Minor,"$1,685,299",20th,toronto-blue-jays,2022
+1233,Total Adjusted Payroll Allocations,"$177,001,966",11th,toronto-blue-jays,2022
+1234,Active Roster,"$58,988,509",21st,washington-nationals,2022
+1235,Injured List,"$40,679,307",7th,washington-nationals,2022
+1236,Retained,"$25,629,924",9th,washington-nationals,2022
+1237,Minor,"$1,374,698",23rd,washington-nationals,2022
+1238,Total Adjusted Payroll Allocations,"$126,672,438",20th,washington-nationals,2022
+1239,Active Roster,"$60,263,998",21st,arizona-diamondbacks,2023
+1240,Injured List,"$11,197,775",25th,arizona-diamondbacks,2023
+1241,Retained,"$39,202,529",3rd,arizona-diamondbacks,2023
+1242,Minor,"$6,113,052",4th,arizona-diamondbacks,2023
+1243,Total Adjusted Payroll Allocations,"$116,777,354",20th,arizona-diamondbacks,2023
+1244,Active Roster,"$31,196,397",29th,athletics,2023
+1245,Injured List,"$7,178,987",27th,athletics,2023
+1246,Retained,"$16,193,039",17th,athletics,2023
+1247,Minor,"$7,674,804",2nd,athletics,2023
+1248,Total Adjusted Payroll Allocations,"$62,243,227",30th,athletics,2023
+1249,Active Roster,"$158,186,507",6th,atlanta-braves,2023
+1250,Injured List,"$34,160,535",11th,atlanta-braves,2023
+1251,Retained,"$11,447,888",21st,atlanta-braves,2023
+1252,Minor,"$894,201",29th,atlanta-braves,2023
+1253,Total Adjusted Payroll Allocations,"$204,689,131",10th,atlanta-braves,2023
+1254,Active Roster,"$53,159,734",24th,baltimore-orioles,2023
+1255,Injured List,"$3,179,476",29th,baltimore-orioles,2023
+1256,Retained,"$9,861,733",23rd,baltimore-orioles,2023
+1257,Minor,"$2,505,496",12th,baltimore-orioles,2023
+1258,Total Adjusted Payroll Allocations,"$68,706,439",29th,baltimore-orioles,2023
+1259,Active Roster,"$128,063,857",11th,boston-red-sox,2023
+1260,Injured List,"$28,736,341",14th,boston-red-sox,2023
+1261,Retained,"$22,444,333",13th,boston-red-sox,2023
+1262,Minor,"$1,682,265",14th,boston-red-sox,2023
+1263,Total Adjusted Payroll Allocations,"$180,926,796",13th,boston-red-sox,2023
+1264,Active Roster,"$134,751,105",9th,chicago-cubs,2023
+1265,Injured List,"$12,522,069",23rd,chicago-cubs,2023
+1266,Retained,"$35,403,285",7th,chicago-cubs,2023
+1267,Minor,"$6,732,899",3rd,chicago-cubs,2023
+1268,Total Adjusted Payroll Allocations,"$189,409,358",11th,chicago-cubs,2023
+1269,Active Roster,"$85,292,616",14th,chicago-white-sox,2023
+1270,Injured List,"$37,717,329",10th,chicago-white-sox,2023
+1271,Retained,"$38,812,106",5th,chicago-white-sox,2023
+1272,Minor,"$1,041,785",27th,chicago-white-sox,2023
+1273,Total Adjusted Payroll Allocations,"$162,863,836",15th,chicago-white-sox,2023
+1274,Active Roster,"$43,815,845",27th,cincinnati-reds,2023
+1275,Injured List,"$9,699,072",26th,cincinnati-reds,2023
+1276,Retained,"$38,896,450",4th,cincinnati-reds,2023
+1277,Minor,"$3,162,050",9th,cincinnati-reds,2023
+1278,Total Adjusted Payroll Allocations,"$95,573,417",24th,cincinnati-reds,2023
+1279,Active Roster,"$54,881,912",22nd,cleveland-guardians,2023
+1280,Injured List,"$1,881,400",30th,cleveland-guardians,2023
+1281,Suspended/Restricted,"$592,263",5th,cleveland-guardians,2023
+1282,Retained,"$30,397,406",9th,cleveland-guardians,2023
+1283,Minor,"$1,158,646",24th,cleveland-guardians,2023
+1284,Total Adjusted Payroll Allocations,"$88,911,627",26th,cleveland-guardians,2023
+1285,Active Roster,"$75,181,741",18th,colorado-rockies,2023
+1286,Injured List,"$46,742,764",8th,colorado-rockies,2023
+1287,Retained,"$47,613,189",2nd,colorado-rockies,2023
+1288,Minor,"$1,488,913",18th,colorado-rockies,2023
+1289,Total Adjusted Payroll Allocations,"$171,026,607",14th,colorado-rockies,2023
+1290,Active Roster,"$82,493,535",16th,detroit-tigers,2023
+1291,Injured List,"$20,259,107",18th,detroit-tigers,2023
+1292,Retained,"$15,005,322",19th,detroit-tigers,2023
+1293,Minor,"$1,586,550",17th,detroit-tigers,2023
+1294,Total Adjusted Payroll Allocations,"$119,344,514",19th,detroit-tigers,2023
+1295,Active Roster,"$211,270,410",2nd,houston-astros,2023
+1296,Injured List,"$16,713,200",20th,houston-astros,2023
+1297,Suspended/Restricted,"$3,600,000",3rd,houston-astros,2023
+1298,Retained,"$2,830,000",30th,houston-astros,2023
+1299,Minor,"$2,694,138",10th,houston-astros,2023
+1300,Total Adjusted Payroll Allocations,"$237,107,748",7th,houston-astros,2023
+1301,Active Roster,"$54,242,001",23rd,kansas-city-royals,2023
+1302,Injured List,"$17,014,952",19th,kansas-city-royals,2023
+1303,Retained,"$22,659,571",12th,kansas-city-royals,2023
+1304,Minor,"$1,679,823",15th,kansas-city-royals,2023
+1305,Total Adjusted Payroll Allocations,"$95,596,347",23rd,kansas-city-royals,2023
+1306,Active Roster,"$43,769,159",28th,los-angeles-angels,2023
+1307,Injured List,"$147,537,321",1st,los-angeles-angels,2023
+1308,Suspended/Restricted,"$7,000,000",2nd,los-angeles-angels,2023
+1309,Retained,"$28,243,281",10th,los-angeles-angels,2023
+1310,Minor,"$1,334,515",20th,los-angeles-angels,2023
+1311,Total Adjusted Payroll Allocations,"$227,884,276",8th,los-angeles-angels,2023
+1312,Active Roster,"$149,705,968",7th,los-angeles-dodgers,2023
+1313,Injured List,"$33,764,202",12th,los-angeles-dodgers,2023
+1314,Suspended/Restricted,"$20,715,030",1st,los-angeles-dodgers,2023
+1315,Retained,"$34,802,727",8th,los-angeles-dodgers,2023
+1316,Minor,"$1,290,369",22nd,los-angeles-dodgers,2023
+1317,Total Adjusted Payroll Allocations,"$240,278,296",6th,los-angeles-dodgers,2023
+1318,Active Roster,"$67,982,517",20th,miami-marlins,2023
+1319,Injured List,"$25,595,861",16th,miami-marlins,2023
+1320,Retained,"$10,698,514",22nd,miami-marlins,2023
+1321,Minor,"$1,158,917",23rd,miami-marlins,2023
+1322,Total Adjusted Payroll Allocations,"$105,435,809",22nd,miami-marlins,2023
+1323,Active Roster,"$86,339,557",13th,milwaukee-brewers,2023
+1324,Injured List,"$11,924,851",24th,milwaukee-brewers,2023
+1325,Reserve/Suspended,"$298,067",2nd,milwaukee-brewers,2023
+1326,Retained,"$13,590,062",20th,milwaukee-brewers,2023
+1327,Minor,"$3,260,808",8th,milwaukee-brewers,2023
+1328,Total Adjusted Payroll Allocations,"$115,413,345",21st,milwaukee-brewers,2023
+1329,Active Roster,"$77,967,521",17th,minnesota-twins,2023
+1330,Injured List,"$71,263,008",5th,minnesota-twins,2023
+1331,Retained,"$3,421,766",27th,minnesota-twins,2023
+1332,Minor,"$3,347,413",7th,minnesota-twins,2023
+1333,Total Adjusted Payroll Allocations,"$155,999,708",16th,minnesota-twins,2023
+1334,Active Roster,"$104,157,606",12th,new-york-mets,2023
+1335,Injured List,"$76,849,257",3rd,new-york-mets,2023
+1336,Retained,"$158,207,683",1st,new-york-mets,2023
+1337,Minor,"$2,459,231",13th,new-york-mets,2023
+1338,Total Adjusted Payroll Allocations,"$341,673,777",1st,new-york-mets,2023
+1339,Active Roster,"$187,316,625",4th,new-york-yankees,2023
+1340,Injured List,"$50,681,231",6th,new-york-yankees,2023
+1341,Reserve/Suspended,"$3,320,000",1st,new-york-yankees,2023
+1342,Retained,"$35,880,817",6th,new-york-yankees,2023
+1343,Minor,"$1,452,477",19th,new-york-yankees,2023
+1344,Total Adjusted Payroll Allocations,"$278,651,150",2nd,new-york-yankees,2023
+1345,Active Roster,"$218,609,553",1st,philadelphia-phillies,2023
+1346,Injured List,"$12,530,327",22nd,philadelphia-phillies,2023
+1347,Retained,"$3,345,770",28th,philadelphia-phillies,2023
+1348,Minor,"$10,933,645",1st,philadelphia-phillies,2023
+1349,Total Adjusted Payroll Allocations,"$245,419,295",5th,philadelphia-phillies,2023
+1350,Active Roster,"$30,946,061",30th,pittsburgh-pirates,2023
+1351,Injured List,"$22,463,351",17th,pittsburgh-pirates,2023
+1352,Retained,"$17,801,293",15th,pittsburgh-pirates,2023
+1353,Minor,"$3,460,270",6th,pittsburgh-pirates,2023
+1354,Total Adjusted Payroll Allocations,"$74,670,975",28th,pittsburgh-pirates,2023
+1355,Active Roster,"$164,623,555",5th,san-diego-padres,2023
+1356,Injured List,"$71,689,912",4th,san-diego-padres,2023
+1357,Retained,"$16,420,993",16th,san-diego-padres,2023
+1358,Minor,"$716,071",30th,san-diego-padres,2023
+1359,Total Adjusted Payroll Allocations,"$253,450,531",3rd,san-diego-padres,2023
+1360,Active Roster,"$130,565,831",10th,san-francisco-giants,2023
+1361,Injured List,"$39,922,449",9th,san-francisco-giants,2023
+1362,Retained,"$15,271,991",18th,san-francisco-giants,2023
+1363,Minor,"$1,637,894",16th,san-francisco-giants,2023
+1364,Total Adjusted Payroll Allocations,"$187,398,165",12th,san-francisco-giants,2023
+1365,Active Roster,"$71,896,948",19th,seattle-mariners,2023
+1366,Injured List,"$27,157,168",15th,seattle-mariners,2023
+1367,Retained,"$24,571,247",11th,seattle-mariners,2023
+1368,Minor,"$1,141,540",26th,seattle-mariners,2023
+1369,Total Adjusted Payroll Allocations,"$124,766,903",18th,seattle-mariners,2023
+1370,Active Roster,"$83,908,832",15th,st-louis-cardinals,2023
+1371,Injured List,"$48,168,555",7th,st-louis-cardinals,2023
+1372,Retained,"$20,560,215",14th,st-louis-cardinals,2023
+1373,Minor,"$1,155,426",25th,st-louis-cardinals,2023
+1374,Total Adjusted Payroll Allocations,"$153,793,028",17th,st-louis-cardinals,2023
+1375,Active Roster,"$52,744,710",25th,tampa-bay-rays,2023
+1376,Injured List,"$15,788,201",21st,tampa-bay-rays,2023
+1377,Suspended/Restricted,"$2,454,545",4th,tampa-bay-rays,2023
+1378,Retained,"$2,956,334",29th,tampa-bay-rays,2023
+1379,Minor,"$1,004,572",28th,tampa-bay-rays,2023
+1380,Total Adjusted Payroll Allocations,"$74,948,362",27th,tampa-bay-rays,2023
+1381,Active Roster,"$148,828,188",8th,texas-rangers,2023
+1382,Injured List,"$96,208,979",2nd,texas-rangers,2023
+1383,Retained,"$4,993,881",26th,texas-rangers,2023
+1384,Minor,"$1,301,706",21st,texas-rangers,2023
+1385,Total Adjusted Payroll Allocations,"$251,332,754",4th,texas-rangers,2023
+1386,Active Roster,"$194,200,854",3rd,toronto-blue-jays,2023
+1387,Injured List,"$6,851,292",28th,toronto-blue-jays,2023
+1388,Retained,"$9,776,101",24th,toronto-blue-jays,2023
+1389,Minor,"$3,802,638",5th,toronto-blue-jays,2023
+1390,Total Adjusted Payroll Allocations,"$214,630,885",9th,toronto-blue-jays,2023
+1391,Active Roster,"$49,949,016",26th,washington-nationals,2023
+1392,Injured List,"$32,648,896",13th,washington-nationals,2023
+1393,Suspended/Restricted,"$232,260",6th,washington-nationals,2023
+1394,Retained,"$7,902,056",25th,washington-nationals,2023
+1395,Minor,"$2,646,435",11th,washington-nationals,2023
+1396,Total Adjusted Payroll Allocations,"$93,378,663",25th,washington-nationals,2023
+1397,Active Roster,"$134,502,970",10th,arizona-diamondbacks,2024
+1398,Injured List,"$9,600,600",27th,arizona-diamondbacks,2024
+1399,Reserve/Suspended,"$70,731",3rd,arizona-diamondbacks,2024
+1400,Retained,"$25,631,063",14th,arizona-diamondbacks,2024
+1401,Minor,"$3,001,465",12th,arizona-diamondbacks,2024
+1402,Total Adjusted Payroll Allocations,"$172,806,829",13th,arizona-diamondbacks,2024
+1403,Active Roster,"$28,956,713",29th,athletics,2024
+1404,Injured List,"$15,581,092",21st,athletics,2024
+1405,Reserve/Suspended,"$274,482",2nd,athletics,2024
+1406,Retained,"$15,557,073",23rd,athletics,2024
+1407,Minor,"$1,763,221",24th,athletics,2024
+1408,Total Adjusted Payroll Allocations,"$62,132,581",30th,athletics,2024
+1409,Active Roster,"$156,338,167",7th,atlanta-braves,2024
+1410,Injured List,"$47,028,814",6th,atlanta-braves,2024
+1411,Retained,"$29,249,155",11th,atlanta-braves,2024
+1412,Minor,"$8,417,765",3rd,atlanta-braves,2024
+1413,Total Adjusted Payroll Allocations,"$236,433,901",6th,atlanta-braves,2024
+1414,Active Roster,"$65,994,548",21st,baltimore-orioles,2024
+1415,Injured List,"$10,808,540",25th,baltimore-orioles,2024
+1416,Retained,"$30,650,082",10th,baltimore-orioles,2024
+1417,Minor,"$1,882,324",21st,baltimore-orioles,2024
+1418,Total Adjusted Payroll Allocations,"$109,335,494",22nd,baltimore-orioles,2024
+1419,Active Roster,"$77,327,289",18th,boston-red-sox,2024
+1420,Injured List,"$76,400,974",2nd,boston-red-sox,2024
+1421,Retained,"$31,745,306",9th,boston-red-sox,2024
+1422,Minor,"$3,063,876",10th,boston-red-sox,2024
+1423,Total Adjusted Payroll Allocations,"$188,537,445",11th,boston-red-sox,2024
+1424,Active Roster,"$177,805,468",4th,chicago-cubs,2024
+1425,Injured List,"$10,207,418",26th,chicago-cubs,2024
+1426,Retained,"$36,617,219",7th,chicago-cubs,2024
+1427,Minor,"$7,604,537",4th,chicago-cubs,2024
+1428,Total Adjusted Payroll Allocations,"$229,567,975",7th,chicago-cubs,2024
+1429,Active Roster,"$74,306,691",19th,chicago-white-sox,2024
+1430,Injured List,"$8,284,460",29th,chicago-white-sox,2024
+1431,Retained,"$46,893,796",4th,chicago-white-sox,2024
+1432,Minor,"$3,012,600",11th,chicago-white-sox,2024
+1433,Total Adjusted Payroll Allocations,"$132,497,547",18th,chicago-white-sox,2024
+1434,Active Roster,"$55,850,116",23rd,cincinnati-reds,2024
+1435,Injured List,"$22,271,250",17th,cincinnati-reds,2024
+1436,Retained,"$20,560,145",18th,cincinnati-reds,2024
+1437,Minor,"$1,573,344",27th,cincinnati-reds,2024
+1438,Total Adjusted Payroll Allocations,"$100,254,855",25th,cincinnati-reds,2024
+1439,Active Roster,"$50,885,032",25th,cleveland-guardians,2024
+1440,Injured List,"$21,120,833",19th,cleveland-guardians,2024
+1441,Retained,"$22,945,837",15th,cleveland-guardians,2024
+1442,Minor,"$10,272,880",2nd,cleveland-guardians,2024
+1443,Total Adjusted Payroll Allocations,"$105,224,582",23rd,cleveland-guardians,2024
+1444,Active Roster,"$79,534,485",17th,colorado-rockies,2024
+1445,Injured List,"$51,060,000",5th,colorado-rockies,2024
+1446,Retained,"$13,132,583",27th,colorado-rockies,2024
+1447,Minor,"$2,373,897",18th,colorado-rockies,2024
+1448,Total Adjusted Payroll Allocations,"$146,100,965",17th,colorado-rockies,2024
+1449,Active Roster,"$33,226,992",28th,detroit-tigers,2024
+1450,Injured List,"$26,677,166",13th,detroit-tigers,2024
+1451,Retained,"$36,920,494",6th,detroit-tigers,2024
+1452,Minor,"$1,070,295",29th,detroit-tigers,2024
+1453,Total Adjusted Payroll Allocations,"$96,961,614",26th,detroit-tigers,2024
+1454,Active Roster,"$170,642,387",6th,houston-astros,2024
+1455,Injured List,"$45,109,866",7th,houston-astros,2024
+1456,Retained,"$21,665,317",16th,houston-astros,2024
+1457,Minor,"$13,642,326",1st,houston-astros,2024
+1458,Total Adjusted Payroll Allocations,"$251,059,896",3rd,houston-astros,2024
+1459,Active Roster,"$84,606,907",16th,kansas-city-royals,2024
+1460,Injured List,"$14,486,000",23rd,kansas-city-royals,2024
+1461,Retained,"$21,087,524",17th,kansas-city-royals,2024
+1462,Minor,"$2,386,442",17th,kansas-city-royals,2024
+1463,Total Adjusted Payroll Allocations,"$122,566,873",20th,kansas-city-royals,2024
+1464,Active Roster,"$40,083,433",26th,los-angeles-angels,2024
+1465,Injured List,"$108,620,160",1st,los-angeles-angels,2024
+1466,Retained,"$18,817,429",21st,los-angeles-angels,2024
+1467,Minor,"$5,873,804",5th,los-angeles-angels,2024
+1468,Total Adjusted Payroll Allocations,"$172,189,987",14th,los-angeles-angels,2024
+1469,Active Roster,"$171,997,739",5th,los-angeles-dodgers,2024
+1470,Injured List,"$37,949,016",9th,los-angeles-dodgers,2024
+1471,Suspended/Restricted,"$740,000",2nd,los-angeles-dodgers,2024
+1472,Retained,"$27,706,461",13th,los-angeles-dodgers,2024
+1473,Minor,"$1,846,901",22nd,los-angeles-dodgers,2024
+1474,Total Adjusted Payroll Allocations,"$240,240,117",5th,los-angeles-dodgers,2024
+1475,Active Roster,"$11,473,396",30th,miami-marlins,2024
+1476,Injured List,"$19,701,083",20th,miami-marlins,2024
+1477,Retained,"$64,284,585",2nd,miami-marlins,2024
+1478,Minor,"$4,131,241",7th,miami-marlins,2024
+1479,Total Adjusted Payroll Allocations,"$96,590,305",27th,miami-marlins,2024
+1480,Active Roster,"$71,398,748",20th,milwaukee-brewers,2024
+1481,Injured List,"$34,433,308",11th,milwaukee-brewers,2024
+1482,Retained,"$6,151,779",29th,milwaukee-brewers,2024
+1483,Minor,"$2,239,544",19th,milwaukee-brewers,2024
+1484,Total Adjusted Payroll Allocations,"$114,223,379",21st,milwaukee-brewers,2024
+1485,Active Roster,"$102,020,614",14th,minnesota-twins,2024
+1486,Injured List,"$22,053,202",18th,minnesota-twins,2024
+1487,Retained,"$2,570,833",30th,minnesota-twins,2024
+1488,Minor,"$2,435,402",16th,minnesota-twins,2024
+1489,Total Adjusted Payroll Allocations,"$129,080,051",19th,minnesota-twins,2024
+1490,Active Roster,"$186,528,021",3rd,new-york-mets,2024
+1491,Injured List,"$37,578,740",10th,new-york-mets,2024
+1492,Retained,"$87,720,420",1st,new-york-mets,2024
+1493,Minor,"$3,931,503",8th,new-york-mets,2024
+1494,Total Adjusted Payroll Allocations,"$314,748,899",1st,new-york-mets,2024
+1495,Active Roster,"$260,231,924",1st,new-york-yankees,2024
+1496,Injured List,"$25,630,756",16th,new-york-yankees,2024
+1497,Retained,"$19,146,394",19th,new-york-yankees,2024
+1498,Minor,"$3,565,533",9th,new-york-yankees,2024
+1499,Total Adjusted Payroll Allocations,"$308,574,607",2nd,new-york-yankees,2024
+1500,Active Roster,"$226,211,338",2nd,philadelphia-phillies,2024
+1501,Injured List,"$3,031,516",30th,philadelphia-phillies,2024
+1502,Retained,"$15,356,883",24th,philadelphia-phillies,2024
+1503,Minor,"$1,699,868",26th,philadelphia-phillies,2024
+1504,Total Adjusted Payroll Allocations,"$246,299,605",4th,philadelphia-phillies,2024
+1505,Active Roster,"$51,220,210",24th,pittsburgh-pirates,2024
+1506,Injured List,"$14,524,211",22nd,pittsburgh-pirates,2024
+1507,Retained,"$15,341,351",25th,pittsburgh-pirates,2024
+1508,Minor,"$2,965,217",13th,pittsburgh-pirates,2024
+1509,Total Adjusted Payroll Allocations,"$84,050,989",29th,pittsburgh-pirates,2024
+1510,Active Roster,"$142,394,254",9th,san-diego-padres,2024
+1511,Injured List,"$9,034,386",28th,san-diego-padres,2024
+1512,Reserve/Suspended,"$276,759",1st,san-diego-padres,2024
+1513,Retained,"$19,045,542",20th,san-diego-padres,2024
+1514,Minor,"$2,437,482",15th,san-diego-padres,2024
+1515,Total Adjusted Payroll Allocations,"$170,855,090",15th,san-diego-padres,2024
+1516,Active Roster,"$102,704,227",13th,san-francisco-giants,2024
+1517,Injured List,"$53,113,846",4th,san-francisco-giants,2024
+1518,Retained,"$44,357,646",5th,san-francisco-giants,2024
+1519,Minor,"$1,791,662",23rd,san-francisco-giants,2024
+1520,Total Adjusted Payroll Allocations,"$201,967,381",10th,san-francisco-giants,2024
+1521,Active Roster,"$93,668,820",15th,seattle-mariners,2024
+1522,Injured List,"$29,288,727",12th,seattle-mariners,2024
+1523,Retained,"$28,968,591",12th,seattle-mariners,2024
+1524,Minor,"$2,004,494",20th,seattle-mariners,2024
+1525,Total Adjusted Payroll Allocations,"$147,930,632",16th,seattle-mariners,2024
+1526,Active Roster,"$112,213,666",12th,st-louis-cardinals,2024
+1527,Injured List,"$44,602,200",8th,st-louis-cardinals,2024
+1528,Retained,"$18,024,055",22nd,st-louis-cardinals,2024
+1529,Minor,"$1,092,838",28th,st-louis-cardinals,2024
+1530,Total Adjusted Payroll Allocations,"$175,932,759",12th,st-louis-cardinals,2024
+1531,Active Roster,"$37,691,876",27th,tampa-bay-rays,2024
+1532,Injured List,"$13,179,262",24th,tampa-bay-rays,2024
+1533,Suspended/Restricted,"$2,454,545",1st,tampa-bay-rays,2024
+1534,Retained,"$34,675,167",8th,tampa-bay-rays,2024
+1535,Minor,"$1,706,572",25th,tampa-bay-rays,2024
+1536,Total Adjusted Payroll Allocations,"$89,707,422",28th,tampa-bay-rays,2024
+1537,Active Roster,"$145,959,070",8th,texas-rangers,2024
+1538,Injured List,"$70,265,121",3rd,texas-rangers,2024
+1539,Retained,"$8,523,079",28th,texas-rangers,2024
+1540,Minor,"$798,138",30th,texas-rangers,2024
+1541,Total Adjusted Payroll Allocations,"$225,545,408",8th,texas-rangers,2024
+1542,Active Roster,"$132,130,693",11th,toronto-blue-jays,2024
+1543,Injured List,"$26,456,777",14th,toronto-blue-jays,2024
+1544,Retained,"$54,615,363",3rd,toronto-blue-jays,2024
+1545,Minor,"$5,199,986",6th,toronto-blue-jays,2024
+1546,Total Adjusted Payroll Allocations,"$218,402,819",9th,toronto-blue-jays,2024
+1547,Active Roster,"$60,351,144",22nd,washington-nationals,2024
+1548,Injured List,"$26,347,303",15th,washington-nationals,2024
+1549,Personal Leave,"$186,966",1st,washington-nationals,2024
+1550,Retained,"$14,212,004",26th,washington-nationals,2024
+1551,Minor,"$2,847,990",14th,washington-nationals,2024
+1552,Total Adjusted Payroll Allocations,"$103,945,407",24th,washington-nationals,2024
