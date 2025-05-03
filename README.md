@@ -13,11 +13,14 @@ This project was completed as part of an **Economics Independent Study** course.
 
 ## Repository Structure
 
-    ├── archive                     # Archived code (original/uncleaned scripts and early versions)
-    ├── datasets                    # All data used in the project 
+    ├── archive/                    # Archived code (original/uncleaned scripts and early versions)
+    ├── datasets/                   # All data used in the project 
     │   ├──                         # Original datasets from Baseball Reference and Spotrac
-    │   └── cleaned                 # Datasets after cleaning
-    ├── figures                     # Figures included in the paper and additional plots 
+    │   └── cleaned/                # Datasets after cleaning
+    ├── delivarables/               # Final paper and poster PDFs
+    │   └── final_paper.pdf                        
+    │   └── project_poster.pdf     
+    ├── figures/                    # Figures included in the paper and additional plots   
     ├── web_scraping.ipynb          # Jupyter notebook use to scrape and assemble payroll and roster data
     ├── data_cleaning.R             # R script to clean and format scraped datasets
     ├── analysis.Rmd                # RMarkdown file containing the full analysis     
