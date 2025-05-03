@@ -1,0 +1,818 @@
+---
+title: "MLB Payroll Distribution and Team Performance Analysis (2015-2024)"
+author: "Selah Dean"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+    highlight: tango
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+# Load required packages
+library(tidyverse)
+library(broom)
+library(plm)
+library(ineq)     
+library(patchwork)
+library(kableExtra)
+library(corrplot)
+library(scales)
+library(lme4)
+library(patchwork)
+library(modelsummary)
+library(fixest)
+
+```
+
+## Introduction
+
+This analysis explores the relationship between Major League Baseball (MLB) team payroll distribution and team success over a ten-season period (2015–2024). We examine whether financial constraints affect team performance and whether small-market teams can achieve similar results as big-market teams despite payroll disparities.
+
+## Data Import and Preparation
+
+```{r}
+
+roster_payroll_data <- read.csv(paste0(getwd(), "/datasets/cleaned/roster_payroll_data.csv"))
+payroll_with_standings <- read.csv(paste0(getwd(), "/datasets/cleaned/payroll_with_standings.csv"))
+
+```
+
+```{r}
+status_summary <- roster_payroll_data %>%
+  filter(!is.na(status_simple) &
+           !is.na(payroll_salary_adjusted)) %>%
+  group_by(team_id, year, status_simple) %>%
+  summarize(
+    num_players = n(),
+    min_salary = min(payroll_salary_adjusted),
+    max_salary = max(payroll_salary_adjusted),
+    avg_salary = mean(payroll_salary_adjusted),
+    total_payroll = sum(payroll_salary_adjusted),
+    payroll_gini = ineq(payroll_salary_adjusted, type = "Gini"),
+    .groups = "drop"
+  ) %>% rbind(
+    roster_payroll_data %>%
+      filter(!is.na(payroll_salary_adjusted)) %>%
+      group_by(team_id, year) %>%
+      summarize(
+        status_simple = "overall",
+        num_players = n(),
+        min_salary = min(payroll_salary_adjusted),
+        max_salary = max(payroll_salary_adjusted),
+        avg_salary = mean(payroll_salary_adjusted),
+        total_payroll = sum(payroll_salary_adjusted),
+        payroll_gini = ineq(payroll_salary_adjusted, type = "Gini"),
+        .groups = "drop"
+      )
+  ) %>%
+  pivot_wider(
+    names_from = status_simple,
+    values_from = c(num_players, min_salary, max_salary, avg_salary, total_payroll, payroll_gini),
+    names_glue = "{status_simple}_{.value}"
+  ) %>% rename_with(~ if_else(.x == "team_id", .x,  
+                        str_to_lower(str_replace_all(.x, "-", "_")) %>%
+                          str_replace("^(.{3})[^_]*_", "\\1_") %>% 
+                          str_replace("^pre_([a-z]{3})[^_]*_", "pre_\\1_") %>%
+                          str_remove("^ove_"))) %>%
+  left_join(
+    payroll_with_standings %>% select(team_id, year, league, division, market_size, W, W.L., win_variability),
+    by = join_by(team_id, year)
+  ) %>%
+  rename(wins = W, 
+         win_pct = W.L.) %>%
+  mutate(
+    market_size = case_when(
+       market_size >= 5e6 ~ "large",
+       market_size < 5e6 & market_size >= 2.5e6 ~ "mid",
+       market_size < 2.5e6 ~ "small"
+     ),
+     market_size = factor(market_size, levels = c("small", "mid", "large")), 
+    pre_arb_payroll_pct = pre_arb_total_payroll / total_payroll,
+    arb_payroll_pct = arb_total_payroll / total_payroll, 
+    vet_payroll_pct = vet_total_payroll / total_payroll, 
+    pre_arb_player_pct = pre_arb_num_players / num_players, 
+    arb_player_pct = arb_num_players / num_players, 
+    vet_player_pct = vet_num_players / num_players
+  )
+
+status_summary_wo2020 <- status_summary %>% filter(year != 2020)
+
+```
+
+## Exploratory Data Analysis
+
+### Descriptive Statistics
+
+```{r descriptive_stats}
+# Year-by-year summary
+yearly_stats <- status_summary %>%
+  group_by(year) %>%
+  summarize(
+    mean_wins = mean(wins),
+    sd_wins = sd(wins),
+    min_wins = min(wins),
+    max_wins = max(wins),
+    
+    mean_payroll = mean(total_payroll),
+    sd_payroll = sd(total_payroll),
+    min_payroll = min(total_payroll),
+    max_payroll = max(total_payroll),
+    mean_gini = mean(payroll_gini), 
+    
+    mean_players = mean(num_players),
+    sd_players = sd(num_players),
+    min_players = min(num_players),
+    max_players = max(num_players),
+    
+    mean_pre_arb_players = mean(pre_arb_num_players),
+    sd_pre_arb_players = sd(pre_arb_num_players),
+    min_pre_arb_players = min(pre_arb_num_players),
+    max_pre_arb_players = max(pre_arb_num_players),
+    
+    mean_arb_players = mean(arb_num_players),
+    sd_arb_players = sd(arb_num_players),
+    min_arb_players = min(arb_num_players),
+    max_arb_players = max(arb_num_players),
+    
+    mean_vet_players = mean(vet_num_players),
+    sd_vet_players = sd(vet_num_players),
+    min_vet_players = min(vet_num_players),
+    max_vet_players = max(vet_num_players),
+    
+    mean_pre_arb_pct = mean(pre_arb_payroll_pct),
+    sd_pre_arb_pct = sd(pre_arb_payroll_pct),
+    min_pre_arb_pct = min(pre_arb_payroll_pct),
+    max_pre_arb_pct = max(pre_arb_payroll_pct),
+    
+    mean_arb_pct = mean(arb_payroll_pct),
+    sd_arb_pct = sd(arb_payroll_pct),
+    min_arb_pct = min(arb_payroll_pct),
+    max_arb_pct = max(arb_payroll_pct),
+    
+    mean_vet_pct = mean(vet_payroll_pct),
+    sd_vet_pct = sd(vet_payroll_pct),
+    min_vet_pct = min(vet_payroll_pct),
+    max_vet_pct = max(vet_payroll_pct),
+  ) %>%
+  mutate(
+    across(ends_with("_payroll"), ~ round(. / 1e6, 2))
+  )
+
+kable(yearly_stats, 
+      caption = "League-Wide Trends by Year",
+      digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+team_stats <- status_summary %>%
+  filter(year != 2020) %>%
+  group_by(team_id) %>%
+  summarize(
+    mean_wins = mean(wins),
+    sd_wins = sd(wins),
+    min_wins = min(wins),
+    max_wins = max(wins),
+    
+    mean_payroll = mean(total_payroll),
+    sd_payroll = sd(total_payroll),
+    min_payroll = min(total_payroll),
+    max_payroll = max(total_payroll),
+    mean_gini = mean(payroll_gini), 
+    
+    mean_players = mean(num_players),
+    sd_players = sd(num_players),
+    min_players = min(num_players),
+    max_players = max(num_players),
+    
+    mean_pre_arb_players = mean(pre_arb_num_players),
+    sd_pre_arb_players = sd(pre_arb_num_players),
+    min_pre_arb_players = min(pre_arb_num_players),
+    max_pre_arb_players = max(pre_arb_num_players),
+    
+    mean_arb_players = mean(arb_num_players),
+    sd_arb_players = sd(arb_num_players),
+    min_arb_players = min(arb_num_players),
+    max_arb_players = max(arb_num_players),
+    
+    mean_vet_players = mean(vet_num_players),
+    sd_vet_players = sd(vet_num_players),
+    min_vet_players = min(vet_num_players),
+    max_vet_players = max(vet_num_players),
+    
+    mean_pre_arb_pct = mean(pre_arb_payroll_pct),
+    sd_pre_arb_pct = sd(pre_arb_payroll_pct),
+    min_pre_arb_pct = min(pre_arb_payroll_pct),
+    max_pre_arb_pct = max(pre_arb_payroll_pct),
+    
+    mean_arb_pct = mean(arb_payroll_pct),
+    sd_arb_pct = sd(arb_payroll_pct),
+    min_arb_pct = min(arb_payroll_pct),
+    max_arb_pct = max(arb_payroll_pct),
+    
+    mean_vet_pct = mean(vet_payroll_pct),
+    sd_vet_pct = sd(vet_payroll_pct),
+    min_vet_pct = min(vet_payroll_pct),
+    max_vet_pct = max(vet_payroll_pct),
+  ) %>%
+  mutate(
+    across(ends_with("_payroll"), ~ round(. / 1e6, 2))
+  )
+
+kable(team_stats, 
+      caption = "Trends by Team",
+      digits = 2) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+
+```
+
+### Correlation Matrix
+
+```{r correlation_matrix}
+# Calculate correlation matrix for key variables
+cor_matrix <- status_summary %>%
+  filter(year != 2020) %>% 
+  select(-team_id, -year, -league, -division, -market_size) %>%
+  cor()
+
+
+corrplot(cor_matrix, type = 'upper',  tl.col = "black",
+         tl.cex = 0.6)
+```
+
+### Visualizations
+
+#### Overall Payroll 
+```{r}
+team_payroll_by_year <- ggplot(status_summary %>% filter(year !=2020), 
+                               aes(x=total_payroll, y=wins)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE, color = "red", size=0.5) + 
+  facet_wrap(vars(year), ncol=3) + 
+  xlab("Team Total Payroll") + ylab("Regular Season Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_minimal() + ggtitle("Team Payroll vs Wins (2015-2024)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+team_payroll_by_year
+
+ggsave("figures/team_payroll_by_year.png", team_payroll_by_year, 
+       width = 8, height = 8, dpi = 300, bg = "white")
+```
+
+#### Payroll Distribution by Player Category
+
+```{r}
+# First, get the team order from the payroll distribution data
+team_order_data <- status_summary %>%
+  group_by(team_id, market_size) %>%
+  summarize(
+    pre_arb = mean(pre_arb_payroll_pct),
+    .groups = 'drop'
+  ) %>%
+  group_by(market_size) %>%
+  mutate(team_order = reorder(team_id, pre_arb)) %>%
+  select(market_size, team_id, team_order)
+
+# First plot - Payroll distribution
+plot1 <- status_summary %>%
+  group_by(team_id, market_size) %>%
+  summarize(
+    pre_arb = mean(pre_arb_payroll_pct),
+    arb = mean(arb_payroll_pct),
+    vet = mean(vet_payroll_pct),
+    .groups = 'drop'
+  ) %>%
+  # Join with the team order data
+  left_join(team_order_data, by = c("team_id", "market_size")) %>%
+  pivot_longer(cols = c(pre_arb, arb, vet), 
+               names_to = "category", 
+               values_to = "percentage") %>%
+  mutate(
+    category = factor(category, 
+                     levels = c("pre_arb", "arb", "vet"),
+                     labels = c("Pre-Arbitration", "Arbitration", "Veteran"))
+  ) %>%
+  ggplot(aes(x = team_order, y = percentage, fill = category)) +
+  geom_bar(stat = "identity", position = position_stack(reverse = TRUE)) +
+  coord_flip() +
+  theme_minimal() +
+  labs(
+    title = "Payroll Distribution",
+    subtitle = "(2015-2024 Average)",
+    x = "Team",
+    y = "Percentage of Payroll",
+    fill = "Player Category"
+  ) +
+  facet_grid(rows = vars(market_size), scales = "free_y", space = "free_y") +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+# Second plot - Player distribution
+plot2 <- status_summary %>%
+  group_by(team_id, market_size) %>%
+  summarize(
+    pre_arb = mean(pre_arb_num_players / num_players),
+    arb = mean(arb_num_players / num_players),
+    vet = mean(vet_num_players / num_players),
+    .groups = 'drop'
+  ) %>%
+  # Join with the team order data to use the same ordering
+  left_join(team_order_data, by = c("team_id", "market_size")) %>%
+  pivot_longer(cols = c(pre_arb, arb, vet), 
+               names_to = "category", 
+               values_to = "percentage") %>%
+  mutate(
+    category = factor(category, 
+                     levels = c("pre_arb", "arb", "vet"),
+                     labels = c("Pre-Arbitration", "Arbitration", "Veteran"))
+  ) %>%
+  ggplot(aes(x = team_order, y = percentage, fill = category)) +
+  geom_bar(stat = "identity", position = position_stack(reverse = TRUE)) +
+  coord_flip() +
+  theme_minimal() +
+  labs(
+    title = "Player Distribution",
+    subtitle = "(2015-2024 Average)",
+    x = "",
+    y = "Percentage of Players",
+    fill = "Player Category"
+  ) +
+  facet_grid(rows = vars(market_size), scales = "free_y", space = "free_y") +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(hjust = 0.5)
+  )
+
+# Combine the plots side by side with shared legend
+payroll_player_dist <- plot1 + plot2 + 
+  plot_layout(guides = "collect") & # Share the legend between plots
+  theme(legend.position = "bottom")  # Position the legend at the bottom
+
+payroll_player_dist
+
+# Display the combined plot
+ggsave("figures/payroll_player_dist.png", payroll_player_dist, 
+       width = 12, height = 8, dpi = 300, bg = "white")
+```
+
+#### Consistency Analysis
+
+```{r consistency_analysis}
+# Calculate consistency metrics for each team
+consistency <- status_summary %>%
+  filter(year != 2020) %>%
+  group_by(team_id, market_size) %>%
+  summarize(
+    avg_wins = mean(wins),
+    sd_wins = sd(wins),
+    avg_payroll_gini = mean(payroll_gini), 
+    sd_payroll_gini = sd(payroll_gini), 
+    avg_payroll = mean(total_payroll),
+    sd_payroll = sd(total_payroll),
+    min_payroll = min(total_payroll), 
+    max_payroll = max(total_payroll), 
+    avg_pre_arb = mean(pre_arb_payroll_pct),
+    avg_arb = mean(arb_payroll_pct), 
+    avg_vet = mean(vet_payroll_pct),
+    .groups = 'drop'
+  )
+
+# Plot average wins vs. standard deviation of wins
+avg_wins_consistency <- ggplot(consistency, aes(x = avg_wins, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    #title = "Average Wins vs. Win Consistency",
+    x = "Average Wins per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+  scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot average payroll vs. standard deviation of wins
+avg_payroll_consistency <- ggplot(consistency, aes(x = avg_payroll, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_minimal() +
+  labs(
+    #title = "Average Total Payroll vs. Win Consistency",
+    x = "Average Total Payroll per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot payroll stability vs. performance stability
+sd_payroll_consistency <- ggplot(consistency, aes(x = sd_payroll, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_minimal() +
+  labs(
+    #title = "Payroll Consistency vs. Win Consistency",
+    x = "Standard Deviation of Total Payroll",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+
+# Plot average wins vs. standard deviation of wins
+avg_pre_arb_pct_consistency <- ggplot(consistency, aes(x = avg_pre_arb, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    title = "Average Pre-Arb Payroll% vs. Win Consistency",
+    x = "Average Pre-Arb Payroll% per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot average wins vs. standard deviation of wins
+avg_arb_pct_consistency <- ggplot(consistency, aes(x = avg_arb, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    title = "Average Arb Payroll% vs. Win Consistency",
+    x = "Average Arb Payroll% per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot average wins vs. standard deviation of wins
+avg_vet_pct_consistency <- ggplot(consistency, aes(x = avg_vet, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    title = "Average Vet Payroll% vs. Win Consistency",
+    x = "Average Vet Payroll% per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot average wins vs. standard deviation of wins
+avg_payroll_gini_consistency <- ggplot(consistency, aes(x = avg_payroll_gini, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    title = "Average Payroll Gini Index vs. Win Consistency",
+    x = "Average Payroll Gini Index per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Plot average wins vs. standard deviation of wins
+sd_payroll_gini_consistency <- ggplot(consistency, aes(x = sd_payroll_gini, y = sd_wins, color = market_size)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", size=0.5) +
+  ggrepel::geom_text_repel(aes(label = team_id), size = 3, max.overlaps = 10) +
+  theme_minimal() +
+  labs(
+    title = "Average Payroll Gini Index vs. Win Consistency",
+    x = "Average Payroll Gini Index per Season",
+    y = "Standard Deviation of Wins",
+    color = "Market Size"
+  ) + 
+    scale_y_continuous(
+    limits = c(0, max(consistency$sd_wins + 1, na.rm = TRUE)),
+    breaks = seq(0, max(consistency$sd_wins + 1, na.rm = TRUE), by = 5)
+  ) +
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+avg_wins_consistency <- avg_wins_consistency +
+  theme(axis.title.y = element_blank())
+
+avg_payroll_consistency <- avg_payroll_consistency +
+  theme(axis.title.y = element_blank())
+
+sd_payroll_consistency <- sd_payroll_consistency +
+  theme(axis.title.y = element_blank())
+
+# Create shared y-axis label using text annotation
+y_label <- ggplot() +
+  theme_void() +
+  annotate("text", x = 1, y = 0.5, angle = 90, label = "Standard Deviation of Wins", size = 4)
+
+wins_payroll_consistency <- (y_label | avg_wins_consistency | avg_payroll_consistency | sd_payroll_consistency) +
+  plot_layout(widths = c(0.05, 1, 1, 1), guides = "collect") +
+  plot_annotation(
+    title = "Wins and Payroll vs Win Consistency (2015-2024)",
+    theme = theme(plot.title = element_text(size = 18,  hjust = 0.5))
+  ) &
+  theme(legend.position = "bottom")
+
+wins_payroll_consistency
+
+ggsave("figures/wins_payroll_consistency.png", wins_payroll_consistency, width = 12, height = 4, dpi = 300, bg = "white")
+```
+
+
+```{r}
+# Calculate correlations
+avg_wins_corr <- cor(consistency$avg_wins, consistency$sd_wins, use = "complete.obs")
+avg_payroll_corr <- cor(consistency$avg_payroll, consistency$sd_wins, use = "complete.obs")
+sd_payroll_corr <- cor(consistency$sd_payroll, consistency$sd_wins, use = "complete.obs")
+
+# Format the correlations for display
+avg_wins_corr_text <- paste("r =", round(avg_wins_corr, 2))
+avg_payroll_corr_text <- paste("r =", round(avg_payroll_corr, 2))
+sd_payroll_corr_text <- paste("r =", round(sd_payroll_corr, 2))
+
+# Modify each plot to include correlation
+avg_wins_consistency <- avg_wins_consistency +
+  annotate("text", x = max(consistency$avg_wins, na.rm = TRUE) - 0.05 * diff(range(consistency$avg_wins, na.rm = TRUE)), 
+           y = max(consistency$sd_wins, na.rm = TRUE) - 0.1 * diff(range(consistency$sd_wins, na.rm = TRUE)), 
+           label = avg_wins_corr_text, hjust = 1, size = 4.5)
+
+avg_payroll_consistency <- avg_payroll_consistency +
+  annotate("text", x = max(consistency$avg_payroll, na.rm = TRUE) - 0.05 * diff(range(consistency$avg_payroll, na.rm = TRUE)), 
+           y = max(consistency$sd_wins, na.rm = TRUE) - 0.1 * diff(range(consistency$sd_wins, na.rm = TRUE)), 
+           label = avg_payroll_corr_text, hjust = 1, size = 4.5)
+
+sd_payroll_consistency <- sd_payroll_consistency +
+  annotate("text", x = max(consistency$sd_payroll, na.rm = TRUE) - 0.05 * diff(range(consistency$sd_payroll, na.rm = TRUE)), 
+           y = max(consistency$sd_wins, na.rm = TRUE) - 0.1 * diff(range(consistency$sd_wins, na.rm = TRUE)), 
+           label = sd_payroll_corr_text, hjust = 1, size = 4.5)
+
+# Then use the modified plots in your final combined plot
+wins_payroll_consistency <- (y_label | avg_wins_consistency | avg_payroll_consistency | sd_payroll_consistency) +
+  plot_layout(widths = c(0.05, 1, 1, 1), guides = "collect") +
+  plot_annotation(
+    title = "Wins and Payroll vs Win Consistency (2015-2024)",
+    theme = theme(plot.title = element_text(size = 18,  hjust = 0.5))
+  ) &
+  theme(legend.position = "bottom")
+
+wins_payroll_consistency
+
+ggsave("figures/wins_payroll_consistency_with_r.png", wins_payroll_consistency, width = 12, height = 4, dpi = 300, bg = "white")
+```
+#### Market Size Comparisons
+
+```{r}
+pvals <- status_summary %>%
+  filter(year != 2020) %>%
+  select(market_size, wins, total_payroll, payroll_gini, pre_arb_payroll_pct, 
+         arb_payroll_pct, vet_payroll_pct) %>%
+  pivot_longer(-market_size, names_to = "metric", values_to = "value") %>%
+  group_by(metric) %>%
+  do(tidy(aov(value ~ market_size, data = .))) %>%
+  filter(term == "market_size") %>%
+  select(metric, p.value) %>%
+  mutate(
+    label = case_when(
+      p.value < 0.001 ~ "< 0.001",
+      TRUE ~ sprintf("%.3f", p.value)
+    ),
+    metric = factor(metric,
+                   levels = c("wins", "total_payroll", "payroll_gini", 
+                              "pre_arb_payroll_pct", "arb_payroll_pct", "vet_payroll_pct"),
+                   labels = c("Wins", "Payroll", "Payroll Gini Index", 
+                              "Pre-Arb Payroll%", "Arb Payroll%", "Vet Payroll%")), 
+    facet_label = paste0(metric, "\n(p = ", label, ")")
+  ) 
+
+
+plot_data <- status_summary %>%
+  filter(year != 2020) %>%
+  select(market_size, wins, total_payroll, payroll_gini, 
+         pre_arb_payroll_pct, arb_payroll_pct, vet_payroll_pct) %>%
+  pivot_longer(-market_size, names_to = "metric", values_to = "value") %>%
+  mutate(
+    metric = factor(metric,
+                   levels = c("wins", "total_payroll", "payroll_gini", 
+                              "pre_arb_payroll_pct", "arb_payroll_pct", "vet_payroll_pct"),
+                   labels = c("Wins", "Payroll", "Payroll Gini Index", 
+                              "Pre-Arb Payroll%", "Arb Payroll%", "Vet Payroll%")), 
+  ) %>%
+  left_join(pvals, by = "metric") %>%
+  arrange(metric) %>%
+  mutate(facet_label = factor(facet_label, levels = unique(facet_label)))
+
+metrics_by_market_size <- ggplot(plot_data, aes(x = market_size, 
+                                                y = value, fill = market_size)) +
+  geom_boxplot() +
+  facet_wrap(~facet_label, scales = "free_y") +
+  theme_minimal() +
+  labs(
+    title = "Metrics by Market Size (2015–2024)",
+    x = "Market Size",
+    y = "Value",
+    fill = "Market Size"
+  ) +
+  theme(legend.position = "none", plot.title = element_text(hjust = 0.5))
+
+metrics_by_market_size
+
+ggsave("figures/metrics_by_market_size.png", metrics_by_market_size, 
+       width = 8, height = 6, dpi = 300, bg = "white")
+
+```
+
+## Regressions 
+```{r}
+status_summary_wo2020 <- status_summary_wo2020 %>%
+  mutate(
+    total_payroll_m = total_payroll / 1e6
+  )
+```
+
+### Simple Linear Model (Total Payroll vs Wins)
+
+```{r}
+
+
+model_base      <- feols(wins ~ total_payroll_m, data = status_summary_wo2020)
+model_team_fe   <- feols(wins ~ total_payroll_m | team_id, data = status_summary_wo2020)
+model_year_fe   <- feols(wins ~ total_payroll_m | year, data = status_summary_wo2020)
+model_both_fe   <- feols(wins ~ total_payroll_m | team_id + year, data = status_summary_wo2020)
+
+model_log_base      <- feols(wins ~ log(total_payroll_m), data = status_summary_wo2020)
+model_log_team_fe   <- feols(wins ~ log(total_payroll_m) | team_id, data = status_summary_wo2020)
+model_log_year_fe   <- feols(wins ~ log(total_payroll_m) | year, data = status_summary_wo2020)
+model_log_both_fe   <- feols(wins ~ log(total_payroll_m) | team_id + year, data = status_summary_wo2020)
+
+# Named list of models
+models <- list(
+  "Baseline"              = model_base,
+  "Team FE"               = model_team_fe,
+  "Year FE"               = model_year_fe,
+  "Team + Year FE"        = model_both_fe,
+  "Baseline"        = model_log_base,
+  "Team FE"         = model_log_team_fe,
+  "Year FE"         = model_log_year_fe,
+  "Team + Year FE"  = model_log_both_fe
+)
+
+# Use msummary to allow grouping and clean formatting
+simple_model_summary <- modelsummary(
+  models,
+  statistic = "std.error",
+  stars = TRUE, 
+  #gof_omit = "r.squared.within|Lik|BIC",
+  gof_map = c("nobs", "r.squared", "adj.r.squared", "aic", "rmse"), 
+  output = "kableExtra", 
+  title = "Effect of Total Payroll on Regular Season Wins"
+)
+
+simple_model_summary %>% kable_classic(full_width = F, html_font = "Cambria") %>%
+   add_header_above(c(" " = 1, "Linear" = 4, "Log" = 4))
+
+
+
+
+
+```
+
+
+#### Visualizing Team Fixed Effects 
+
+```{r}
+team_effects <- fixef(model_log_both_fe)$team_id
+team_effects_df <- data.frame(
+  team_id = names(team_effects),
+  effect = as.numeric(team_effects)
+)
+
+# Center the effects (subtract the mean) to show relative performance
+team_effects_df$effect_centered <- team_effects_df$effect - mean(team_effects_df$effect)
+
+team_effects_df <- team_effects_df %>% left_join(status_summary_wo2020 %>% select(team_id, market_size) %>% distinct(), by="team_id")
+
+
+# Now plot the centered effects
+team_fixed_effects <- ggplot(team_effects_df, aes(x = reorder(team_id, effect_centered), 
+                           y = effect_centered,
+                           fill = market_size)) +  # Use market_size for fill color
+  geom_bar(stat = "identity") +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  coord_flip() +
+  labs(
+    title = "Team Fixed Effects",
+    x = "Team",
+    y = "Effect on Wins (Relative to Average Team)",
+    fill = "Market Size"  # Legend title
+  ) +
+  theme_minimal() + 
+  theme(legend.position = "bottom", plot.title = element_text(hjust = 0.5))
+
+team_fixed_effects
+
+ggsave("figures/team_fixed_effects.png", team_fixed_effects, width = 6, height = 5, dpi = 300, bg = "white")
+```
+
+### Payroll Allocation Model 
+```{r}
+model_base      <- lm(wins ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct -
+                        1 ,
+                      data = status_summary_wo2020)
+model_payroll      <- lm(
+  wins ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + total_payroll_m - 1,
+  data = status_summary_wo2020
+)
+model_interactions <- lm(
+  wins ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + total_payroll_m +
+    arb_payroll_pct:total_payroll_m + vet_payroll_pct:total_payroll_m - 1,
+  data = status_summary_wo2020
+)
+
+model_market_size <- lm(
+  wins ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + market_size - 1,
+  data = status_summary_wo2020
+)
+
+model_base_variability      <- lm(win_variability ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct -
+                        1 ,
+                      data = status_summary_wo2020)
+model_payroll_variability      <- lm(
+  win_variability ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + total_payroll_m - 1,
+  data = status_summary_wo2020
+)
+model_interactions_variability <- lm(
+  win_variability ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + total_payroll_m +
+    arb_payroll_pct:total_payroll_m + vet_payroll_pct:total_payroll_m - 1,
+  data = status_summary_wo2020
+)
+
+model_market_size_variability <- lm(
+  win_variability ~ pre_arb_payroll_pct + arb_payroll_pct + vet_payroll_pct + market_size - 1,
+  data = status_summary_wo2020
+)
+
+# Named list of models
+models <- list(
+  "Baseline"              = model_base,
+  "Total Payroll"        = model_payroll,
+  "Market Size"          = model_market_size,
+  "Payroll Interaction"          = model_interactions, 
+  "Baseline"              = model_base_variability,
+  "Total Payroll"        = model_payroll_variability,
+  "Market Size"          = model_market_size_variability,
+  "Payroll Interaction"          = model_interactions_variability
+)
+
+modelsummary(
+  models,
+  statistic = "std.error",
+  stars = TRUE, 
+  gof_omit = "Lik|BIC", 
+  output = "kableExtra",
+  escape = FALSE, 
+  title = "Effect of Payroll Allocations on Wins and Win Variability"
+) %>% kable_classic(full_width = F, html_font = "Cambria") %>%
+   add_header_above(c(" " = 1, "Wins" = 4, "Win Variability" = 4))
+```

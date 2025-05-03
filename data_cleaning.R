@@ -1,15 +1,6 @@
 library(tidyverse)
-library(ggpubr)
-library(naniar)
-library(scales)
-library(gridExtra)
-library(grid)
 library(stringr)
 library(stringi)
-library(stringdist)
-library(deaR)
-
-setwd("C:/Users/sgdea/ECON399")
 
 # Load datasets
 payroll_data <- read.csv("datasets/payroll_data_from_2015.csv") %>% select(-X)
@@ -181,6 +172,9 @@ match_players <- function(roster, payroll) {
       suffix = c("", "")
     )
   
+  print("First step matches:")
+  print(nrow(exact_matches)/nrow(roster))
+  
   # Identify unmatched rows
   unmatched_roster <- roster %>%
     anti_join(exact_matches,
@@ -201,6 +195,9 @@ match_players <- function(roster, payroll) {
   # Combine exact and last name matches
   combined_matches <- exact_matches %>%
     bind_rows(last_name_matches)
+  
+  print("Second step matches:")
+  print(nrow(combined_matches)/nrow(roster))
   
   # Identify remaining unmatched rows
   unmatched_roster_2 <- unmatched_roster %>%
@@ -224,6 +221,9 @@ match_players <- function(roster, payroll) {
   # Combine all matches
   combined_matches_2 <- combined_matches %>%
     bind_rows(wo_position_matches)
+  
+  print("Third step matches:")
+  print(nrow(combined_matches_2)/nrow(roster))
   
   # Final unmatched players
   unmatched_roster_3 <- unmatched_roster_2 %>%
@@ -316,6 +316,8 @@ determine_status <- function(roster_payroll_data) {
   
 }
 
+roster_payroll_data <- determine_status(roster_payroll_data)
+
 # Simplify status to be either Pre-Arbitration, Arbitration, or Veteran
 roster_payroll_data <- roster_payroll_data %>%
   mutate(
@@ -333,45 +335,14 @@ roster_payroll_data <- roster_payroll_data %>%
     )
   )
 
-# Summarize status info and other relevant info for each team each year 
-status_summary <- roster_payroll_data %>%
-  filter(!is.na(status_simple) &
-           !is.na(payroll_salary_adjusted)) %>%
-  group_by(team_id, year, status_simple) %>%
-  summarize(
-    num_players = n(),
-    min_salary = min(payroll_salary_adjusted, na.rm = T),
-    max_salary = max(payroll_salary_adjusted, na.rm = T),
-    avg_salary = mean(payroll_salary_adjusted, na.rm = T),
-    total_payroll = sum(payroll_salary_adjusted, na.rm = T),
-    .groups = "drop"
-  ) %>%
-  left_join(
-    total_payroll %>% select(amount, rank, team_id, year, league, division, market_size),
-    by = join_by(team_id, year)
-  ) %>%
-  rename(total_payroll_amount = amount,
-         total_payroll_rank = rank) %>%
-  left_join(standings %>% select(W, W.L., win_variability, team_id, year),
-            by = join_by(team_id, year)) %>%
-  mutate(status_simple = factor(
-    status_simple,
-    levels = c("Pre-Arbitration", "Arbitration", "Veteran")
-  )) %>%
-  pivot_wider(
-    names_from = status_simple,
-    values_from = c(num_players, min_salary, max_salary, avg_salary, sd_salary, total_payroll),
-    names_glue = "{status_simple}_{.value}"
-  ) %>%
-  rename_with(~ str_to_lower(str_replace_all(., "-", "_"))) %>%
-  mutate(
-    market_size_cat = case_when(
-      market_size >= 5e6 ~ "large",
-      market_size < 5e6 & market_size >= 2.5e6 ~ "mid",
-      market_size < 2.5e6 ~ "small"
-    ),
-    market_size_cat = factor(market_size_cat, levels = c("small", "mid", "large"))
-  )
+# Combine payroll and standings data
+payroll_with_standings <- inner_join(
+  total_payroll, standings, 
+  by = join_by(team_id, year, league, division, market_size)
+) %>% distinct()
+
+
 
 # Saved cleaned files for modeling 
 write.csv(roster_payroll_data, "C:/Users/sgdea/ECON399/datasets/cleaned/roster_payroll_data.csv", row.names = FALSE)
+write.csv(payroll_with_standings, "C:/Users/sgdea/ECON399/datasets/cleaned/payroll_with_standings.csv", row.names = FALSE)
