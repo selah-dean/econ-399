@@ -1,0 +1,667 @@
+---
+title: "Data Description"
+author: "Selah Dean"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+setwd("C:/Users/sgdea/ECON399")
+
+library(tidyverse)
+library(ggpubr)
+library(scales)
+```
+
+# Read Data 
+
+```{r}
+# Read cleaned datasets 
+roster_payroll_data <- read.csv(paste0(getwd(), "/datasets/cleaned/roster_payroll_data.csv"))
+payroll_with_standings <- read.csv(paste0(getwd(), "/datasets/cleaned/payroll_with_standings.csv"))
+```
+
+# Initial Plots 
+
+## Payroll Rank vs Team Performance 
+```{r}
+# Payroll Rank vs Regular Season Rank
+payroll_rank_reg_season_rank <- ggplot(payroll_with_standings, aes(x=rank, y=Rk)) + 
+  geom_point() + 
+  xlab("Payroll Rank") + ylab("Regular Season Rank") + 
+  xlim(1, 30) + ylim(1,30) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Regular Season Rank)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_rank_reg_season_rank.png", payroll_rank_reg_season_rank,
+       width = 6, height = 4, units = "in")
+
+payroll_rank_reg_season_rank
+
+```
+
+### By Year 
+
+```{r}
+# Payroll Rank vs Regular Season Rank split by Season 
+payroll_rank_reg_season_rank_by_season <- ggplot(payroll_with_standings, aes(x=rank, y=Rk)) + 
+  geom_point() + 
+  xlab("Payroll Rank") + ylab("Regular Season Rank") + 
+  xlim(1, 30) + ylim(1,30) + 
+  theme_bw() + facet_wrap(vars(year), ncol=5) + 
+  ggtitle("Payroll vs Team Performance (Regular Season Rank) by Season") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_rank_reg_season_rank_by_season.png", 
+       payroll_rank_reg_season_rank_by_season,
+       width = 10, height = 5, units = "in")
+
+payroll_rank_reg_season_rank_by_season
+```
+
+## Payroll Amount vs Team Performance 
+```{r}
+# Payroll Amount vs Win Percentage
+payroll_amount_win_per <- ggplot(payroll_with_standings, aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Wins)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_win_per.png", 
+       payroll_amount_win_per,
+       width = 6, height = 4, units = "in")
+
+payroll_amount_win_per
+
+# Without 2020 
+payroll_amount_win_per_wo_2020 <- ggplot(payroll_with_standings %>% 
+                                           filter(year != 2020), aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + ggtitle("Payroll vs Team Performance (Wins) (Excluding 2020)") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_win_per_wo_2020.png", 
+       payroll_amount_win_per_wo_2020,
+       width = 6, height = 4, units = "in")
+
+payroll_amount_win_per_wo_2020
+```
+
+### By Year 
+```{r}
+# Payroll Amount vs Wins split by Season 
+payroll_amount_wins_by_season <- ggplot(payroll_with_standings %>% 
+                                          filter(year !=2020), aes(x=amount, y=W)) + 
+  geom_point() + 
+  xlab("Payroll") + ylab("Wins") + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) + 
+  theme_bw() + facet_wrap(vars(year), ncol=5) + 
+  ggtitle("Payroll vs Team Performance (Wins) by Season") + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_amount_wins_by_season.png", 
+       payroll_amount_wins_by_season,
+       width = 10, height = 5, units = "in")
+
+payroll_amount_wins_by_season
+
+
+```
+
+## Payroll Gap 
+```{r}
+payroll_gap <- payroll_with_standings %>%
+  group_by(league, year) %>%
+  summarize(
+    payroll_gap = max(amount) - min(amount),
+    win_gap = max(W) - min(W),
+    .groups = "drop"
+  ) %>%
+  bind_rows(
+    payroll_with_standings %>%
+      group_by(year) %>%
+      summarize(
+        league = "Overall",
+        payroll_gap = max(amount) - min(amount),
+        win_gap = max(W) - min(W),
+        .groups = "drop"
+      )
+  ) %>%
+  mutate(
+    gap_group = ifelse(year < 2020, "before_2020", "after_2020")
+  )
+
+payroll_gap_plot <- ggplot(payroll_gap, aes(x = year, group = league)) +
+  geom_point(aes(y = payroll_gap, color = league)) +
+  geom_line(aes(y = payroll_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Payroll Gap") +
+  labs(color = "League") +
+  ggtitle("League Payroll Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+win_gap_plot <- ggplot(payroll_gap, aes(x = year, group = league)) +
+  geom_point(aes(y = win_gap, color = league)) +
+  geom_line(aes(y = win_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Win Gap") +
+  labs(color = "League") +
+  ggtitle("League Win Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+payroll_win_gap <- ggarrange(payroll_gap_plot, win_gap_plot,
+                             common.legend = TRUE, legend="bottom")
+
+ggsave("figures/payroll_win_gap.png", 
+       payroll_win_gap,
+       width = 8, height = 4, units = "in")
+
+payroll_win_gap
+
+
+payroll_gap_plot_wo_2020 <- ggplot(payroll_gap %>% filter(year != 2020), 
+                                   aes(x = year, 
+                                       group = interaction(league, gap_group))) +
+  geom_point(aes(y = payroll_gap, color = league)) +
+  geom_line(aes(y = payroll_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) + 
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Payroll Gap") +
+  labs(color = "League") +
+  ggtitle("League Payroll Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+win_gap_plot_wo_2020 <- ggplot(payroll_gap %>% filter(year != 2020), 
+                               aes(x = year, 
+                                   group = interaction(league, gap_group))) +
+  geom_point(aes(y = win_gap, color = league)) +
+  geom_line(aes(y = win_gap, color = league), linetype = 2) +
+  scale_color_brewer(palette = "Set1") +
+  scale_x_continuous(breaks = 2015:2024) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Win Gap") +
+  labs(color = "League") +
+  ggtitle("League Win Gap by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+payroll_win_gap_wo_2020 <- ggarrange(payroll_gap_plot_wo_2020, win_gap_plot_wo_2020, 
+          common.legend = TRUE, legend="bottom")
+
+ggsave("figures/payroll_win_gap_wo_2020.png", 
+       payroll_win_gap_wo_2020,
+       width = 8, height = 4, units = "in")
+
+payroll_win_gap_wo_2020
+
+```
+
+## Min, Avg, Max Payroll 
+```{r}
+team_payroll_by_year <- payroll_with_standings %>% group_by(league, year) %>%
+  summarize(
+    avg_team_payroll = mean(amount), 
+    max_team_payroll = max(amount), 
+    min_team_payroll = min(amount), 
+    .groups = "drop"
+  ) %>% bind_rows(
+    payroll_with_standings %>% 
+      group_by(year) %>%
+      summarize(
+        league = "Overall", 
+        avg_team_payroll = mean(amount), 
+        max_team_payroll = max(amount), 
+        min_team_payroll = min(amount), 
+        .groups = "drop"
+        )
+  ) %>% pivot_longer(
+    cols = c(avg_team_payroll, max_team_payroll, min_team_payroll), 
+    names_to = "payroll_type",  
+    values_to = "payroll_value" 
+  ) %>% mutate(
+    gap_group = ifelse(year < 2020, "before_2020", "after_2020")
+  )
+
+league_payroll_by_season <- ggplot(team_payroll_by_year, aes(x = year, 
+                                 group = interaction(league, payroll_type))) +
+  geom_point(aes(y = payroll_value, color = payroll_type)) +
+  geom_line(aes(y = payroll_value, color = payroll_type, linetype = league)) +
+  scale_color_brewer(palette = "Set1") +  
+  scale_linetype_manual(values = c("solid", "dashed", "dotted")) + 
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Team Payroll") +
+  labs(color = "", linetype = "League") +
+  ggtitle("League Payroll by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+ggsave("figures/league_payroll_by_season.png", 
+       league_payroll_by_season,
+       width = 8, height = 4, units = "in")
+
+league_payroll_by_season
+
+league_payroll_by_season_wo_2020 <- ggplot(team_payroll_by_year %>% filter(year != 2020), aes(x = year, 
+                                 group = interaction(league, payroll_type, gap_group))) +
+  geom_point(aes(y = payroll_value, color = payroll_type)) +
+  geom_line(aes(y = payroll_value, color = payroll_type, linetype = league)) +
+  scale_color_brewer(palette = "Set1") +  
+  scale_linetype_manual(values = c("solid", "dashed", "dotted")) + 
+  scale_x_continuous(breaks = 2015:2024) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Season") +
+  ylab("Team Payroll") +
+  labs(color = "", linetype = "League") +
+  ggtitle("League Payroll by Season") +
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x=element_text(angle=45, hjust=1))
+
+ggsave("figures/league_payroll_by_season_wo_2020.png", 
+       league_payroll_by_season_wo_2020,
+       width = 8, height = 4, units = "in")
+
+league_payroll_by_season_wo_2020
+```
+
+# Player Status 
+```{r}
+# Summarize status info and other relevant info for each team each year 
+status_summary <- roster_payroll_data %>%
+  filter(!is.na(status_simple) &
+           !is.na(payroll_salary_adjusted)) %>%
+  group_by(team_id, year, status_simple) %>%
+  summarize(
+    num_players = n(),
+    min_salary = min(payroll_salary_adjusted, na.rm = T),
+    max_salary = max(payroll_salary_adjusted, na.rm = T),
+    avg_salary = mean(payroll_salary_adjusted, na.rm = T),
+    total_payroll = sum(payroll_salary_adjusted, na.rm = T),
+    .groups = "drop"
+  ) %>%
+  left_join(
+    payroll_with_standings %>% select(amount, year_end_40_man, rank, team_id, year, league, division, market_size, W, W.L., win_variability),
+    by = join_by(team_id, year)
+  ) %>%
+  rename(total_payroll_amount = amount,
+         total_payroll_rank = rank) %>%
+  mutate(status_simple = factor(
+    status_simple,
+    levels = c("Pre-Arbitration", "Arbitration", "Veteran")
+  )) 
+# %>%
+#   pivot_wider(
+#     names_from = status_simple,
+#     values_from = c(num_players, min_salary, max_salary, avg_salary, total_payroll),
+#     names_glue = "{status_simple}_{.value}"
+#   ) %>%
+#   rename_with(~ str_to_lower(str_replace_all(., "-", "_"))) %>%
+#   mutate(
+#     market_size_cat = case_when(
+#       market_size >= 5e6 ~ "large",
+#       market_size < 5e6 & market_size >= 2.5e6 ~ "mid",
+#       market_size < 2.5e6 ~ "small"
+#     ),
+#     market_size_cat = factor(market_size_cat, levels = c("small", "mid", "large"))
+#   )
+```
+
+## Plots
+```{r}
+player_designation_distribution <- ggplot(status_summary %>% filter(year != 2020), aes(x = W, 
+                                 group = interaction(status_simple))) +
+  geom_point(aes(y = num_players, color = status_simple)) +
+  theme_bw() +
+  xlab("Wins") +
+  ylab("Number of Players") +
+  labs(color = "") +
+  ggtitle("Player Designation Distribution") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/player_designation_distribution.png", 
+       player_designation_distribution,
+       width = 8, height = 4, units = "in")
+
+player_designation_distribution
+
+payroll_player_distribution <- ggplot(status_summary %>% filter(year != 2020), aes(x = total_payroll_amount, 
+                                 group = interaction(status_simple))) +
+  geom_point(aes(y = avg_salary, color = status_simple)) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw() +
+  xlab("Total Payroll Amount") +
+  ylab("Avgerage Player Salary") +
+  labs(color = "", linetype = "League") +
+  ggtitle("Payroll Player Distribution") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggsave("figures/payroll_player_distribution.png", 
+       payroll_player_distribution,
+       width = 8, height = 4, units = "in")
+
+payroll_player_distribution
+```
+
+
+## Win variance
+```{r}
+status_summary_wide <- status_summary %>% 
+  pivot_wider(names_from = status_simple, 
+              values_from = c(num_players, min_salary, max_salary, avg_salary, total_payroll), 
+              names_glue = "{status_simple}_{.value}") %>%
+  rename_with(~ str_to_lower(str_replace_all(., "-", "_"))) %>%
+  mutate(
+    market_size_cat = case_when(
+      market_size >= 5e6 ~ "large", 
+      market_size < 5e6 & market_size >= 2.5e6 ~ "mid", 
+      market_size < 2.5e6 ~ "small"
+    ), 
+    market_size_cat = factor(market_size_cat, levels = c("small", "mid", "large")), 
+    total_players = veteran_num_players + arbitration_num_players + pre_arbitration_num_players
+  )
+
+status_payroll_summary <- status_summary_wide %>% 
+  filter(year != 2020) %>% 
+  group_by(team_id) %>%
+  summarize(
+    win_sd = sd(w), 
+    total_payroll = sum(total_payroll_amount), 
+    avg_payroll = mean(total_payroll_amount), 
+    total_veteran_payroll = sum(veteran_total_payroll), 
+    avg_veteran_payroll = mean(veteran_total_payroll), 
+    total_arbitration_payroll = sum(arbitration_total_payroll), 
+    avg_arbitration_payroll = mean(arbitration_total_payroll), 
+    total_pre_arbitration_payroll = sum(pre_arbitration_total_payroll), 
+    avg_pre_arbitration_payroll = mean(pre_arbitration_total_payroll), 
+    market_size_cat = first(market_size_cat)
+  )
+  
+
+ggplot(status_payroll_summary, aes(x = avg_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  ylim(0, max(status_payroll_summary$win_sd)) + 
+  xlab("Average Total Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+ggplot(status_payroll_summary, aes(x = avg_veteran_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e9, suffix = "B")) +
+  ylim(0, max(status_payroll_summary$win_sd)) + 
+  xlab("Average Total Veteran Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+ggplot(status_payroll_summary, aes(x = avg_arbitration_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e9, suffix = "B")) +
+  ylim(0, max(status_payroll_summary$win_sd)) + 
+  xlab("Average Total Arbitration Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+
+ggplot(status_payroll_summary, aes(x = avg_pre_arbitration_payroll, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  scale_x_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  ylim(0, max(status_payroll_summary$win_sd)) + 
+  xlab("Average Total Pre-Arbitration Payroll Each Season") + 
+  ylab("Wins") + 
+  theme_bw()
+
+```
+
+```{r}
+num_players_summary <- status_summary_wide %>% 
+  filter(year != 2020) %>% 
+  group_by(team_id) %>%
+  summarize(
+    win_sd = sd(w), 
+    total_veteran_players = sum(veteran_num_players), 
+    avg_veteran_players = mean(veteran_num_players), 
+    total_arbitration_players = sum(arbitration_num_players), 
+    avg_arbitration_players = mean(arbitration_num_players), 
+    total_pre_arbitration_players = sum(pre_arbitration_num_players), 
+    avg_pre_arbitration_players = mean(pre_arbitration_num_players),
+    total_players = sum(total_players),
+    avg_players = mean(total_players),
+    market_size_cat = first(market_size_cat)
+  )
+
+ggplot(num_players_summary, aes(x = avg_players, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  ylim(0, max(num_players_summary$win_sd)) + 
+  xlab("Average Number of Players Each Season") + 
+  ylab("Wins") + 
+  theme_bw() + 
+  labs(color = "Market Size")
+
+ggplot(num_players_summary, aes(x = avg_veteran_players, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  ylim(0, max(num_players_summary$win_sd)) + 
+  xlab("Average Number of Veteran Players Each Season") + 
+  ylab("Wins") + 
+  theme_bw() + 
+  labs(color = "Market Size")
+
+ggplot(num_players_summary, aes(x = avg_arbitration_players, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  ylim(0, max(num_players_summary$win_sd)) + 
+  xlab("Average Number of Arbitration Players Each Season") + 
+  ylab("Wins") + 
+  theme_bw() + 
+  labs(color = "Market Size")
+
+
+ggplot(num_players_summary, aes(x = avg_pre_arbitration_players, y = win_sd, color=market_size_cat)) + 
+  geom_point() + 
+  geom_text(aes(label = team_id), vjust = -0.5, size = 3) + 
+  ylim(0, max(num_players_summary$win_sd)) + 
+  xlab("Average Number of Pre-Arbitration Players Each Season") + 
+  ylab("Wins") + 
+  theme_bw() + 
+  labs(color = "Market Size")
+```
+```{r}
+test <- status_summary_wide %>%
+  mutate(
+    cost_per_win = total_payroll_amount / w, 
+    veteran_cost_per_win = veteran_total_payroll / w, 
+    arbitration_cost_per_win = arbitration_total_payroll / w, 
+    pre_arbitration_cost_per_win = pre_arbitration_total_payroll / w, 
+  )
+
+ggplot(test %>% filter(year != 2020), aes(x = w, y = cost_per_win)) + 
+  geom_point() + 
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw()
+
+ggplot(test %>% filter(year != 2020), aes(x = w, y = veteran_cost_per_win)) + 
+  geom_point() + 
+  scale_y_continuous(labels = label_dollar(scale = 1/1e6, suffix = "M")) +
+  theme_bw()
+```
+
+
+
+# Data Description
+```{r}
+cat("Total Players: ", nrow(roster_payroll_data))
+cat("Total Distinct Players: ", 
+    n_distinct(roster_payroll_data %>% select(Name, DoB)))
+
+top_contracts <- roster_payroll_data %>% filter(!is.na(status_simple)) %>% 
+  group_by(status_simple) %>% slice_max(payroll_salary_adjusted, n = 10) %>% 
+  select(Name, Age, G, year, team_id, position, payroll_salary_adjusted, status_simple)
+
+bottom_contracts <- roster_payroll_data %>% filter(!is.na(status_simple)) %>% 
+  group_by(status_simple) %>% slice_min(payroll_salary_adjusted, n = 10) %>% 
+  select(Name, Age, G, year, team_id, position, payroll_salary_adjusted, status_simple)
+
+top_contract_yearly <- roster_payroll_data %>% group_by(year) %>% slice_max(payroll_salary_adjusted, n=3) %>% 
+  select(Name, Age, G, year, team_id, position, payroll_salary_adjusted, status_simple)
+
+```
+
+```{r}
+format_salary <- function(value) {
+  ifelse(value >= 1e6, paste0(round(value / 1e6, 2), "M"),
+         ifelse(value >= 1e3, paste0(round(value / 1e3, 1), "K"), as.character(value)))
+}
+
+# Select columns to summarize
+cols_to_summarize <- c("payroll_salary_adjusted", "G")
+
+# Convert summary output into a data frame
+summary_list <- lapply(roster_payroll_data[cols_to_summarize], summary)
+
+# Convert list to a data frame
+summary_df <- do.call(rbind, summary_list) %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "Variable")
+
+# Rename columns for clarity
+colnames(summary_df) <- c("Column", "Min", "1st_Quartile", "Median", "Mean", "3rd_Quartile", "Max", "Num_NA")
+
+# Apply formatting to salary column
+summary_df <- summary_df %>%
+  mutate(across(c(Min, `1st_Quartile`, Median, Mean, `3rd_Quartile`, Max, Num_NA), 
+                ~ if_else(Column == "payroll_salary_adjusted", format_salary(as.numeric(.)), as.character(.))))
+
+# Print formatted summary
+print(summary_df)
+
+```
+```{r}
+# Function to format salary values in K or M
+format_salary <- function(value) {
+  ifelse(value >= 1e6, paste0(round(value / 1e6, 2), "M"),
+         ifelse(value >= 1e3, paste0(round(value / 1e3, 1), "K"), as.character(value)))
+}
+
+# Select columns to summarize
+cols_to_summarize <- c("payroll_salary_adjusted", "Age", "G")
+
+# Apply summary() and extract the result as a list
+summary_list <- lapply(roster_payroll_data[cols_to_summarize], summary)
+
+# Convert list to a data frame
+summary_df <- do.call(rbind, summary_list) %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "Column")
+
+# Rename columns (handling possible NA column variations)
+colnames(summary_df) <- c("Column", "Min", "1st_Quartile", "Median", "Mean", "3rd_Quartile", "Max", "NA_Count")
+
+# Ensure NA_Count exists (if no NAs in dataset, summary() may not include this column)
+if (!"NA_Count" %in% colnames(summary_df)) {
+  summary_df$NA_Count <- 0
+}
+
+# Apply formatting to salary column and rounding to others
+summary_df <- summary_df %>%
+  mutate(across(c(Min, `1st_Quartile`, Median, Mean, `3rd_Quartile`, Max), 
+                ~ if_else(Column == "payroll_salary_adjusted", 
+                          sapply(as.numeric(.), format_salary), 
+                          as.character(round(as.numeric(.), 2)))))  # Round non-salary values
+
+# Convert NA_Count to integer
+summary_df$NA_Count <- as.integer(summary_df$NA_Count)
+
+# Print formatted summary
+print(summary_df)
+
+
+```
+```{r}
+format_millions <- function(value) {
+  ifelse(is.na(value), NA, paste0(round(value / 1e6, 2), "M"))
+}
+
+# Apply summary() and extract the result as a list
+summary_list <- lapply(status_summary_wide %>% select(where(is.numeric)), summary)
+
+# Convert list to a data frame
+summary_df <- do.call(rbind, summary_list) %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "Column")
+
+# Rename columns (handling possible NA column variations)
+colnames(summary_df) <- c("Column", "Min", "1st_Quartile", "Median", "Mean", "3rd_Quartile", "Max")
+
+# Apply formatting to salary column and rounding to others
+summary_df <- summary_df %>%
+  mutate(across(c(Min, `1st_Quartile`, Median, Mean, `3rd_Quartile`, Max), 
+                ~ if_else(str_detect(Column, "payroll"), 
+                          sapply(as.numeric(.), format_millions), 
+                          as.character(round(as.numeric(.), 2)))))
+
+# Print formatted summary
+print(summary_df)
+
+```
+
+
+```{r}
+
+test <- status_summary %>% group_by(team_id, year) %>%
+  summarize(
+    total_by_status = sum(total_payroll), 
+    total_payroll_amount = first(total_payroll_amount), 
+    total_year_end_40 = first(year_end_40_man), 
+    spotrac_dif = total_payroll_amount - total_by_status, 
+    cots_diff = total_year_end_40 - total_by_status, 
+    .groups = "drop"
+  )
+
+status_summary_wide <- status_summary_wide %>% 
+  mutate(
+    veteran_payroll_pct = veteran_total_payroll / total_payroll_amount, 
+    arbitration_payroll_pct = arbitration_total_payroll / total_payroll_amount, 
+    pre_arbitration_payroll_pct = pre_arbitration_total_payroll / total_payroll_amount, 
+    other_payroll_pct = 1 - (veteran_payroll_pct + arbitration_payroll_pct + pre_arbitration_payroll_pct)
+  )
+
+status_summary_wo_2020 <- status_summary_wide %>% filter(year != 2020)
+df <- pdata.frame(status_summary_wo_2020, index = c("team_id", "year"))
+
+fe_model <- plm(w ~ pre_arbitration_total_payroll + arbitration_total_payroll + veteran_total_payroll, 
+                data = df, 
+                model = "within", 
+                effect = "individual")
+summary(fe_model)
+
+```
