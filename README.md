@@ -12,14 +12,15 @@ This project investigates the relationship between MLB team payroll structures a
 This project was completed as part of an **Economics Independent Study** course. The research combines economic theory with statistical analysis to explore how financial strategies and labor market structures impact competitive balance in Major League Baseball.
 
 ## Repository Structure
-├── datasets/
-│   ├── # original datasets from Baseball Reference and Spotrac
-│   └── cleaned/ # datasets after cleaning
-├── figures/ # Figures included in the paper and additional plots
-├── webscrape.ipynb # Jupyter notebook used to scrape and assemble payroll and roster data
-├── clean_data.R # R script to clean and format scraped datasets
-├── analysis.Rmd # RMarkdown file containing the full analysis and writeup
-└── archive/ # Archived code (original/uncleaned scripts and early versions)
+
+    ├── archive                     # Archived code (original/uncleaned scripts and early versions)
+    ├── datasets                    # All data used in the project 
+    │   ├──                         # Original datasets from Baseball Reference and Spotrac
+    │   └── cleaned                 # Datasets after cleaning
+    ├── figures                     # Figures included in the paper and additional plots 
+    ├── web_scraping.ipynb          # Jupyter notebook use to scrape and assemble payroll and roster data
+    ├── data_cleaning.R             # R script to clean and format scraped datasets
+    ├── analysis.Rmd                # RMarkdown file containing the full analysis     
 
 ## Key Questions Addressed
 
